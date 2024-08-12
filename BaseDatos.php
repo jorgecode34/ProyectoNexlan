@@ -244,7 +244,7 @@ public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $
                 Color = '$Color',
                 Precio = '$Precio',
                 
-             WHERE vehiculos = '$vehiculos'";
+             WHERE vehiculos = '$ID_Vehiculos'";
 
     return mysqli_query($this->conexion, $modificar);
 }
