@@ -155,7 +155,102 @@ class BaseDatos
 
 /************************************************************************************************************************************************/
 
+                                                           /* FUNCIONES VEHICULOS */
+/************************************************************************************************************************************************/
 
+
+// Alta Vehiculo
+public function ingresarvehiculo($vehiculo)
+{
+    $ID_Vehiculos = $vehiculo->getID_Vehiculos();
+    $Matricula = $vehiculo->getMatricula();
+    $tipoId = $vehiculo->getTipoId();
+    $Modelo = $vehiculo->getModelo();
+    $Marca = $vehiculo->getMarca();
+    $AnioFabricacion = $vehiculo->getAnioFabricacion();
+    $Color = $vehiculo->getColor();
+    $Precio = $vehiculo->getPrecio();
+    
+
+    $insertar = "INSERT INTO vehiculos (ID_Vehiculos, Matricula, tipoId, Modelo, Marca, AnioFabricacion, Color, Precio) 
+             VALUES ('$ID_Vehiculos' , '$Matricula', '$tipoId', '$Modelo', '$Marca', '$AnioFabricacion', '$Color', '$Precio')";
+
+    return mysqli_query($this->conexion, $insertar);
+}
+
+
+
+
+// Mostrar Vehiculos    
+public function seleccionarTodosVehiculos()
+{
+    $resultado = mysqli_query($this->conexion, "select * from vehiculos"); 
+    $arreglo = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    return $arreglo;
+}
+
+
+
+
+// Baja Vehiculo
+public function eliminarVehiculo($Matricula)
+{
+    $query = "DELETE FROM vehiculos WHERE Matricula = ?";
+    $stmt = mysqli_prepare($this->conexion, $query);
+    if ($stmt === false) {
+        die("Error al preparar la sentencia: " . mysqli_error($this->conexion));
+    }
+    mysqli_stmt_bind_param($stmt, "s", $Matricula);
+    $resultado = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $resultado;
+}
+
+
+// Buscar Vehiculo
+public function buscarVehiculo($termino)
+{
+    $consulta = "SELECT * FROM instructor 
+             WHERE 
+             Matricula LIKE '%$termino%' 
+             OR 
+             Modelo LIKE '%$termino%' 
+             OR 
+             Marca LIKE '%$termino%'";
+
+    $resultado = mysqli_query($this->conexion, $consulta);
+
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
+        $vehiculo = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        return $vehiculo;
+    } else {
+        return [];
+    }
+}
+
+
+
+
+// Modificar Vehiculo
+public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio)
+{
+    $modificar = "UPDATE vehiculos SET 
+                ID_Vehiculos = '$ID_Vehiculos',
+                Matricula = '$Matricula',
+                tipoId = '$tipoId',
+                Modelo = '$Modelo',
+                Marca = '$Marca',
+                AnioFabricacion = '$AnioFabricacion',
+                Color = '$Color',
+                Precio = '$Precio',
+                
+             WHERE vehiculos = '$vehiculos'";
+
+    return mysqli_query($this->conexion, $modificar);
+}
+
+
+/************************************************************************************************************************************************/
 
 
 

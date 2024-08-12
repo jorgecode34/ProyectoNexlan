@@ -87,6 +87,39 @@ class Controlador
 
     /********************************************************************************************/
 
+/* FUNCIONES VEHICULOS*/
+    /********************************************************************************************/
+
+    public function listarVehiculo()
+    {
+        return $this->base->seleccionarTodosVehiculos();
+    }
+
+    public function buscarVehiculo($termino)
+    {
+        return $this->base->buscarVehiculo($termino);
+    }
+
+    /* Agarra los datos para crear vehiculo, crea el OBJETO estudiante para posteriorme ingresarlo en la BD  */
+    public function altaVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio)
+    {
+        $vehiculo = new vehiculo(null, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio);
+        $this->base->ingresarVehiculo($vehiculo);
+    }
+
+    /* Elimina un vehiculo de la base de datos usando su cédula como identificador único */
+    public function eliminarVehiculo($vehiculo)
+    {
+        return $this->base->eliminarVehiculo($vehiculo);
+    }
+
+    public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio)
+{
+    return $this->base->modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio);
+}
+
+
+    /********************************************************************************************/
 
 
 

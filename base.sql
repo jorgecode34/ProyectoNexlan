@@ -76,3 +76,15 @@ CREATE TABLE events (
     `time` TIME,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE vehiculos (
+    ID_Vehiculos INT NOT NULL AUTO_INCREMENT,
+    tipoId ENUM('auto', 'moto') NOT NULL,
+    Matricula VARCHAR(8) UNIQUE,
+    Modelo VARCHAR(30),
+    Marca VARCHAR(20),
+    AnioFabricacion INT(4),
+    Color VARCHAR(15),
+    Precio INT(10),
+    PRIMARY KEY (ID_Vehiculos, Matricula)
+);
