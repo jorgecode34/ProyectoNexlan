@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif !important;
+  overflow-y: scroll;
+  margin: 0;
+  background-position: center bottom;
+  background-size: cover;
+  --fc-today-bg-color: rgb(255 213 0 / 40%);
+  --fc-neutral-bg-color: hsla(0, 0%, 77%, 0.3);
+}
+
+
+/**************************** Header ******************************/
+
+.font-weight-header {
+  font-weight: 200 !important;
+}
+
+.header-web {
+  background-color: #01082F;
+  color: white;
+  height: 45px;
+}
+
+/******************************************************************/
+
+
+
+/******************************** Navbar **********************************/
+
+.navbar-color {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.centrar-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.color-azul-oscuro {
+  color: #01082F !important;
+}
+
+/*************************************************************************/
+
+
+
+/*************************************************************/
+.texto-carousel {
+  text-align: left !important;
+  padding: 1% 1% !important;
+  width: 480px !important;
+  top: 24% !important;
+}
+
+#hero-title {
+  font-weight: bold !important;
+  font-size: 3vw !important;
+}
+
+#hero-text {
+  margin-top: 20px !important;
+  font-size: 2vw !important;
+  font-weight: 200 !important;
+}
+
+.btn-ingresar {
+  font-size: 1.5vw !important;
+  padding: 2.5px 10vw !important;
+  border-width: 0.2vw !important;
+}
+
+/*************************************************************/
+
+
+
+
+/**************************************************************************/
+.oscurecer-imagen {
+  filter: brightness(50%) !important;
+}
+
+
+.gradiente-texto {
+  background: linear-gradient(to right, #283AA4, #FFFFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/**************************************************************************/
+
+
+
+
+
+/***************************************************************************/
+.seccion-quienes-somos {
+  background: linear-gradient(to bottom right, #171C3A 40%, #454C78 70%);
+  height: 200px;
+  /* Altura de la sección, ajusta según necesites */
+}
+
+#title-quienes-somos {
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 15px;
+
+}
+
+#text-quienes-somos {
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/***************************************************************************/
+
+
+
+/***************************************************************************/
+.seccion-nuestros-servicios {
+  background: rgb(0, 0, 0);
+  height: 200px;
+  /* Altura de la sección, ajusta según necesites */
+}
+
+#title-nuestros-servicios {
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#text-nuestros-servicios {
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/***************************************************************************/
+
+
+
+
+
+
+/****************************  SIDE BAR  *************************************/
+
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  background-color: #01082F;
+  max-width: 264px;
+  min-width: 264px;
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
+  z-index: 1040;
+}
+
+/* Sidebar collapse */
+#sidebar.collapsed {
+  margin-left: -264px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+
+
+.sidebar-nav {
+  padding: 0;
+}
+
+.sidebar-header {
+  color: #ffffff;
+  font-size: .75rem;
+  padding: .350rem 1.5rem .375rem;
+}
+
+.sidebar-link-dashboard{
+    text-decoration: none;
+    padding: .625rem 1.625rem;
+    color: #ffffff;
+    position: relative;
+    display: block;
+    font-size: 1rem;
+    transition: color 0.3s, background-color 0.3s; 
+}
+
+a.sidebar-link {
+  text-decoration: none;
+  padding: .625rem 1.625rem;
+  color: #a3a3a3;
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar-link:hover {
+  /* Blanco para el fondo del enlace */
+  color: #ffffff;
+  /* Azul oscuro para el texto del enlace */
+  /* Borde redondeado */
+}
+
+.separar-items {
+  padding-bottom: 12px;
+}
+
+
+.separar-headers {
+  padding-top: 40px;
+}
+
+.separar-hijos {
+  padding-left: 27px;
+}
+
+.hr-color{
+  color: #ffffff;
+}
+
+/*****************************************************************************/
+
+
+
+
+/***************************** Arrows sidebar ****************************************/
+
+.sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 .075rem .075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all .2s ease-out;
+}
+
+.sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all .2s ease-out;
+}
+
+/*************************************************************************************/
+
+
+
+
+/************************************************************************************/
+
+
+
+.btn-azul {
+  background-color: #2F44B9 !important;
+  color: white !important;
+}
+
+
+.modal {
+  z-index: 1050; 
+}
+       
+.search-icon-container {
+  display: flex;
+  align-items: center;
+}
+.search-icon-container form {
+  margin-right: 10px; 
+}
+
+
+.table-light{
+  --bs-table-bg: #ffffff !important;
+}
+
+.color-gris{
+  background-color: #F4F4F4 !important;
+}
+
+#header-tabla {
+    position: relative;
+    background-color: #fff; 
+}
+
+
+
+
+
+
+#iconoEstudiante{
+  fill: var(--bs-primary) !important; 
+}
+
+#iconoInstructor{
+  fill: var(--bs-warning) !important; 
+}
+
+#iconoTeorico{
+  fill: var(--bs-success) !important; 
+}
+
+#iconoVehiculo{
+  fill: var(--bs-info) !important; 
+}
+
+.custom-title {
+  font-size: 14px; 
+}
+
+.number-display {
+  font-size: 28px !important;
+}
+
+
+.fc-header-toolbar{
+  margin: 24px 10px 24px 10px;
+}
+
