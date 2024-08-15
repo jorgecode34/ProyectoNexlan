@@ -29,6 +29,7 @@ body {
   height: 45px;
 }
 
+
 /******************************************************************/
 
 
@@ -341,3 +342,9 @@ a.sidebar-link {
   margin: 24px 10px 24px 10px;
 }
 
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

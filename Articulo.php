@@ -183,7 +183,7 @@ class instructor {
 
 }
 
-class Vehiculo {
+class vehiculo {
     private $ID_Vehiculos;
     private $tipoId;
     private $Matricula;

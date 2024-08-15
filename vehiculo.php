@@ -287,8 +287,8 @@
                                                         <label for="tipoId" class="form-label">Tipo de Vehiculo</label>
                                                         <select class="form-select" id="tipoId" name="tipoId">
                                                             <option value="" selected>Seleccione una opción</option>
-                                                            <option value="auto">Auto</option>
-                                                            <option value="moto">Moto</option>
+                                                            <option value="Auto">Auto</option>
+                                                            <option value="Moto">Moto</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -326,7 +326,7 @@
                                                 <input type="text" placeholder="Ingrese Color" class="form-control" id="Color" name="Color" required>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="Precio" class="form-label">Precio</label>
+                                                <label for="Precio" class="form-label">Precio (en dolares)</label>
                                                 <input type="number" placeholder="Ingrese Precio" class="form-control" id="Precio" name="Precio" required>
                                             </div>
                                           
@@ -368,8 +368,9 @@
                                 $buscar = '';
                             }
 
+                            $vehiculos = $controlador->listarVehiculo();
+
                             // Metodo para buscar vehículos en la tabla
-                            $vehiculos = $controlador->buscarVehiculo($buscar);
 
                             // Si el array de vehículos no está vacío, mostrar la tabla
                             if (!empty($vehiculos)) {
@@ -388,7 +389,8 @@
                                             <th>Año fabricación</th>
                                             <th>Color</th>
                                             <th>Precio</th>
-                                            <th>Acciones</th>
+                                            <th class='center-content'>Eliminar</th>
+                                            <th>Modificar</th>
                                         </tr>
                                     </thead>";
 
@@ -451,13 +453,14 @@
                                             <div class='modal-body'>
                                                 <form action='modificar-vehiculo.php' method='post'>
 
+                                                `   <input type='hidden' name='ID_Vehiculos' value='{$vehiculo['ID_Vehiculos']}'>
                                                     <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}'>
 
                                                     <div class='mb-3'>
                                                         <label for='tipoId{$vehiculo['Matricula']}' class='form-label'>Tipo de Vehículo</label>
-                                                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' required>
-                                                            <option value='auto' ".($vehiculo['tipoId'] == 'auto' ? 'selected' : '').">Auto</option>
-                                                            <option value='moto' ".($vehiculo['tipoId'] == 'moto' ? 'selected' : '').">Moto</option>
+                                                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' vaule='{$vehiculo['Matricula']}' required>
+                                                            <option value='Auto'>Auto</option>
+                                                            <option value='Moto'>Moto</option>
                                                         </select>
                                                     </div>
 
