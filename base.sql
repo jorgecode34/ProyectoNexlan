@@ -79,8 +79,8 @@ CREATE TABLE events (
 
 CREATE TABLE vehiculos (
     ID_Vehiculos INT NOT NULL AUTO_INCREMENT,
-    tipoId ENUM('auto', 'moto') NOT NULL,
     Matricula VARCHAR(8) UNIQUE,
+    tipoId ENUM('Auto', 'Moto') NOT NULL,
     Modelo VARCHAR(30),
     Marca VARCHAR(20),
     AnioFabricacion INT(4),
