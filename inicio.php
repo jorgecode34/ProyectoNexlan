@@ -361,7 +361,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="instructor.php" class="btn btn-info mt-auto py-1 rounded-0 text-white">Ver más</a>
+                            <a href="vehiculo.php" class="btn btn-info mt-auto py-1 rounded-0 text-white">Ver más</a>
                         </div>
                     </div>
 

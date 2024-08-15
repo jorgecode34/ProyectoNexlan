@@ -208,22 +208,44 @@ body {
     transition: color 0.3s, background-color 0.3s; 
 }
 
+/*************************************************************/
+/* NUEVO */
 a.sidebar-link {
   text-decoration: none;
   padding: .625rem 1.625rem;
   color: #a3a3a3;
   position: relative;
-  display: block;
+  display: flex; /* Añadir esta línea */
+  align-items: center; /* Añadir esta línea */
   font-size: 1rem;
-  transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(234, 234, 234, 0.1);
+  border-radius: 8px;
+  transform: scaleX(0);
+  z-index: -1; 
+}
+
+.sidebar-link:hover::before {
+  transform: scaleX(0.9); 
+}
+/*************************************************************/
+
+.active-link{
+  color: #ffffff !important;
 }
 
 .sidebar-link:hover {
-  /* Blanco para el fondo del enlace */
   color: #ffffff;
-  /* Azul oscuro para el texto del enlace */
-  /* Borde redondeado */
 }
+
 
 .separar-items {
   padding-bottom: 12px;
@@ -234,9 +256,11 @@ a.sidebar-link {
   padding-top: 40px;
 }
 
-.separar-hijos {
-  padding-left: 27px;
+.table th, .table td {
+  width: 100px; /* Ajusta el ancho según sea necesario */
+  text-align: center !important; /* Centra el contenido de las celdas */
 }
+
 
 .hr-color{
   color: #ffffff;

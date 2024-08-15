@@ -20,7 +20,7 @@
 
     <div class="wrapper">
 
-<!-- Sidebar -->
+        <!-- Sidebar -->
         <aside id="sidebar">
             <div class="h-100 ">
 
@@ -49,13 +49,13 @@
                     <hr class="hr-color">
 
 
-<!-- Header General -->
+                    <!-- Header General -->
                     <li class="sidebar-header">
                         General
                     </li>
 
 
-<!-- Inicio -->
+                    <!-- Inicio -->
                     <li class="sidebar-item separar-items active-link">
 
                         <a href="inicio.php" class="sidebar-link">
@@ -68,7 +68,7 @@
 
                     </li>
 
-<!-- Configuracion -->
+                    <!-- Configuracion -->
                     <li class="sidebar-item">
 
                         <a href="#" class="sidebar-link">
@@ -83,13 +83,13 @@
 
 
 
-<!-- Header Menu de Gestion -->
+                    <!-- Header Menu de Gestion -->
                     <li class="sidebar-header separar-headers">
                         Menú de Gestión
                     </li>
 
 
-<!-- Usuarios -->
+                    <!-- Usuarios -->
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
@@ -113,7 +113,7 @@
                         </ul>
 
                     </li>
-<!-- Vehículos -->
+                    <!-- Vehículos -->
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link">
@@ -130,7 +130,7 @@
 
 
 
-<!-- Clases y Horarios -->
+                    <!-- Clases y Horarios -->
                     <li class="sidebar-item">
 
                         <a href="clases.php" class="sidebar-link">
@@ -147,7 +147,7 @@
                     <hr class="hr-color">
 
 
-<!-- Cerrar sesíón -->
+                    <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
                         <a href="cerrar_sesion.php" class="sidebar-link">
@@ -171,15 +171,15 @@
         </aside>
 
 
-<!-- Main Component -->
+        <!-- Main Component -->
         <div class="main">
 
 
 
-<!-- Nav Bar -->
+            <!-- Nav Bar -->
             <nav class="navbar navbar-expand navbar-light bg-white shadow-sm px-3 border-bottom">
 
-<!-- Boton para abir y cerrar sidebar -->
+                <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -198,19 +198,19 @@
             </nav>
 
 
-<!-- Cuerpo -->
+            <!-- Cuerpo -->
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
 
                         <h5 id="fecha-actual" class="text-center"></h5>
-                        
+
                         <h3>Vehiculos</h3>
                         <p>Administra los distintos Vehiculos del sistema aquí.</p>
 
 
                         <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow color-gris">
-<!-- Boton refrescar -->
+                            <!-- Boton refrescar -->
                             <div class="me-auto p-2">
                                 <button type="submit" class="btn btn-outline-dark" onClick="refreshPage()">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
@@ -219,7 +219,7 @@
                                     </svg>
                                 </button>
                             </div>
-<!-- Barra de busqueda -->
+                            <!-- Barra de busqueda -->
                             <div class="p-2">
                                 <form action="" method="get">
                                     <div class="input-group">
@@ -228,7 +228,7 @@
                                     </div>
                                 </form>
                             </div>
-<!-- Boton agregar estudiante -->
+                            <!-- Boton agregar Vehículo -->
                             <div class="p-2">
                                 <button type="button" class="btn btn-azul shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -254,101 +254,86 @@
 
 
 
-<!-- Modal agregar Vehiculo -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Vehiculo</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="alta-vehiculo.php" method="post">
-                    <div class="row">
-                        <!-- Columna izquierda -->
-                        <div class="col-lg-6">
-                            <div class="accordion shadow mb-3" id="accordionIdentification">
-                                <!-- Identificación -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button custom-header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIdentification" aria-expanded="true" aria-controls="collapseIdentification">
-                                            Identificación
-                                        </button>
-                                    </h2>
-                                    <div id="collapseIdentification" class="accordion-collapse collapse show">
-                                        <div class="accordion-body">
-                                            <div class="mb-3">
-                                                <label for="Matricula" class="form-label">Matricula</label>
-                                                <input type="text" placeholder="Ingrese Matricula" class="form-control" id="Matricula" name="Matricula">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="mb-3">
-                                                        <label for="tipoId" class="form-label">Tipo de Vehiculo</label>
-                                                        <select class="form-select" id="tipoId" name="tipoId">
-                                                            <option value="" selected>Seleccione una opción</option>
-                                                            <option value="Auto">Auto</option>
-                                                            <option value="Moto">Moto</option>
-                                                        </select>
+                        <!-- Modal agregar Vehiculo -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Vehiculo</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="alta-vehiculo.php" method="post">
+                                            <div class="accordion shadow mb-3" id="accordionIdentification">
+                                                <!-- Identificación -->
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button custom-header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIdentification" aria-expanded="true" aria-controls="collapseIdentification">
+                                                            Identificación
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseIdentification" class="accordion-collapse collapse show">
+                                                        <div class="accordion-body">
+                                                            <div class="mb-3">
+                                                                <label for="Matricula" class="form-label">Matricula</label>
+                                                                <input type="text" placeholder="Ingrese Matricula" class="form-control" id="Matricula" name="Matricula">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="tipoId" class="form-label">Tipo de Vehiculo</label>
+                                                                <select class="form-select" id="tipoId" name="tipoId">
+                                                                    <option value="" selected>Seleccione una opción</option>
+                                                                    <option value="Auto">Auto</option>
+                                                                    <option value="Moto">Moto</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <!-- <div class="mb-3">
-                                                <label for="pasaporte" class="form-label">Pasaporte</label>
-                                                <input type="text" placeholder="Ingrese Pasaporte" class="form-control" id="pasaporte" name="pasaporte" required disabled>
-                                            </div> -->
-                                        </div>
+                                                <!-- Datos de vehículo -->
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseName" aria-expanded="true" aria-controls="collapseName">
+                                                            Datos de vehículo
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseName" class="accordion-collapse collapse show">
+                                                        <div class="accordion-body">
+                                                            <div class="mb-3">
+                                                                <label for="Modelo" class="form-label">Modelo</label>
+                                                                <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="Marca" class="form-label">Marca</label>
+                                                                <input type="text" placeholder="Ingrese Marca" class="form-control" id="Marca" name="Marca">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="AnioFabricacion" class="form-label">Año de fabricación</label>
+                                                                <input type="number" placeholder="Ingrese Año de Fabricacion" class="form-control" id="AnioFabricacion" name="AnioFabricacion">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="Color" class="form-label">Color</label>
+                                                                <input type="text" placeholder="Ingrese Color" class="form-control" id="Color" name="Color" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="Precio" class="form-label">Precio (en dolares)</label>
+                                                                <input type="number" placeholder="Ingrese Precio" class="form-control" id="Precio" name="Precio" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- Fin del accordion-item -->
+                                            </div> <!-- Fin del accordion -->
+
                                     </div>
-                                </div>
-                                <!-- Datos de vehículo -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseName" aria-expanded="true" aria-controls="collapseName">
-                                            Datos de vehículo
-                                        </button>
-                                    </h2>
-                                    <div id="collapseName" class="accordion-collapse collapse show">
-                                        <div class="accordion-body">
-                                            <div class="mb-3">
-                                                <label for="Modelo" class="form-label">Modelo</label>
-                                                <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Marca" class="form-label">Marca</label>
-                                                <input type="text" placeholder="Ingrese Marca" class="form-control" id="Marca" name="Marca">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="AnioFabricacion" class="form-label">Año de fabricación</label>
-                                                <input type="number" placeholder="Ingrese Año de Fabricacion" class="form-control" id="AnioFabricacion" name="AnioFabricacion">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Color" class="form-label">Color</label>
-                                                <input type="text" placeholder="Ingrese Color" class="form-control" id="Color" name="Color" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Precio" class="form-label">Precio (en dolares)</label>
-                                                <input type="number" placeholder="Ingrese Precio" class="form-control" id="Precio" name="Precio" required>
-                                            </div>
-                                          
-                                        </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                     </div>
-                                </div> <!-- Fin del accordion-item -->
-                            </div> <!-- Fin del accordion -->
-                        </div> <!-- Fin de la columna izquierda -->
-                    </div> <!-- Fin de la fila -->
-                
-<!-- Cerrar y guardar cambios -->
-                     <div class="modal-footer">
-                    <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </form>
-            </div> <!-- Fin del modal-body -->
-        </div> <!-- Fin del modal-content -->
-    </div> <!-- Fin del modal-dialog -->
-</div> <!-- Fin del modal -->
-
-                              
+                                    </form> <!-- Fin del modal-body -->
+                                </div> <!-- Fin del modal-content -->
+                            </div> <!-- Fin del modal-dialog -->
+                        </div> <!-- Fin del modal -->
 
 
 
@@ -356,29 +341,31 @@
 
 
 
-                            <!-- Table -->
-                            <?php
-                            include("Controlador.php");
-                            $controlador = new Controlador();
 
-                            // Verificar si se envió un término de búsqueda a través de $_GET
-                            if (isset($_GET['buscar'])) {
-                                $buscar = $_GET['buscar'];
-                            } else {
-                                $buscar = '';
-                            }
 
-                            $vehiculos = $controlador->listarVehiculo();
+                        <!-- Table -->
+                        <?php
+                        include("Controlador.php");
+                        $controlador = new Controlador();
 
-                            // Metodo para buscar vehículos en la tabla
+                        // Verificar si se envió un término de búsqueda a través de $_GET
+                        if (isset($_GET['buscar'])) {
+                            $buscar = $_GET['buscar'];
+                        } else {
+                            $buscar = '';
+                        }
 
-                            // Si el array de vehículos no está vacío, mostrar la tabla
-                            if (!empty($vehiculos)) {
-                                echo "<div id='tabla-vehiculos' class='table-responsive shadow'>";
-                                echo "<table class='table'>";
+                        $vehiculos = $controlador->listarVehiculo();
 
-                                // HEADER TABLA
-                                echo " 
+                        // Metodo para buscar vehículos en la tabla
+
+                        // Si el array de vehículos no está vacío, mostrar la tabla
+                        if (!empty($vehiculos)) {
+                            echo "<div id='tabla-vehiculos' class='table-responsive shadow'>";
+                            echo "<table class='table'>";
+
+                            // HEADER TABLA
+                            echo " 
                                     <thead class='table-light'>
                                         <tr>
                                             <th>ID</th>
@@ -389,26 +376,26 @@
                                             <th>Año fabricación</th>
                                             <th>Color</th>
                                             <th>Precio</th>
-                                            <th class='center-content'>Eliminar</th>
+                                            <th>Eliminar</th>
                                             <th>Modificar</th>
                                         </tr>
                                     </thead>";
 
-                                // CUERPO TABLA
-                                echo "<tbody>";
-                                foreach ($vehiculos as $vehiculo) {
-                                    echo "<tr>";
-                                    echo "<td>{$vehiculo['ID_Vehiculos']}</td>";
-                                    echo "<td>{$vehiculo['Matricula']}</td>";
-                                    echo "<td>{$vehiculo['tipoId']}</td>";
-                                    echo "<td>{$vehiculo['Modelo']}</td>";
-                                    echo "<td>{$vehiculo['Marca']}</td>";
-                                    echo "<td>{$vehiculo['AnioFabricacion']}</td>";
-                                    echo "<td>{$vehiculo['Color']}</td>";
-                                    echo "<td>{$vehiculo['Precio']}</td>";
+                            // CUERPO TABLA
+                            echo "<tbody>";
+                            foreach ($vehiculos as $vehiculo) {
+                                echo "<tr>";
+                                echo "<td>{$vehiculo['ID_Vehiculos']}</td>";
+                                echo "<td>{$vehiculo['Matricula']}</td>";
+                                echo "<td>{$vehiculo['tipoId']}</td>";
+                                echo "<td>{$vehiculo['Modelo']}</td>";
+                                echo "<td>{$vehiculo['Marca']}</td>";
+                                echo "<td>{$vehiculo['AnioFabricacion']}</td>";
+                                echo "<td>{$vehiculo['Color']}</td>";
+                                echo "<td>{$vehiculo['Precio']}</td>";
 
-                                    // BOTON DE BAJA
-                                    echo "<td class='text-center'>
+                                // BOTON DE BAJA
+                                echo "<td class='text-center'>
                                             <form action='baja-vehiculo.php' method='post'>
                                                 <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}' /> 
                                                 <button type='submit' class='btn btn-danger'>
@@ -420,8 +407,8 @@
                                             </form>
                                         </td>";
 
-                                    // BOTON QUE ME LLEVA AL MODAL DE MODIFICAR
-                                    echo "<td class='text-center'>
+                                // BOTON QUE ME LLEVA AL MODAL DE MODIFICAR
+                                echo "<td class='text-center'>
                                             <button type='button' data-bs-toggle='modal' data-bs-target='#modalModificar{$vehiculo['Matricula']}' class='btn btn-warning'>
                                                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 16 16'>
                                                     <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>
@@ -429,18 +416,18 @@
                                                 </svg>
                                             </button>
                                         </td>";
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";
-                                echo "</table>";
-                                echo "</div>";
-                            } else {
-                                echo "<br> No existen vehículos que coincidan con la búsqueda.";
+                                echo "</tr>";
                             }
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
+                        } else {
+                            echo "<br> No existen vehículos que coincidan con la búsqueda.";
+                        }
 
-                            // Modal para modificar vehículo
-                            foreach ($vehiculos as $vehiculo) {
-                                echo "
+                        // Modal para modificar vehículo
+                        foreach ($vehiculos as $vehiculo) {
+                            echo "
                                 <div class='modal fade' id='modalModificar{$vehiculo['Matricula']}' tabindex='-1' aria-labelledby='modalModificarLabel{$vehiculo['Matricula']}' aria-hidden='true'>
                                     <div class='modal-dialog modal-dialog-scrollable'>
                                         <div class='modal-content'>
@@ -501,10 +488,10 @@
                                         </div>
                                     </div>
                                 </div>";
-                            }
+                        }
 
-                            $controlador->cerrarConexion();
-                            ?>
+                        $controlador->cerrarConexion();
+                        ?>
                     </div>
                 </div>
             </main>
