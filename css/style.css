@@ -8,7 +8,7 @@
 
 body {
   font-family: "Outfit", sans-serif !important;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin: 0;
   background-position: center bottom;
   background-size: cover;
@@ -16,6 +16,9 @@ body {
   --fc-neutral-bg-color: hsla(0, 0%, 77%, 0.3);
 }
 
+body.dashboard-page {
+  overflow-y: hidden;
+}
 
 /**************************** Header ******************************/
 
@@ -162,12 +165,13 @@ body {
   align-items: stretch;
   display: flex;
   width: 100%;
+  height: 100vh;
 }
 
 #sidebar {
   background-color: #01082F;
-  max-width: 264px;
-  min-width: 264px;
+  max-width: 240px;
+  min-width: 240px;
   transition: all 0.35s ease-in-out;
   box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
   z-index: 1040;
@@ -175,7 +179,7 @@ body {
 
 /* Sidebar collapse */
 #sidebar.collapsed {
-  margin-left: -264px;
+  margin-left: -240px;
 }
 
 .main {
@@ -183,7 +187,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-y: auto !important;
   transition: all 0.35s ease-in-out;
 }
 
@@ -213,12 +217,21 @@ body {
 a.sidebar-link {
   text-decoration: none;
   padding: .625rem 1.625rem;
-  color: #a3a3a3;
+  color: #ffffff;
   position: relative;
-  display: flex; /* Añadir esta línea */
-  align-items: center; /* Añadir esta línea */
-  font-size: 1rem;
+  display: flex; 
+  align-items: center; 
+  font-size: 0.8rem;
 }
+
+/* .navbar {
+  position: sticky !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background-color: #ffffff !important; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+} */
 
 .sidebar-link::before {
   content: "";
@@ -236,29 +249,36 @@ a.sidebar-link {
 .sidebar-link:hover::before {
   transform: scaleX(0.9); 
 }
+
+.sidebar-link.selected::before {
+  background-color: #ffffff; /* Color más claro para el elemento seleccionado */
+  transform: scaleX(0.9); /* Mantener el mismo tamaño que el hover */
+}
+.sidebar-link.selected {
+  color: #01082F; /* Cambiar el color del texto cuando está seleccionado */
+  font-weight: bold;
+}
 /*************************************************************/
 
 .active-link{
   color: #ffffff !important;
 }
 
-.sidebar-link:hover {
-  color: #ffffff;
-}
+
 
 
 .separar-items {
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 }
 
 
 .separar-headers {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .table th, .table td {
-  width: 100px; /* Ajusta el ancho según sea necesario */
-  text-align: center !important; /* Centra el contenido de las celdas */
+  width: 100px; 
+  text-align: center !important;
 }
 
 
@@ -281,13 +301,13 @@ a.sidebar-link {
   padding: 2px;
   position: absolute;
   right: 1.5rem;
-  top: 1.4rem;
-  transform: rotate(-135deg);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
   transition: all .2s ease-out;
 }
 
 .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
-  transform: rotate(45deg);
+  transform: translateY(-50%) rotate(-135deg);
   transition: all .2s ease-out;
 }
 
@@ -372,3 +392,18 @@ a.sidebar-link {
   align-items: center;
   height: 100%;
 }
+
+.fixed-nav{
+  position: sticky !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background-color: #ffffff !important; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control:focus {
+  border-color: var(--bs-border-color) !important;
+  box-shadow: none !important; 
+}
+
