@@ -11,4 +11,3 @@
     $resultado = $controlador->modificarVehiculo($_POST['ID_Vehiculos'], $_POST['Matricula'], $_POST['tipoId'], $_POST['Modelo'], $_POST['Marca'], $_POST['AnioFabricacion'], $_POST['Color'], $_POST['Precio']);
 
     header('Location: vehiculo.php');
-?>

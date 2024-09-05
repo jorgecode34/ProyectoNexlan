@@ -239,7 +239,7 @@ public function __construct($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca,
 
 
     public function __toString() {
-        return $this->ID_Vehiculo . ","  . $this->Matricula . "," . $this->tipoId . "," . $this->Modelo . "," . $this->Marca . "," . $this->AnioFabricacion . "," . $this->Color . "," . $this->Precio;
+        return $this->ID_Vehiculos . ","  . $this->Matricula . "," . $this->tipoId . "," . $this->Modelo . "," . $this->Marca . "," . $this->AnioFabricacion . "," . $this->Color . "," . $this->Precio;
     }
 }
 
