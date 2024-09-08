@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['documento'])) {
     $id = $_POST['documento'];
     
     $controlador = new Controlador();
-    $controlador->eliminarInstructor($id);
+    $controlador->bajaInstructor($id);
     
     header('Location: Instructor.php'); 
 } else {

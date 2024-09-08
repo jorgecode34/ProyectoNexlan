@@ -6,7 +6,7 @@ $controlador = new Controlador();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
 
-    $resultado = $controlador->eliminarEvento($id);
+    $resultado = $controlador->bajaEvento($id);
 
     if ($resultado) {
         header("Location: clases.php?eliminado=true");

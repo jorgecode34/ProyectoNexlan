@@ -39,7 +39,9 @@ function renderizarCuerpoTabla($estudiantes) {
         $html .= "<tr>";
 
         foreach ($estudiante as $key => $value) {
+            if ($key !== 'activo') { // Excluye el atributo activo
                 $html .= "<td>$value</td>";
+            }
         }
 
         $html .= renderizarBotones($estudiante['documento']);

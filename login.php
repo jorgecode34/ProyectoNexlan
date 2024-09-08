@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($usuarios[$usuario]) && $usuarios[$usuario] === $contrasena) {
         // Login exitoso, iniciar sesión y redirigir a inicio.php
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['password'] = $contrasena;
         if ($recordar) {
             setcookie('email', $usuario, time() + (86400 * 30), "/"); // 30 días
             setcookie('password', $contrasena, time() + (86400 * 30), "/"); // 30 días
@@ -34,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($estudiante) {
         // Login exitoso, iniciar sesión y redirigir a inicio.php
         $_SESSION['usuario'] = $usuario;
+        $_SESSION['password'] = $contrasena;
         if ($recordar) {
             setcookie('email', $usuario, time() + (86400 * 30), "/"); // 30 días
             setcookie('password', $contrasena, time() + (86400 * 30), "/"); // 30 días

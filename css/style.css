@@ -20,6 +20,10 @@ body.dashboard-page {
   overflow-y: hidden;
 }
 
+a{
+  text-decoration: none !important;
+}
+
 /**************************** Header ******************************/
 
 .font-weight-header {
@@ -407,3 +411,17 @@ a.sidebar-link {
   box-shadow: none !important; 
 }
 
+.form-check-input:checked {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  box-shadow: none !important; /* Elimina el box-shadow */
+}
+
+.form-check-input:not(:checked) {
+  border-color: gray !important;
+  box-shadow: none !important; /* Elimina el box-shadow */
+}
+
+.form-check-input:focus {
+  box-shadow: none !important; /* Elimina el box-shadow al enfocar */
+}

@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Matricula'])) {
     $id = $_POST['Matricula'];
     
     $controlador = new Controlador();
-    $controlador->eliminarVehiculo($id);
+    $controlador->bajaVehiculo($id);
     
     header('Location: vehiculo.php'); 
 } else {

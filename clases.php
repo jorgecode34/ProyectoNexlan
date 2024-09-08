@@ -1,4 +1,10 @@
-<?php include 'verificar_sesion.php'; ?>
+<?php include 'verificar_sesion.php';
+require_once 'Controlador.php';
+$controlador = new Controlador();
+$instructores = $controlador->obtenerInstructores();
+$estudiantes = $controlador->obtenerEstudiantes();
+$vehiculos = $controlador->obtenerVehiculos();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -213,9 +219,9 @@
                 </div>
             </main>
 
-<!-- Modal de Evento-->
+            <!-- Modal de Evento-->
             <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
 
                         <div class="modal-header">
@@ -223,60 +229,62 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <form id="eventForm" action="modificar-evento.php" method="POST">
-                            <div class="modal-body">
+                        <div class="modal-body">
+                            <form id="eventForm" action="modificar-evento.php" method="POST">
+                                <div class="modal-body">
 
-                                <div class="mb-3">
-                                    <!-- <label for="visualizar_id" class="form-label">ID</label> -->
-                                    <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
+                                        <!-- <label for="visualizar_id" class="form-label">ID</label> -->
+                                        <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
+
+                                    <div class="mb-3">
+                                        <label for="visualizar_titulo" class="form-label">Título del evento</label>
+                                        <input type="text" class="form-control" id="visualizar_titulo" name="titulo" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="visualizar_inicio" class="form-label">Día</label>
+                                        <input type="date" class="form-control" id="visualizar_inicio" name="inicio" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <!-- <label for="visualizar_fin" class="form-label">Fin</label> -->
+                                        <input type="hidden" class="form-control" id="visualizar_fin" name="fin" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="visualizar_descripcion" class="form-label">Descripcion </label>
+                                        <textarea class="form-control" id="visualizar_descripcion" name="descripcion" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="visualizar_time" class="form-label">Hora</label>
+                                        <input type="time" class="form-control" id="visualizar_time" name="hora" required>
+                                    </div>
+
+
+
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="visualizar_titulo" class="form-label">Título del evento</label>
-                                    <input type="text" class="form-control" id="visualizar_titulo" name="titulo" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="visualizar_inicio" class="form-label">Día</label>
-                                    <input type="date" class="form-control" id="visualizar_inicio" name="inicio" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <!-- <label for="visualizar_fin" class="form-label">Fin</label> -->
-                                    <input type="hidden" class="form-control" id="visualizar_fin" name="fin" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="visualizar_descripcion" class="form-label">Descripcion </label>
-                                    <textarea class="form-control" id="visualizar_descripcion" name="descripcion" rows="3"></textarea>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="visualizar_time" class="form-label">Hora</label>
-                                    <input type="time" class="form-control" id="visualizar_time" name="hora" required>
-                                </div>
-
-                            </div>
+                        </div>
 
 
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                        </form>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            </form>
 
 
-                        <form id="deleteForm" action="baja-evento.php" method="POST">
+                            <form id="deleteForm" action="baja-evento.php" method="POST">
                                 <input type="hidden" id="delete_id" name="id">
                                 <button type="submit" class="btn btn-danger">Eliminar</button>
-                        </form>
+                            </form>
 
 
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 
 
-                            </div>
-                        
+                        </div>
 
-                       
+
+
 
 
                     </div>
@@ -285,9 +293,9 @@
 
 
 
-<!-- Modal de Día -->
+            <!-- Modal de Día -->
             <div class="modal fade" id="dayModal" tabindex="-1" aria-labelledby="dayModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
 
                         <div class="modal-header">
@@ -295,36 +303,83 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <form id="newEventForm" action="alta-evento.php" method="POST">
-                            <div class="modal-body">
+                        <div class="modal-body">
+                            <form id="newEventForm" action="alta-evento.php" method="POST">
+                                <div class="modal-body">
 
-                                <div class="mb-3">
-                                    <label for="nuevo_titulo" class="form-label">Título del evento</label>
-                                    <input type="text" class="form-control" id="nuevo_titulo" name="titulo" required>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="nuevo_titulo" class="form-label">Título del evento</label>
+                                        <input type="text" class="form-control" id="nuevo_titulo" name="titulo" required>
+                                    </div>
 
-                                <div class="mb-3">
-                                    <label for="nueva_descripcion" class="form-label">Descripcion</label>
-                                    <textarea class="form-control" id="nueva_descripcion" name="descripcion" rows="3"></textarea>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="nueva_descripcion" class="form-label">Descripcion</label>
+                                        <textarea class="form-control" id="nueva_descripcion" name="descripcion" rows="3"></textarea>
+                                    </div>
 
-                                <div class="mb-3">
-                                    <label for="nuevo_time" class="form-label">Hora</label>
-                                    <input type="time" class="form-control" id="nuevo_time" name="hora" required>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="nuevo_time" class="form-label">Hora</label>
+                                        <input type="time" class="form-control" id="nuevo_time" name="hora" required>
+                                    </div>
 
-                                <!-- <div class="mb-3">
+                                    <div class="mb-3">
+                                        <label for="asignar_tipo" class="form-label">Tipo de Clase</label>
+                                        <select class="form-select" id="asignar_tipo" name="tipo" required>
+                                            <option value="">Selecciona un Tipo</option>
+                                            <option value="Teórico" id='Teórico'>Teórico</option>
+                                            <option value="Práctico" id='Práctico'>Práctico</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="nuevo_instructor" class="form-label">Instructor</label>
+                                        <select class="form-select" id="nuevo_instructor" name="instructor" required>
+                                            <option value="">Selecciona un instructor</option>
+                                            <?php foreach ($instructores as $instructor): ?>
+                                                <option value="<?php echo $instructor['IDInstructor']; ?>">
+                                                    <?php echo htmlspecialchars($instructor['primerNombre'] . ' ' . $instructor['primerApellido']); ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="nuevo_estudiante" class="form-label">Estudiante</label>
+                                        <select class="form-select" id="nuevo_estudiante" name="estudiante" required>
+                                            <option value="">Selecciona un estudiante</option>
+                                            <?php foreach ($estudiantes as $estudiante): ?>
+                                                <option value="<?php echo $estudiante['IDEstudiante']; ?>">
+                                                    <?php echo htmlspecialchars($estudiante['primerNombre'] . ' ' . $estudiante['primerApellido']); ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="nuevo_vehiculo" class="form-label">Vehiculo</label>
+                                        <select class="form-select" id="nuevo_vehiculo" name="vehiculo" required>
+                                            <option value="">Selecciona un vehiculo</option>
+                                            <?php foreach ($vehiculos as $vehiculo): ?>
+                                                <option value="<?php echo $vehiculo['ID_Vehiculos']; ?>">
+                                                    <?php echo htmlspecialchars($vehiculo['Matricula'] . ' ' . $vehiculo['Modelo'] . ' ' . $vehiculo['Marca']); ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+
+                                    <!-- <div class="mb-3">
                                     <label for="nuevo_color" class="form-label">Color</label>
                                     <input type="color" class="form-control form-control-color" id="nueco_color" name="color" value="#563d7c" title="Choose your color">
                                 </div> -->
 
-                                <input type="hidden" id="nuevo_fecha" name="fecha">
+                                    <input type="hidden" id="nuevo_fecha" name="fecha">
 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Guardar evento</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar evento</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
                         </form>
 
                     </div>

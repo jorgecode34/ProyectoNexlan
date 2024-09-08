@@ -256,7 +256,7 @@
 
                         <!-- Modal agregar Vehiculo -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                            <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
 
                                     <div class="modal-header">
@@ -300,6 +300,7 @@
                                                     </h2>
                                                     <div id="collapseName" class="accordion-collapse collapse show">
                                                         <div class="accordion-body">
+                                                        <input type="hidden" id="Estado" name="Estado" value="Disponible">
                                                             <div class="mb-3">
                                                                 <label for="Modelo" class="form-label">Modelo</label>
                                                                 <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
@@ -355,9 +356,10 @@
                             $buscar = '';
                         }
 
-                        $vehiculos = $controlador->listarVehiculo();
+                        $vehiculos = $controlador->listarVehiculos();
 
                         // Metodo para buscar vehículos en la tabla
+                        $vehiculos = $controlador->buscarVehiculo($buscar);
 
                         // Si el array de vehículos no está vacío, mostrar la tabla
                         if (!empty($vehiculos)) {
@@ -376,6 +378,7 @@
                                             <th>Año fabricación</th>
                                             <th>Color</th>
                                             <th>Precio</th>
+                                            <th>Estado</th>
                                             <th>Eliminar</th>
                                             <th>Modificar</th>
                                         </tr>
@@ -393,6 +396,7 @@
                                 echo "<td>{$vehiculo['AnioFabricacion']}</td>";
                                 echo "<td>{$vehiculo['Color']}</td>";
                                 echo "<td>{$vehiculo['Precio']}</td>";
+                                echo "<td>{$vehiculo['Estado']}</td>";
 
                                 // BOTON DE BAJA
                                 echo "<td class='text-center'>
@@ -475,6 +479,15 @@
                                                         <label for='Precio{$vehiculo['Matricula']}' class='form-label'>Precio</label>
                                                         <input type='number' class='form-control' id='Precio{$vehiculo['Matricula']}' name='Precio' value='{$vehiculo['Precio']}' required>
                                                     </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='Estado{$vehiculo['Matricula']}' class='form-label'>Estado</label>
+                                                        <select class='form-select' id='Estado{$vehiculo['Matricula']}' name='Estado' value='{$vehiculo['Estado']}' required>
+                                                            <option value='Disponible' " . ($vehiculo['Estado'] == 'Disponible' ? 'selected' : '') . ">Disponible</option>
+                                                            <option value='En clase' " . ($vehiculo['Estado'] == 'En clase' ? 'selected' : '') . ">En clase</option>
+                                                            <option value='En mantenimiento' " . ($vehiculo['Estado'] == 'En mantenimiento' ? 'selected' : '') . ">En mantenimiento</option>
+                                                        </select>
+                                                    </div>  
 
                                             </div>
 

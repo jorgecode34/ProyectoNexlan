@@ -18,6 +18,7 @@ CREATE TABLE estudiante (
     email VARCHAR(100),
     pass VARCHAR(50),
     teorico VARCHAR(10),
+    activo BOOLEAN DEFAULT TRUE,
     PRIMARY KEY (IDEstudiante, documento)
 );
 
@@ -35,6 +36,7 @@ CREATE TABLE instructor (
     tel VARCHAR(20),
     email VARCHAR(100),
     pass VARCHAR(50),
+    activo BOOLEAN DEFAULT TRUE,
     PRIMARY KEY (IDInstructor, documento)
 );
 
@@ -49,33 +51,6 @@ INSERT INTO admin (nombre, pass) VALUES ('aguslopoli@gmail.com', '1234');
 INSERT INTO admin (nombre, pass) VALUES ('roberto34xd@gmail.com', '1234');
 
 
--- INSERT INTO instructor (IDInstructor, ci, pasaporte, primerNombre, segundoNombre, primerApellido, segundoApellido, calle, numeroPuerta, barrio, localidad, tel, email, pass) 
---                  VALUES ('$IDInstructor' , '$ci', '$pasaporte', '$primerNombre', '$segundoNombre', '$primerApellido', '$segundoApellido', '$calle', '$numeroPuerta', '$barrio', '$localidad', '$tel', '$email', '$pass')
-
-
-
-
-/*
-CREATE TABLE clases (
-    IDClase INT NOT NULL AUTO_INCREMENT,
-    fecha DATE NOT NULL,
-    hora TIME NOT NULL,
-    tipo ENUM('Teórico', 'Práctico') NOT NULL,
-    duracion INT NOT NULL, -- duración en minutos
-    PRIMARY KEY (IDClase)
-);
-*/
-
-CREATE TABLE events (
-    id INT AUTO_INCREMENT,
-    title VARCHAR(255),
-    color VARCHAR(7),
-    start DATE,
-    descripcion VARCHAR(255),
-    -- end DATE,
-    `time` TIME,
-    PRIMARY KEY (id)
-);
 
 CREATE TABLE vehiculos (
     ID_Vehiculos INT NOT NULL AUTO_INCREMENT,
@@ -86,5 +61,26 @@ CREATE TABLE vehiculos (
     AnioFabricacion INT(4),
     Color VARCHAR(15),
     Precio INT(10),
+    Estado ENUM('Disponible', 'En clase', 'En mantenimiento'),
+    activo BOOLEAN DEFAULT TRUE,
     PRIMARY KEY (ID_Vehiculos, Matricula)
+);
+
+
+CREATE TABLE events (
+    id INT AUTO_INCREMENT,
+    title VARCHAR(255),
+    color VARCHAR(7),
+    start DATE,
+    descripcion VARCHAR(255),
+    -- end DATE,
+    `time` TIME,
+    tipo ENUM('Teórico', 'Práctico'),
+    IDInstructor INT,
+    ID_Vehiculos INT,
+    IDEstudiante INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (IDInstructor) REFERENCES instructor(IDInstructor),
+    FOREIGN KEY (ID_Vehiculos) REFERENCES vehiculos(ID_Vehiculos),
+    FOREIGN KEY (IDEstudiante) REFERENCES estudiante(IDEstudiante)
 );

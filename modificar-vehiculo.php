@@ -8,6 +8,6 @@
 
     require_once 'Controlador.php';
     $controlador = new Controlador();
-    $resultado = $controlador->modificarVehiculo($_POST['ID_Vehiculos'], $_POST['Matricula'], $_POST['tipoId'], $_POST['Modelo'], $_POST['Marca'], $_POST['AnioFabricacion'], $_POST['Color'], $_POST['Precio']);
+    $resultado = $controlador->modificarVehiculo($_POST['ID_Vehiculos'], $_POST['Matricula'], $_POST['tipoId'], $_POST['Modelo'], $_POST['Marca'], $_POST['AnioFabricacion'], $_POST['Color'], $_POST['Precio'], $_POST['Estado']);
 
     header('Location: vehiculo.php');

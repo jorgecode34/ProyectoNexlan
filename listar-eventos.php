@@ -2,7 +2,7 @@
 require_once 'Controlador.php';
 
 $controlador = new Controlador();
-$eventos = $controlador->obtenerEventos();
+$eventos = $controlador->listarEventos();
 
 $evs = [];
 foreach($eventos as $evento) {

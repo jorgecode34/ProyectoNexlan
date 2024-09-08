@@ -24,7 +24,7 @@ class Controlador
 
     public function listarEstudiantes()
     {
-        return $this->base->seleccionarTodos();
+        return $this->base->listarEstudiantes();
     }
 
     public function buscarEstudiantes($termino)
@@ -58,7 +58,7 @@ class Controlador
 
     public function listarInstructores()
     {
-        return $this->base->seleccionarTodos();
+        return $this->base->listarInstructores();
     }
 
     public function buscarInstructores($termino)
@@ -70,13 +70,13 @@ class Controlador
     public function altaInstructor($documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass)
     {
         $instructor = new instructor(null, $documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass);
-        $this->base->ingresarInstructor($instructor);
+        $this->base->altaInstructor($instructor);
     }
 
     /* Elimina un estudiante de la base de datos usando su documento como identificador único */
-    public function eliminarInstructor($documento)
+    public function bajaInstructor($documento)
     {
-        return $this->base->eliminarInstructor($documento);
+        return $this->base->bajaInstructor($documento);
     }
 
     public function modificarInstructor($IDInstructor, $documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass)
@@ -90,9 +90,9 @@ class Controlador
 /* FUNCIONES VEHICULOS*/
     /********************************************************************************************/
 
-    public function listarVehiculo()
+    public function listarVehiculos()
     {
-        return $this->base->seleccionarTodosVehiculos();
+        return $this->base->listarVehiculos();
     }
 
     public function buscarVehiculo($termino)
@@ -101,21 +101,21 @@ class Controlador
     }
 
     /* Agarra los datos para crear vehiculo, crea el OBJETO estudiante para posteriorme ingresarlo en la BD  */
-    public function altaVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio)
+    public function altaVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado)
     {
-        $vehiculo = new vehiculo(null, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio);
-        $this->base->ingresarVehiculo($vehiculo);
+        $vehiculo = new vehiculo(null, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado);
+        $this->base->altaVehiculo($vehiculo);
     }
 
     /* Elimina un vehiculo de la base de datos usando su cédula como identificador único */
-    public function eliminarVehiculo($vehiculo)
+    public function bajaVehiculo($vehiculo)
     {
-        return $this->base->eliminarVehiculo($vehiculo);
+        return $this->base->bajaVehiculo($vehiculo);
     }
 
-    public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio)
+    public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado)
     {
-        return $this->base->modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio);
+        return $this->base->modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado);
     }
 
 
@@ -127,14 +127,14 @@ class Controlador
     /* FUNCIONES EVENTOS */
     /********************************************************************************************/
 
-    public function obtenerEventos()
+    public function listarEventos()
     {
-        return $this->base->obtenerEventos();
+        return $this->base->listarEventos();
     }
 
-    public function crearEvento($titulo, $fecha, $descripcion, $hora, $color)
+    public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
     {
-        return $this->base->crearEvento($titulo, $fecha, $descripcion, $hora, $color);
+        return $this->base->altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante);
     }
 
 
@@ -143,9 +143,9 @@ class Controlador
         return $this->base->modificarEvento($id, $titulo, $inicio, $descripcion, $hora);
     }
 
-    public function eliminarEvento($id)
+    public function bajaEvento($id)
     {
-        return $this->base->eliminarEvento($id);
+        return $this->base->bajaEvento($id);
     }
 
     /********************************************************************************************/
@@ -166,11 +166,30 @@ class Controlador
         return $this->base->listarTotalEstudiantesAprobados();
     }
 
+    public function listarTotalVehiculosMantenimiento()
+    {
+        return $this->base->listarTotalVehiculosMantenimiento();
+    }
+
+    public function obtenerInstructores()
+    {
+        return $this->base->obtenerInstructores();
+    }
+    
+    public function obtenerEstudiantes()
+    {
+        return $this->base->obtenerEstudiantes();
+    }
+    public function obtenerVehiculos()
+    {
+        return $this->base->obtenerVehiculos();
+    }
+
 
     public function traerTabla()
     {
         echo ('<pre>');
-        print_r($this->base->seleccionarTodos());
+        print_r($this->base->listarEstudiantes());
         echo ('</pre>');
     }
 
