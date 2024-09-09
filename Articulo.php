@@ -193,9 +193,10 @@ class vehiculo {
     private $Color;
     private $Precio;
     private $Estado;
+    private $kilometraje;
 
 
-public function __construct($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado) {
+public function __construct($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado, $kilometraje) {
     $this->ID_Vehiculos = $ID_Vehiculos;
     $this->Matricula = $Matricula;
     $this->tipoId = $tipoId;
@@ -205,6 +206,7 @@ public function __construct($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca,
     $this->Color = $Color;
     $this->Precio = $Precio;
     $this->Estado = $Estado;
+    $this->kilometraje = $kilometraje;
     }
 
     public function getID_Vehiculos(){
@@ -243,9 +245,12 @@ public function __construct($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca,
         return $this->Estado;
     }
 
+    public function getKilometraje() {
+        return $this->kilometraje;
+    }
 
     public function __toString() {
-        return $this->ID_Vehiculos . ","  . $this->Matricula . "," . $this->tipoId . "," . $this->Modelo . "," . $this->Marca . "," . $this->AnioFabricacion . "," . $this->Color . "," . $this->Precio . "," . $this->Estado;
+        return $this->ID_Vehiculos . ","  . $this->Matricula . "," . $this->tipoId . "," . $this->Modelo . "," . $this->Marca . "," . $this->AnioFabricacion . "," . $this->Color . "," . $this->Precio . "," . $this->Estado . "," . $this->kilometraje;
     }
 }
 

@@ -321,6 +321,10 @@
                                                                 <label for="Precio" class="form-label">Precio (en dolares)</label>
                                                                 <input type="number" placeholder="Ingrese Precio" class="form-control" id="Precio" name="Precio" required>
                                                             </div>
+                                                            <div class="mb-3">
+                                                                <label for="kilometraje" class="form-label">Kilometraje</label>
+                                                                <input type="number" placeholder="Ingrese Kilometraje" class="form-control" id="kilometraje" name="kilometraje" required>
+                                                            </div>    
                                                         </div>
                                                     </div>
                                                 </div> <!-- Fin del accordion-item -->
@@ -379,6 +383,7 @@
                                             <th>Color</th>
                                             <th>Precio</th>
                                             <th>Estado</th>
+                                            <th>Kilometraje</th>
                                             <th>Eliminar</th>
                                             <th>Modificar</th>
                                         </tr>
@@ -397,6 +402,7 @@
                                 echo "<td>{$vehiculo['Color']}</td>";
                                 echo "<td>{$vehiculo['Precio']}</td>";
                                 echo "<td>{$vehiculo['Estado']}</td>";
+                                echo "<td>{$vehiculo['kilometraje']}</td>"; 
 
                                 // BOTON DE BAJA
                                 echo "<td class='text-center'>
@@ -449,9 +455,9 @@
 
                                                     <div class='mb-3'>
                                                         <label for='tipoId{$vehiculo['Matricula']}' class='form-label'>Tipo de Vehículo</label>
-                                                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' vaule='{$vehiculo['Matricula']}' required>
-                                                            <option value='Auto'>Auto</option>
-                                                            <option value='Moto'>Moto</option>
+                                                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' required>
+                                                            <option value='Auto' " . ($vehiculo['tipoId'] == 'Auto' ? 'selected' : '') . ">Auto</option>
+                                                            <option value='Moto' " . ($vehiculo['tipoId'] == 'Moto' ? 'selected' : '') . ">Moto</option>
                                                         </select>
                                                     </div>
 
@@ -488,6 +494,11 @@
                                                             <option value='En mantenimiento' " . ($vehiculo['Estado'] == 'En mantenimiento' ? 'selected' : '') . ">En mantenimiento</option>
                                                         </select>
                                                     </div>  
+
+                                                    <div class='mb-3'>
+                                                        <label for='kilometraje{$vehiculo['Matricula']}' class='form-label'>Kilometraje</label>
+                                                        <input type='number' class='form-control' id='kilometraje{$vehiculo['Matricula']}' name='kilometraje' value='{$vehiculo['kilometraje']}' required>
+                                                    </div>    
 
                                             </div>
 

@@ -482,6 +482,7 @@
                                         <th>Teléfono</th>
                                         <th>Email</th>
                                         <th>Contraseña</th>
+                                        <th>Horas Dictadas</th>
                                         <th>Eliminar</th>
                                         <th>Modificar</th>
                                     </tr>
@@ -503,6 +504,7 @@
                                 echo "<td>{$instructor['tel']}</td>";
                                 echo "<td>{$instructor['email']}</td>";
                                 echo "<td>{$instructor['pass']}</td>";
+                                echo "<td>{$instructor['horasDictadas']}</td>";
                                 echo "<td class='text-center'>
                                                 <form action='baja-instructor.php' method='post'>
                                                     <input type='hidden' name='documento' value='{$instructor['documento']}' /> 
@@ -590,6 +592,10 @@
                                                 <div class='mb-3'>
                                                     <label for='pass{$instructor['documento']}' class='form-label'>Pass</label>
                                                     <input type='text' class='form-control' id='pass{$instructor['documento']}' name='pass' value='{$instructor['pass']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='horasDictadas{$instructor['documento']}' class='form-label'>Horas Dictadas</label>
+                                                    <input type='number' class='form-control' id='horasDictadas{$instructor['documento']}' name='horasDictadas' value='{$instructor['horasDictadas']}' required>
                                                 </div>
                                         </div>
 

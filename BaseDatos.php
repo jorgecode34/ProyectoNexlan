@@ -172,10 +172,11 @@ public function altaVehiculo($vehiculo)
     $Color = $vehiculo->getColor();
     $Precio = $vehiculo->getPrecio();
     $Estado = $vehiculo->getEstado();
+    $kilometraje = $vehiculo->getKilometraje();
     
 
-    $insertar = "INSERT INTO vehiculos (ID_Vehiculos, Matricula, tipoId, Modelo, Marca, AnioFabricacion, Color, Precio, Estado) 
-             VALUES ('$ID_Vehiculos' , '$Matricula', '$tipoId', '$Modelo', '$Marca', '$AnioFabricacion', '$Color', '$Precio', '$Estado')";
+    $insertar = "INSERT INTO vehiculos (ID_Vehiculos, Matricula, tipoId, Modelo, Marca, AnioFabricacion, Color, Precio, Estado, kilometraje) 
+             VALUES ('$ID_Vehiculos' , '$Matricula', '$tipoId', '$Modelo', '$Marca', '$AnioFabricacion', '$Color', '$Precio', '$Estado', '$kilometraje')";
 
     return mysqli_query($this->conexion, $insertar);
 }
@@ -233,7 +234,7 @@ public function buscarVehiculo($termino)
 
 
 // Modificar Vehiculo
-public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado)
+public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado, $kilometraje)
 {
     $modificar = "UPDATE vehiculos SET 
                 ID_Vehiculos = '$ID_Vehiculos',
@@ -244,7 +245,8 @@ public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $
                 AnioFabricacion = '$AnioFabricacion',
                 Color = '$Color',
                 Precio = '$Precio',
-                Estado = '$Estado'
+                Estado = '$Estado',
+                kilometraje = '$kilometraje'
                 
              WHERE ID_Vehiculos = '$ID_Vehiculos'";
 
@@ -264,7 +266,7 @@ public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $
 // Mostrar Eventos
     public function listarEventos()
     {
-        $consulta = "SELECT id, title, start, descripcion, time, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante FROM events";
+        $consulta = "SELECT id, title, start, descripcion, time, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante FROM clases WHERE activo = TRUE";
         $resultado = mysqli_query($this->conexion, $consulta);
 
         if ($resultado) {
@@ -278,55 +280,81 @@ public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $
 
 
 // Alta Evento
-
 public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
 {
-    if ($tipo == 'Teórico'){
+    if ($tipo == 'Teórico') {
         $color = '#800020';
     } else {
         $color = '#3355ff';
     }
-    
-    // Iniciar una transacción
+
+    $insertarClases = "INSERT INTO clases (title, start, time, descripcion, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color', '$tipo', '$IDInstructor', '$ID_Vehiculos', '$IDEstudiante')";
+    $resultadoInsertar = mysqli_query($this->conexion, $insertarClases);
+
+    if ($resultadoInsertar) {
+        $idCurso = mysqli_insert_id($this->conexion);
+
+        // Verificar si la combinación ya existe
+        $verificarUsan = "SELECT * FROM usan WHERE ID_Vehiculos = '$ID_Vehiculos' AND IDEstudiante = '$IDEstudiante'";
+        $resultadoVerificar = mysqli_query($this->conexion, $verificarUsan);
+
+        if (mysqli_num_rows($resultadoVerificar) == 0) {
+            $insertarUsan = "INSERT INTO usan (ID_Vehiculos, IDEstudiante) VALUES ('$ID_Vehiculos', '$IDEstudiante')";
+            $resultadoUsan = mysqli_query($this->conexion, $insertarUsan);
+        } else {
+            $resultadoUsan = true; // Ya existe, no es necesario insertar
+        }
+
+        $insertarDictan = "INSERT INTO dictan (IDInstructor, idCurso, fechaHoraDicta) VALUES ('$IDInstructor', '$idCurso', '$fecha $hora')";
+        $resultadoDictan = mysqli_query($this->conexion, $insertarDictan);
+
+        $insertarCursan = "INSERT INTO cursan (IDEstudiante, idCurso, fechaHoraCursan) VALUES ('$IDEstudiante', '$idCurso', '$fecha $hora')";
+        $resultadoCursan = mysqli_query($this->conexion, $insertarCursan);
+
+        if ($resultadoUsan && $resultadoDictan && $resultadoCursan) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/*
+public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
+{
+    if ($tipo == 'Teórico') {
+        $color = '#800020';
+    } else {
+        $color = '#3355ff';
+    }
+
+    // Iniciar transacción
     mysqli_begin_transaction($this->conexion);
-    
+
     try {
-        // Insertar el evento
-        $insertar = "INSERT INTO events (title, start, time, descripcion, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color', '$tipo', '$IDInstructor', '$ID_Vehiculos', '$IDEstudiante')";
-        $resultadoInsertar = mysqli_query($this->conexion, $insertar);
-        
-        if (!$resultadoInsertar) {
-            throw new Exception("Error al insertar el evento: " . mysqli_error($this->conexion));
+        $insertarClase = "INSERT INTO clases (title, start, time, descripcion, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color', '$tipo', '$IDInstructor', '$ID_Vehiculos', '$IDEstudiante')";
+        $resultadoClase = mysqli_query($this->conexion, $insertarClase);
+
+        if (!$resultadoClase) {
+            throw new Exception("Error al insertar en la tabla clases");
         }
-        
-        // Actualizar el estado del vehículo
-        $actualizar = "UPDATE vehiculos SET Estado = 'En clase' WHERE ID_Vehiculos = '$ID_Vehiculos'";
-        $resultadoActualizar = mysqli_query($this->conexion, $actualizar);
-        
-        if (!$resultadoActualizar) {
-            throw new Exception("Error al actualizar el estado del vehículo: " . mysqli_error($this->conexion));
+
+        $insertarUsan = "INSERT INTO usan (ID_Vehiculos, IDEstudiante) VALUES ('$ID_Vehiculos', '$IDEstudiante')";
+        $resultadoUsan = mysqli_query($this->conexion, $insertarUsan);
+
+        if (!$resultadoUsan) {
+            throw new Exception("Error al insertar en la tabla usan");
         }
-        
-        // Confirmar la transacción
+
+        // Confirmar transacción
         mysqli_commit($this->conexion);
-        
         return true;
     } catch (Exception $e) {
-        // Revertir la transacción en caso de error
+        // Revertir transacción en caso de error
         mysqli_rollback($this->conexion);
         return false;
     }
-
-/* Código antiguo:
-        if ($tipo == 'Teórico'){
-            $color = '#800020';
-        } else {
-            $color = '#3355ff';
-        }
-        $insertar = "INSERT INTO events (title, start, time, descripcion, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color', '$tipo', '$IDInstructor', '$ID_Vehiculos', '$IDEstudiante')";	
-        return mysqli_query($this->conexion, $insertar);
-*/
-}
+} */
 
 
 
@@ -334,7 +362,7 @@ public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, 
 // Modificar Evento
     public function modificarEvento($id, $titulo, $inicio, $descripcion, $hora)
     {
-        $consulta = "UPDATE events SET 
+        $consulta = "UPDATE clases SET 
                  title = ?, 
                  start = ?, 
                  descripcion = ?,
@@ -356,7 +384,8 @@ public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, 
 // Baja Evento
     public function bajaEvento($id)
     {
-        $consulta = "DELETE FROM events WHERE id = ?";
+        $consulta = "UPDATE clases SET activo = 0 WHERE id = ?";
+        
 
         $stmt = mysqli_prepare($this->conexion, $consulta);
         mysqli_stmt_bind_param($stmt, "i", $id);
@@ -463,7 +492,7 @@ public function buscarInstructor($termino)
 
 
 // Modificar Instructor
-    public function modificarInstructor($IDInstructor, $documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass)
+    public function modificarInstructor($IDInstructor, $documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass, $horasDictadas)
     {
         $modificar = "UPDATE instructor SET 
                     primerNombre = '$primerNombre',
@@ -476,7 +505,8 @@ public function buscarInstructor($termino)
                     localidad = '$localidad',
                     tel = '$tel',
                     email = '$email',
-                    pass = '$pass'
+                    pass = '$pass',
+                    horasDictadas = '$horasDictadas'
                  WHERE documento = '$documento'";
 
         return mysqli_query($this->conexion, $modificar);
@@ -577,10 +607,10 @@ public function obtenerEstudiantes()
 }
 
 
-//Al momento de crear un evento (clase), se debe seleccionar un vehículo qué esté disponible (ni en mantenimiento ni en clase)
+//Al momento de crear un evento (clase), se debe seleccionar un vehículo qué esté activo (es decir, que exista en la base de datos)
 public function obtenerVehiculos()
 {
-    $consulta = "SELECT ID_Vehiculos, Matricula, Modelo, Marca FROM vehiculos WHERE activo = TRUE AND Estado = 'Disponible'";
+    $consulta = "SELECT ID_Vehiculos, Matricula, Modelo, Marca FROM vehiculos WHERE activo = TRUE";
     $resultado = mysqli_query($this->conexion, $consulta);
 
     if ($resultado) {
