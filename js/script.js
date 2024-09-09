@@ -89,6 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("visualizar_time").value = info.event.extendedProps.time ? moment(info.event.extendedProps.time, 'HH:mm:ss').format('HH:mm') : '';
 
 
+        document.getElementById("visualizar_instructor").value = info.event.extendedProps.instructor;
+        document.getElementById("visualizar_estudiante").value = info.event.extendedProps.estudiante;
+        document.getElementById("visualizar_vehiculo").value = info.event.extendedProps.vehiculo;
        visualizarModalEvento.show();
       },
 

@@ -233,8 +233,25 @@ $vehiculos = $controlador->obtenerVehiculos();
                             <form id="eventForm" action="modificar-evento.php" method="POST">
                                 <div class="modal-body">
 
-                                        <!-- <label for="visualizar_id" class="form-label">ID</label> -->
-                                        <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
+                                    <!-- <label for="visualizar_id" class="form-label">ID</label> -->
+                                    <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
+
+                                    <div class="mb-3">
+                                        <label for="visualizar_estudiante" class="form-label">Estudiante</label>
+                                        <input type="text" class="form-control" id="visualizar_estudiante" name="estudiante" readonly>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="visualizar_instructor" class="form-label">Instructor</label>
+                                        <input type="text" class="form-control" id="visualizar_instructor" name="instructor" readonly>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="visualizar_vehiculo" class="form-label">Vehículo</label>
+                                        <input type="text" class="form-control" id="visualizar_vehiculo" name="vehiculo" readonly>
+                                    </div>
+
+                                    <hr class="">
 
                                     <div class="mb-3">
                                         <label for="visualizar_titulo" class="form-label">Título del evento</label>
@@ -261,7 +278,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                                         <input type="time" class="form-control" id="visualizar_time" name="hora" required>
                                     </div>
 
-
+                                    
 
                                 </div>
                         </div>

@@ -12,7 +12,12 @@ foreach($eventos as $evento) {
         'start' => $evento['start'],
         'descripcion' => $evento['descripcion'],
         'time' => $evento['time'],
-        'color' => $evento['color']
+        'color' => $evento['color'],
+        'extendedProps' => [
+            'instructor' => $evento['instructor'],
+            'estudiante' => $evento['estudiante'],
+            'vehiculo' => $evento['vehiculo']
+        ]
         // 'end' => $evento['end']
     ];
 }

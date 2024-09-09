@@ -266,7 +266,24 @@ public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $
 // Mostrar Eventos
     public function listarEventos()
     {
-        $consulta = "SELECT id, title, start, descripcion, time, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante FROM clases WHERE activo = TRUE";
+        $consulta = "SELECT 
+                        clases.id, 
+                        clases.title, 
+                        clases.start, 
+                        clases.descripcion, 
+                        clases.time, 
+                        clases.color,
+                        CONCAT(instructor.primerNombre, ' ', instructor.primerApellido) AS instructor,
+                        CONCAT(estudiante.primerNombre, ' ', estudiante.primerApellido) AS estudiante,
+                        CONCAT(vehiculos.Marca, ' ', vehiculos.Modelo) AS vehiculo
+                    FROM 
+                        clases, instructor, estudiante, vehiculos
+                    WHERE 
+                        clases.activo = TRUE
+                        AND clases.IDInstructor = instructor.IDInstructor
+                        AND clases.IDEstudiante = estudiante.IDEstudiante
+                        AND clases.ID_Vehiculos = vehiculos.ID_Vehiculos;";
+
         $resultado = mysqli_query($this->conexion, $consulta);
 
         if ($resultado) {
