@@ -1,12 +1,7 @@
-<?php include 'verificar_sesion.php';
-require_once 'Controlador.php';
-$controlador = new Controlador();
-$instructores = $controlador->obtenerInstructores();
-$estudiantes = $controlador->obtenerEstudiantes();
-$vehiculos = $controlador->obtenerVehiculos();
-?>
+<?php include 'verificar_sesion.php'; ?>
 
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -17,15 +12,15 @@ $vehiculos = $controlador->obtenerVehiculos();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-
 </head>
 
-<body class="dashboard-page">
+<body>
+
+
+
     <div class="wrapper">
 
-        <!-- Sidebar -->
+<!-- Sidebar -->
         <aside id="sidebar">
             <div class="h-100 ">
 
@@ -54,13 +49,13 @@ $vehiculos = $controlador->obtenerVehiculos();
                     <hr class="hr-color">
 
 
-                    <!-- Header General -->
+<!-- Header General -->
                     <li class="sidebar-header">
                         General
                     </li>
 
 
-                    <!-- Inicio -->
+<!-- Inicio -->
                     <li class="sidebar-item separar-items active-link">
 
                         <a href="inicio.php" class="sidebar-link">
@@ -73,7 +68,7 @@ $vehiculos = $controlador->obtenerVehiculos();
 
                     </li>
 
-                    <!-- Configuracion -->
+<!-- Configuracion -->
                     <li class="sidebar-item">
 
                         <a href="configuracion.php" class="sidebar-link">
@@ -88,13 +83,13 @@ $vehiculos = $controlador->obtenerVehiculos();
 
 
 
-                    <!-- Header Menu de Gestion -->
+<!-- Header Menu de Gestion -->
                     <li class="sidebar-header separar-headers">
                         Menú de Gestión
                     </li>
 
 
-                    <!-- Usuarios -->
+<!-- Usuarios -->
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
@@ -118,7 +113,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                         </ul>
 
                     </li>
-                    <!-- Vehículos -->
+<!-- Vehículos -->
                     <li class="sidebar-item separar-items">
 
                         <a href="vehiculo.php" class="sidebar-link">
@@ -135,10 +130,10 @@ $vehiculos = $controlador->obtenerVehiculos();
 
 
 
-                    <!-- Clases y Horarios -->
+<!-- Clases y Horarios -->
                     <li class="sidebar-item">
 
-                        <a href="#" class="sidebar-link selected">
+                        <a href="clases.php" class="sidebar-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
                                 <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
@@ -152,7 +147,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                     <hr class="hr-color">
 
 
-                    <!-- Cerrar sesíón -->
+<!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
                         <a href="cerrar_sesion.php" class="sidebar-link">
@@ -176,15 +171,15 @@ $vehiculos = $controlador->obtenerVehiculos();
         </aside>
 
 
-        <!-- Main Component -->
+<!-- Main Component -->
         <div class="main">
 
 
 
-            <!-- Nav Bar -->
+<!-- Nav Bar -->
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
 
-                <!-- Boton para abir y cerrar sidebar -->
+<!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -203,201 +198,89 @@ $vehiculos = $controlador->obtenerVehiculos();
             </nav>
 
 
-            <!-- Cuerpo -->
+<!-- Cuerpo -->
             <main class="content px-3 py-2">
                 <div class="container-fluid">
-
                     <div class="mb-3">
-                        <h3>Clases</h3>
-                        <p>Administra a las distintas clases del sistema aquí.</p>
 
+                        <h5 id="fecha-actual" class="text-center"></h5>
+                        
+                        <h3>Configuracion</h3>
+                        <p>Configura tus parametros.</p>
+
+                        <div class="accordion accordion-flush shadow" id="accordionFlushExample">
+                            
+                        <div class="accordion-item">
+                            
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                    Editar Perfil
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4" value="<?php echo isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : (isset($_COOKIE['email']) ? htmlspecialchars($_COOKIE['email']) : ''); ?>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4" value="<?php echo isset($_SESSION['password']) ? htmlspecialchars($_SESSION['password']) : (isset($_COOKIE['password']) ? htmlspecialchars($_COOKIE['password']) : ''); ?>">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                            <div class="accordion-item">
+
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                                </h2>
+
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                </div>
+                            </div>
+                        </div>
+                    
 
                     </div>
-
-                    <div id='calendar' class="shadow"></div>
-
                 </div>
             </main>
-
-            <!-- Modal de Evento-->
-            <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="eventModalLabel">Ver evento</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <form id="eventForm" action="modificar-evento.php" method="POST">
-                                <div class="modal-body">
-
-                                        <!-- <label for="visualizar_id" class="form-label">ID</label> -->
-                                        <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_titulo" class="form-label">Título del evento</label>
-                                        <input type="text" class="form-control" id="visualizar_titulo" name="titulo" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_inicio" class="form-label">Día</label>
-                                        <input type="date" class="form-control" id="visualizar_inicio" name="inicio" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <!-- <label for="visualizar_fin" class="form-label">Fin</label> -->
-                                        <input type="hidden" class="form-control" id="visualizar_fin" name="fin" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_descripcion" class="form-label">Descripcion </label>
-                                        <textarea class="form-control" id="visualizar_descripcion" name="descripcion" rows="3"></textarea>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_time" class="form-label">Hora</label>
-                                        <input type="time" class="form-control" id="visualizar_time" name="hora" required>
-                                    </div>
-
-
-
-                                </div>
-                        </div>
-
-
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                            </form>
-
-
-                            <form id="deleteForm" action="baja-evento.php" method="POST">
-                                <input type="hidden" id="delete_id" name="id">
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
-
-
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-
-
-                        </div>
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- Modal de Día -->
-            <div class="modal fade" id="dayModal" tabindex="-1" aria-labelledby="dayModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="dayModalLabel">Crear nuevo evento</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <form id="newEventForm" action="alta-evento.php" method="POST">
-                                <div class="modal-body">
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_titulo" class="form-label">Título del evento</label>
-                                        <input type="text" class="form-control" id="nuevo_titulo" name="titulo" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nueva_descripcion" class="form-label">Descripcion</label>
-                                        <textarea class="form-control" id="nueva_descripcion" name="descripcion" rows="3"></textarea>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_time" class="form-label">Hora</label>
-                                        <input type="time" class="form-control" id="nuevo_time" name="hora" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="asignar_tipo" class="form-label">Tipo de Clase</label>
-                                        <select class="form-select" id="asignar_tipo" name="tipo" required>
-                                            <option value="">Selecciona un Tipo</option>
-                                            <option value="Teórico" id='Teórico'>Teórico</option>
-                                            <option value="Práctico" id='Práctico'>Práctico</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_instructor" class="form-label">Instructor</label>
-                                        <select class="form-select" id="nuevo_instructor" name="instructor" required>
-                                            <option value="">Selecciona un instructor</option>
-                                            <?php foreach ($instructores as $instructor): ?>
-                                                <option value="<?php echo $instructor['IDInstructor']; ?>">
-                                                    <?php echo htmlspecialchars($instructor['primerNombre'] . ' ' . $instructor['primerApellido']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_estudiante" class="form-label">Estudiante</label>
-                                        <select class="form-select" id="nuevo_estudiante" name="estudiante" required>
-                                            <option value="">Selecciona un estudiante</option>
-                                            <?php foreach ($estudiantes as $estudiante): ?>
-                                                <option value="<?php echo $estudiante['IDEstudiante']; ?>">
-                                                    <?php echo htmlspecialchars($estudiante['primerNombre'] . ' ' . $estudiante['primerApellido']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_vehiculo" class="form-label">Vehiculo</label>
-                                        <select class="form-select" id="nuevo_vehiculo" name="vehiculo" required>
-                                            <option value="">Selecciona un vehiculo</option>
-                                            <?php foreach ($vehiculos as $vehiculo): ?>
-                                                <option value="<?php echo $vehiculo['ID_Vehiculos']; ?>">
-                                                    <?php echo htmlspecialchars($vehiculo['Matricula'] . ' ' . $vehiculo['Modelo'] . ' ' . $vehiculo['Marca']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <!-- <div class="mb-3">
-                                    <label for="nuevo_color" class="form-label">Color</label>
-                                    <input type="color" class="form-control form-control-color" id="nueco_color" name="color" value="#563d7c" title="Choose your color">
-                                </div> -->
-
-                                    <input type="hidden" id="nuevo_fecha" name="fecha">
-
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Guardar evento</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-
-
         </div>
     </div>
 
 
-    </script>
-    <script src="dist/index.global.min.js"></script>
-    <script src="core/locales/es-us.global.min.js"></script>
+
+
+
+
+
+
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-
 </body>
 
 </html>

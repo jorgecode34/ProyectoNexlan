@@ -75,10 +75,10 @@ class BaseDatos
 
 
 
-// Mostrar Estudiantes
-    public function seleccionarTodos()
+// Listar Estudiantes
+    public function listarEstudiantes()
     {
-        $resultado = mysqli_query($this->conexion, "select * from estudiante"); //------------------> Cambiar tabla
+        $resultado = mysqli_query($this->conexion, "select * from estudiante where activo = TRUE"); 
         $arreglo = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
         return $arreglo;
     }
@@ -89,7 +89,7 @@ class BaseDatos
 // Baja Estudiante
     public function bajaEstudiante($documento)
     {
-        $query = "DELETE FROM estudiante WHERE documento = ?";
+        $query = "UPDATE estudiante SET activo = 0 WHERE documento = ?";
         $stmt = mysqli_prepare($this->conexion, $query);
         if ($stmt === false) {
             die("Error al preparar la sentencia: " . mysqli_error($this->conexion));
@@ -107,16 +107,17 @@ class BaseDatos
     public function buscarEstudiantes($termino)
     {
         $consulta = "SELECT * FROM estudiante 
-                WHERE 
-                documento LIKE '%$termino%' 
-                OR 
-                primerNombre LIKE '%$termino%' 
-                OR 
-                primerApellido LIKE '%$termino%'
-                OR
-                segundoNombre LIKE '%$termino%'
-                OR
-                segundoApellido LIKE '%$termino%'";
+            WHERE 
+            (documento LIKE '%$termino%' 
+            OR 
+            primerNombre LIKE '%$termino%' 
+            OR 
+            primerApellido LIKE '%$termino%'
+            OR
+            segundoNombre LIKE '%$termino%'
+            OR
+            segundoApellido LIKE '%$termino%')
+            AND activo = TRUE"; 
 
         $resultado = mysqli_query($this->conexion, $consulta);
 
@@ -155,7 +156,105 @@ class BaseDatos
 
 /************************************************************************************************************************************************/
 
+                                                           /* FUNCIONES VEHICULOS */
+/************************************************************************************************************************************************/
 
+
+// Alta Vehiculo
+public function altaVehiculo($vehiculo)
+{
+    $ID_Vehiculos = $vehiculo->getID_Vehiculos();
+    $Matricula = $vehiculo->getMatricula();
+    $tipoId = $vehiculo->getTipoId();
+    $Modelo = $vehiculo->getModelo();
+    $Marca = $vehiculo->getMarca();
+    $AnioFabricacion = $vehiculo->getAnioFabricacion();
+    $Color = $vehiculo->getColor();
+    $Precio = $vehiculo->getPrecio();
+    $Estado = $vehiculo->getEstado();
+    $kilometraje = $vehiculo->getKilometraje();
+    
+
+    $insertar = "INSERT INTO vehiculos (ID_Vehiculos, Matricula, tipoId, Modelo, Marca, AnioFabricacion, Color, Precio, Estado, kilometraje) 
+             VALUES ('$ID_Vehiculos' , '$Matricula', '$tipoId', '$Modelo', '$Marca', '$AnioFabricacion', '$Color', '$Precio', '$Estado', '$kilometraje')";
+
+    return mysqli_query($this->conexion, $insertar);
+}
+
+
+
+
+// Mostrar Vehiculos    
+public function listarVehiculos()
+{
+    $resultado = mysqli_query($this->conexion, "select * from vehiculos where activo = TRUE"); 
+    $arreglo = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    return $arreglo;
+}
+
+
+
+
+// Baja Vehiculo
+public function bajaVehiculo($Matricula)
+{
+    $query = "UPDATE vehiculos SET activo = 0 WHERE Matricula = ?";
+    $stmt = mysqli_prepare($this->conexion, $query);
+    if ($stmt === false) {
+        die("Error al preparar la sentencia: " . mysqli_error($this->conexion));
+    }
+    mysqli_stmt_bind_param($stmt, "s", $Matricula);
+    $resultado = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $resultado;
+}
+
+
+// Buscar Vehiculo
+public function buscarVehiculo($termino)
+{
+    $consulta = "SELECT * FROM vehiculos 
+             WHERE 
+             (Matricula LIKE '%$termino%' 
+             OR 
+             Modelo LIKE '%$termino%' 
+             OR 
+             Marca LIKE '%$termino%') 
+             AND activo = TRUE";
+
+    $resultado = mysqli_query($this->conexion, $consulta);
+
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
+        $vehiculo = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        return $vehiculo;
+    } else {
+        return [];
+    }
+}
+
+
+// Modificar Vehiculo
+public function modificarVehiculo($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado, $kilometraje)
+{
+    $modificar = "UPDATE vehiculos SET 
+                ID_Vehiculos = '$ID_Vehiculos',
+                Matricula = '$Matricula',
+                tipoId = '$tipoId',
+                Modelo = '$Modelo',
+                Marca = '$Marca',
+                AnioFabricacion = '$AnioFabricacion',
+                Color = '$Color',
+                Precio = '$Precio',
+                Estado = '$Estado',
+                kilometraje = '$kilometraje'
+                
+             WHERE ID_Vehiculos = '$ID_Vehiculos'";
+
+    return mysqli_query($this->conexion, $modificar);
+}
+
+
+/************************************************************************************************************************************************/
 
 
 
@@ -165,9 +264,9 @@ class BaseDatos
 
 
 // Mostrar Eventos
-    public function obtenerEventos()
+    public function listarEventos()
     {
-        $consulta = "SELECT id, title, start, descripcion, time, color/*, end*/ FROM events";
+        $consulta = "SELECT id, title, start, descripcion, time, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante FROM clases WHERE activo = TRUE";
         $resultado = mysqli_query($this->conexion, $consulta);
 
         if ($resultado) {
@@ -181,12 +280,81 @@ class BaseDatos
 
 
 // Alta Evento
-    public function crearEvento($titulo, $fecha, $descripcion, $hora, $color)
-    {
+public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
+{
+    if ($tipo == 'Teórico') {
+        $color = '#800020';
+    } else {
         $color = '#3355ff';
-        $insertar = "INSERT INTO events (title, start, time, descripcion, color) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color')";
-        return mysqli_query($this->conexion, $insertar);
     }
+
+    $insertarClases = "INSERT INTO clases (title, start, time, descripcion, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color', '$tipo', '$IDInstructor', '$ID_Vehiculos', '$IDEstudiante')";
+    $resultadoInsertar = mysqli_query($this->conexion, $insertarClases);
+
+    if ($resultadoInsertar) {
+        $idCurso = mysqli_insert_id($this->conexion);
+
+        // Verificar si la combinación ya existe
+        $verificarUsan = "SELECT * FROM usan WHERE ID_Vehiculos = '$ID_Vehiculos' AND IDEstudiante = '$IDEstudiante'";
+        $resultadoVerificar = mysqli_query($this->conexion, $verificarUsan);
+
+        if (mysqli_num_rows($resultadoVerificar) == 0) {
+            $insertarUsan = "INSERT INTO usan (ID_Vehiculos, IDEstudiante) VALUES ('$ID_Vehiculos', '$IDEstudiante')";
+            $resultadoUsan = mysqli_query($this->conexion, $insertarUsan);
+        } else {
+            $resultadoUsan = true; // Ya existe, no es necesario insertar
+        }
+
+        $insertarDictan = "INSERT INTO dictan (IDInstructor, idCurso, fechaHoraDicta) VALUES ('$IDInstructor', '$idCurso', '$fecha $hora')";
+        $resultadoDictan = mysqli_query($this->conexion, $insertarDictan);
+
+        $insertarCursan = "INSERT INTO cursan (IDEstudiante, idCurso, fechaHoraCursan) VALUES ('$IDEstudiante', '$idCurso', '$fecha $hora')";
+        $resultadoCursan = mysqli_query($this->conexion, $insertarCursan);
+
+        if ($resultadoUsan && $resultadoDictan && $resultadoCursan) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/*
+public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
+{
+    if ($tipo == 'Teórico') {
+        $color = '#800020';
+    } else {
+        $color = '#3355ff';
+    }
+
+    // Iniciar transacción
+    mysqli_begin_transaction($this->conexion);
+
+    try {
+        $insertarClase = "INSERT INTO clases (title, start, time, descripcion, color, tipo, IDInstructor, ID_Vehiculos, IDEstudiante) VALUES ('$titulo', '$fecha', '$hora', '$descripcion', '$color', '$tipo', '$IDInstructor', '$ID_Vehiculos', '$IDEstudiante')";
+        $resultadoClase = mysqli_query($this->conexion, $insertarClase);
+
+        if (!$resultadoClase) {
+            throw new Exception("Error al insertar en la tabla clases");
+        }
+
+        $insertarUsan = "INSERT INTO usan (ID_Vehiculos, IDEstudiante) VALUES ('$ID_Vehiculos', '$IDEstudiante')";
+        $resultadoUsan = mysqli_query($this->conexion, $insertarUsan);
+
+        if (!$resultadoUsan) {
+            throw new Exception("Error al insertar en la tabla usan");
+        }
+
+        // Confirmar transacción
+        mysqli_commit($this->conexion);
+        return true;
+    } catch (Exception $e) {
+        // Revertir transacción en caso de error
+        mysqli_rollback($this->conexion);
+        return false;
+    }
+} */
 
 
 
@@ -194,7 +362,7 @@ class BaseDatos
 // Modificar Evento
     public function modificarEvento($id, $titulo, $inicio, $descripcion, $hora)
     {
-        $consulta = "UPDATE events SET 
+        $consulta = "UPDATE clases SET 
                  title = ?, 
                  start = ?, 
                  descripcion = ?,
@@ -214,9 +382,10 @@ class BaseDatos
 
 
 // Baja Evento
-    public function eliminarEvento($id)
+    public function bajaEvento($id)
     {
-        $consulta = "DELETE FROM events WHERE id = ?";
+        $consulta = "UPDATE clases SET activo = 0 WHERE id = ?";
+        
 
         $stmt = mysqli_prepare($this->conexion, $consulta);
         mysqli_stmt_bind_param($stmt, "i", $id);
@@ -240,7 +409,7 @@ class BaseDatos
 
 
 // Alta Instructor
-    public function ingresarInstructor($instructor)
+    public function altaInstructor($instructor)
     {
         $IDInstructor = $instructor->getIdInstructor();
         $documento = $instructor->getDocumento();
@@ -266,9 +435,9 @@ class BaseDatos
 
 
 // Mostrar Instructores    
-    public function seleccionarTodosinstructores()
+    public function listarInstructores()
     {
-        $resultado = mysqli_query($this->conexion, "select * from instructor"); 
+        $resultado = mysqli_query($this->conexion, "select * from instructor where activo = TRUE"); 
         $arreglo = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
         return $arreglo;
     }
@@ -277,9 +446,9 @@ class BaseDatos
 
 
 // Baja Instructor
-    public function eliminarInstructor($documento)
+    public function bajaInstructor($documento)
     {
-        $query = "DELETE FROM instructor WHERE documento = ?";
+        $query = "UPDATE instructor SET activo = 0 WHERE documento = ?";
         $stmt = mysqli_prepare($this->conexion, $query);
         if ($stmt === false) {
             die("Error al preparar la sentencia: " . mysqli_error($this->conexion));
@@ -294,35 +463,36 @@ class BaseDatos
 
 
 // Buscar Instructor
-    public function buscarInstructor($termino)
-    {
-        $consulta = "SELECT * FROM instructor 
-                WHERE 
-                documento LIKE '%$termino%' 
-                OR 
-                primerNombre LIKE '%$termino%' 
-                OR 
-                primerApellido LIKE '%$termino%'
-                OR
-                segundoNombre LIKE '%$termino%'
-                OR
-                segundoApellido LIKE '%$termino%'";
+public function buscarInstructor($termino)
+{
+    $consulta = "SELECT * FROM instructor 
+            WHERE 
+            (documento LIKE '%$termino%' 
+            OR 
+            primerNombre LIKE '%$termino%' 
+            OR 
+            primerApellido LIKE '%$termino%'
+            OR
+            segundoNombre LIKE '%$termino%'
+            OR
+            segundoApellido LIKE '%$termino%')
+            AND activo = TRUE"; 
 
-        $resultado = mysqli_query($this->conexion, $consulta);
+    $resultado = mysqli_query($this->conexion, $consulta);
 
-        if ($resultado && mysqli_num_rows($resultado) > 0) {
-            $instructor = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
-            return $instructor;
-        } else {
-            return [];
-        }
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
+        $instructor = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+        return $instructor;
+    } else {
+        return [];
     }
+}
 
 
 
 
 // Modificar Instructor
-    public function modificarInstructor($IDInstructor, $documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass)
+    public function modificarInstructor($IDInstructor, $documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass, $horasDictadas)
     {
         $modificar = "UPDATE instructor SET 
                     primerNombre = '$primerNombre',
@@ -335,7 +505,8 @@ class BaseDatos
                     localidad = '$localidad',
                     tel = '$tel',
                     email = '$email',
-                    pass = '$pass'
+                    pass = '$pass',
+                    horasDictadas = '$horasDictadas'
                  WHERE documento = '$documento'";
 
         return mysqli_query($this->conexion, $modificar);
@@ -356,7 +527,7 @@ class BaseDatos
 // Listar total de estudiantes en inicio.php
     public function listarTotalEstudiantes()
     {
-        $enumerar = "SELECT COUNT(*) AS total_estudiantes FROM estudiante;";
+        $enumerar = "SELECT COUNT(*) AS total_estudiantes FROM estudiante WHERE activo = TRUE;";
 
         $resultado = mysqli_query($this->conexion, $enumerar);
         if ($resultado) {
@@ -372,7 +543,7 @@ class BaseDatos
 // Listar total de instructores en inicio.php
     public function listarTotalInstructores()
     {
-        $enumerar = "SELECT COUNT(*) AS total_instructores FROM instructor;";
+        $enumerar = "SELECT COUNT(*) AS total_instructores FROM instructor WHERE activo = TRUE;";
 
         $resultado = mysqli_query($this->conexion, $enumerar);
         if ($resultado) {
@@ -383,9 +554,10 @@ class BaseDatos
     }
 
 
+    // Listar total de estudiantes con el exámen teórico aprobado en inicio.php
     public function listarTotalEstudiantesAprobados()
 {
-    $consulta = "SELECT COUNT(*) AS total_estudiantes_aprobados FROM estudiante WHERE teorico = 'aprobado';";
+    $consulta = "SELECT COUNT(*) AS total_estudiantes_aprobados FROM estudiante WHERE teorico = 'aprobado' AND activo = TRUE;";
     
     $resultado = mysqli_query($this->conexion, $consulta);
     if ($resultado) {
@@ -395,6 +567,58 @@ class BaseDatos
     }
 }
 
+//Listar total de vehiculos que se encuentran "En mantenimiento" en inicio.php
+public function listarTotalVehiculosMantenimiento()
+{
+    $consulta = "SELECT COUNT(*) AS total_vehiculos_mantenimiento FROM vehiculos WHERE Estado = 'En mantenimiento' AND activo = TRUE;";
+    
+    $resultado = mysqli_query($this->conexion, $consulta);
+    if ($resultado) {
+        return mysqli_fetch_assoc($resultado);
+    } else {
+        return null;
+    }
+}
+
+//Al momento de crear un evento (clase), se debe seleccionar un instructor qué esté activo (es decir, que exista en la base de datos)
+public function obtenerInstructores()
+{
+    $consulta = "SELECT IDInstructor, primerNombre, primerApellido FROM instructor WHERE activo = TRUE";
+    $resultado = mysqli_query($this->conexion, $consulta);
+
+    if ($resultado) {
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    } else {
+        return [];
+    }
+}
+
+//Al momento de crear un evento (clase), se debe seleccionar un estudiante qué esté activo (es decir, que exista en la base de datos)
+public function obtenerEstudiantes()
+{
+    $consulta = "SELECT IDEstudiante, primerNombre, primerApellido FROM estudiante WHERE activo = TRUE";
+    $resultado = mysqli_query($this->conexion, $consulta);
+
+    if ($resultado) {
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    } else {
+        return [];
+    }
+}
+
+
+//Al momento de crear un evento (clase), se debe seleccionar un vehículo qué esté activo (es decir, que exista en la base de datos)
+public function obtenerVehiculos()
+{
+    $consulta = "SELECT ID_Vehiculos, Matricula, Modelo, Marca FROM vehiculos WHERE activo = TRUE";
+    $resultado = mysqli_query($this->conexion, $consulta);
+
+    if ($resultado) {
+        return mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+    } else {
+        return [];
+    }
+}
 
 
     public function cerrarConexion()

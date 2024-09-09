@@ -182,4 +182,75 @@ class instructor {
     }
 
 }
-?>
+
+class vehiculo {
+    private $ID_Vehiculos;
+    private $tipoId;
+    private $Matricula;
+    private $Modelo;
+    private $Marca;
+    private $AnioFabricacion;
+    private $Color;
+    private $Precio;
+    private $Estado;
+    private $kilometraje;
+
+
+public function __construct($ID_Vehiculos, $Matricula, $tipoId, $Modelo, $Marca, $AnioFabricacion, $Color, $Precio, $Estado, $kilometraje) {
+    $this->ID_Vehiculos = $ID_Vehiculos;
+    $this->Matricula = $Matricula;
+    $this->tipoId = $tipoId;
+    $this->Modelo = $Modelo;
+    $this->Marca = $Marca;
+    $this->AnioFabricacion = $AnioFabricacion;
+    $this->Color = $Color;
+    $this->Precio = $Precio;
+    $this->Estado = $Estado;
+    $this->kilometraje = $kilometraje;
+    }
+
+    public function getID_Vehiculos(){
+        return $this->ID_Vehiculos;
+    }
+
+    public function getMatricula() {
+        return $this->Matricula;
+    }
+
+    public function getTipoId() {
+        return $this->tipoId;
+    }
+
+    public function getModelo() {
+        return $this->Modelo;
+    }
+
+    public function getMarca() {
+        return $this->Marca;
+    }
+
+    public function getAnioFabricacion() {
+        return $this->AnioFabricacion;
+    }
+
+    public function getColor() {
+        return $this->Color;
+    }
+
+    public function getPrecio() {
+        return $this->Precio;
+    }
+
+    public function getEstado() {
+        return $this->Estado;
+    }
+
+    public function getKilometraje() {
+        return $this->kilometraje;
+    }
+
+    public function __toString() {
+        return $this->ID_Vehiculos . ","  . $this->Matricula . "," . $this->tipoId . "," . $this->Modelo . "," . $this->Marca . "," . $this->AnioFabricacion . "," . $this->Color . "," . $this->Precio . "," . $this->Estado . "," . $this->kilometraje;
+    }
+}
+

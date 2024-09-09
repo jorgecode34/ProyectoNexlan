@@ -9,13 +9,13 @@
 
 require_once 'Controlador.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['documento'])) {
-    $id = $_POST['documento'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Matricula'])) {
+    $id = $_POST['Matricula'];
     
     $controlador = new Controlador();
-    $controlador->bajaInstructor($id);
+    $controlador->bajaVehiculo($id);
     
-    header('Location: Instructor.php'); 
+    header('Location: vehiculo.php'); 
 } else {
     echo "Error al procesar la solicitud de eliminación.";
 }
