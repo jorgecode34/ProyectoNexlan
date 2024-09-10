@@ -7,3 +7,14 @@ PASOS PARA VISUALIZAR PROYECTO
 5. Abrir un navegador web y visitar:
    - Si descargaste el proyecto como zip: http://localhost/proyectoNexlan-main
    - Si clonaste el repositorio: http://localhost/proyectoNexlan
+
+**ACLARACIÓN IMPORTANTE**
+Para ingresar al sistema, de momento se debe utilizar alguna de las siguientes credenciales:
+Mail: aguslopoli@gmail.com
+Contraseña: 1234
+
+Mail: roberto34xd@gmail.com
+Contraseña: 1234
+
+Mail: ninajuli87@gmail.com
+Contraseña: 1234
