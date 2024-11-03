@@ -12,6 +12,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Símbolos para el toggler de los temas -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
 </head>
 
 <body class="dashboard-page">
@@ -20,7 +37,7 @@
 
     <div class="wrapper">
 
-<!-- Sidebar -->
+        <!-- Sidebar -->
         <aside id="sidebar">
             <div class="h-100 ">
 
@@ -49,13 +66,13 @@
                     <hr class="hr-color">
 
 
-<!-- Header General -->
+                    <!-- Header General -->
                     <li class="sidebar-header">
                         General
                     </li>
 
 
-<!-- Inicio -->
+                    <!-- Inicio -->
                     <li class="sidebar-item separar-items active-link">
 
                         <a href="inicio.php" class="sidebar-link">
@@ -68,7 +85,7 @@
 
                     </li>
 
-<!-- Configuracion -->
+                    <!-- Configuracion -->
                     <li class="sidebar-item">
 
                         <a href="configuracion.php" class="sidebar-link">
@@ -83,13 +100,13 @@
 
 
 
-<!-- Header Menu de Gestion -->
+                    <!-- Header Menu de Gestion -->
                     <li class="sidebar-header separar-headers">
                         Menú de Gestión
                     </li>
 
 
-<!-- Usuarios -->
+                    <!-- Usuarios -->
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link collapsed selected" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
@@ -113,7 +130,7 @@
                         </ul>
 
                     </li>
-<!-- Vehículos -->
+                    <!-- Vehículos -->
                     <li class="sidebar-item separar-items">
 
                         <a href="vehiculo.php" class="sidebar-link">
@@ -130,7 +147,7 @@
 
 
 
-<!-- Clases y Horarios -->
+                    <!-- Clases y Horarios -->
                     <li class="sidebar-item">
 
                         <a href="clases.php" class="sidebar-link">
@@ -147,10 +164,10 @@
                     <hr class="hr-color">
 
 
-<!-- Cerrar sesíón -->
+                    <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
-                        <a href="cerrar_sesion.php" class="sidebar-link">
+                        <a href="cerrar_sesion.php" class="sidebar-cerrar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -171,72 +188,114 @@
         </aside>
 
 
-<!-- Main Component -->
+        <!-- Main Component -->
         <div class="main">
 
 
 
-<!-- Nav Bar -->
-            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
 
-<!-- Boton para abir y cerrar sidebar -->
+                <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="ms-auto search-icon-container">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+                <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
+                    <div class="btn-group">
+                        <div class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" id="userDropdown" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <span class="ms-2" style="user-select: none;">
+                                <?php
+                                echo isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : (isset($_COOKIE['email']) ? htmlspecialchars($_COOKIE['email']) : 'Email no disponible');
+                                ?>
+                            </span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Configuracón</button></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a href="cerrar_sesion.php" class="dropdown-item" onclick="window.location.href='cerrar_sesion.php'; return false;">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </nav>
 
 
-<!-- Cuerpo -->
+            <!-- Cuerpo -->
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
 
-                        <h5 id="fecha-actual" class="text-center"></h5>
-                        
-                        <h3>Estudiantes</h3>
-                        <p>Administra a los distintos Estudiantes del sistema aquí.</p>
+                        <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
-                        <?php 
-                            if (isset($_SESSION['status'])) {
-                                if ($_SESSION['status'] == 'success') {
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-people me-2" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                            </svg>
+                            <h3 class="mb-0">Estudiantes</h3>
+                        </div>
+                        <p class="text-center text-lg-start">Administra a los distintos Estudiantes del sistema aquí.</p>
+
+                        <?php
+                        if (isset($_SESSION['status'])) {
+
+                            if ($_SESSION['status'] == 'success') {
+                                if ($_SESSION['operation'] == 'alta') {
+                                    $nombreEstudiante = isset($_SESSION['nombre_estudiante']) ? $_SESSION['nombre_estudiante'] : 'el estudiante';
                                     echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-                                            <strong>¡Excelente!</strong> Los cambios para el estudiante se han realizado correctamente.
-                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                                        </div>";
-                                } else if ($_SESSION['status'] == 'error') {
-                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                                            <strong>¡Oh no!</strong> Ha ocurrido un error al intentar modificar la información del estudiante. Por favor, inténtalo de nuevo más tarde.
-                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                                        </div>";
+                                                <strong>¡Excelente!</strong> El estudiante $nombreEstudiante ha sido registrado correctamente.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
+                                } else if ($_SESSION['operation'] == 'modificar') {
+                                    $nombreEstudiante = isset($_SESSION['nombre_estudiante']) ? $_SESSION['nombre_estudiante'] : 'el estudiante';
+                                    echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                                <strong>¡Excelente!</strong> Los cambios para el estudiante $nombreEstudiante se han realizado correctamente.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
                                 }
-                                unset($_SESSION['status']);
+                            } else if ($_SESSION['status'] == 'error') {
+                                if ($_SESSION['operation'] == 'alta') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                <strong>¡Oh no!</strong> Ha ocurrido un error al intentar registrar al estudiante. {$_SESSION['error_message']}
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
+                                } else if ($_SESSION['operation'] == 'modificar') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                <strong>¡Oh no!</strong> Ha ocurrido un error al intentar modificar la información del estudiante. {$_SESSION['error_message']}
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
+                                }
                             }
-                        ?>
-                        
 
-                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow color-gris">
-<!-- Boton refrescar -->
+                            unset($_SESSION['status']);
+                            unset($_SESSION['operation']);
+                            unset($_SESSION['nombre_estudiante']);
+                            unset($_SESSION['error_message']);
+                        }
+                        ?>
+
+
+                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow bg-body-tertiary">
+                            <!-- Boton refrescar -->
                             <div class="me-auto p-2">
-                                <button type="submit" class="btn btn-outline-dark" onClick="refreshPage()">
+                                <button type="submit" class="btn" onClick="refreshPage()">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
                                         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
                                     </svg>
                                 </button>
                             </div>
-<!-- Barra de busqueda -->
+                            <!-- Barra de busqueda -->
                             <div class="p-2">
                                 <form action="" method="get">
                                     <div class="input-group">
@@ -245,7 +304,7 @@
                                     </div>
                                 </form>
                             </div>
-<!-- Boton agregar estudiante -->
+                            <!-- Boton agregar estudiante -->
                             <div class="p-2">
                                 <button type="button" class="btn btn-azul shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -256,22 +315,13 @@
                                 </button>
                             </div>
 
-                            <!-- <div class="p-2">
-                                <button type="button" class="btn btn-azul shadow d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle me-1" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                                    </svg>
-                                    <span class="text-nowrap">Agregar Estudiante</span>
-                                </button>
-                            </div> -->
                         </div>
 
 
 
 
 
-<!-- Modal agregar estudiante -->
+                        <!-- Modal agregar estudiante -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -285,11 +335,11 @@
                                         <form action="alta-estudiante.php" method="post">
                                             <div class="row">
 
-<!-- Columna izquierda -->
+                                                <!-- Columna izquierda -->
                                                 <div class="col-lg-6">
 
                                                     <div class="accordion shadow mb-3" id="accordionIdentification">
-<!-- Identificación -->
+                                                        <!-- Identificación -->
                                                         <div class="accordion-item">
                                                             <h2 class="accordion-header">
                                                                 <button class="accordion-button custom-header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIdentification" aria-expanded="true" aria-controls="collapseIdentification">
@@ -332,7 +382,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-<!-- Nombre Completo -->
+                                                        <!-- Nombre Completo -->
                                                         <div class="accordion-item">
                                                             <h2 class="accordion-header">
                                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseName" aria-expanded="true" aria-controls="collapseName">
@@ -379,10 +429,10 @@
 
                                                     </div>
                                                 </div>
-<!-- Columna derecha: Dirección y Contacto -->
+                                                <!-- Columna derecha: Dirección y Contacto -->
                                                 <div class="col-lg-6">
                                                     <div class="accordion shadow mb-3" id="accordionAddress">
-<!-- Dirección -->
+                                                        <!-- Dirección -->
                                                         <div class="accordion-item">
                                                             <h2 class="accordion-header">
                                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddress" aria-expanded="true" aria-controls="collapseAddress">
@@ -410,7 +460,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-<!-- Contacto -->
+                                                        <!-- Contacto -->
                                                         <div class="accordion-item">
                                                             <h2 class="accordion-header">
                                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContact" aria-expanded="true" aria-controls="collapseContact">
@@ -433,14 +483,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-<!-- Cerrar y guardar cambios -->
-                                            <div class="modal-footer">
-                                                <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            </div>
-                                        </form>
-                                    
+                                    </div>
+                                    <!-- Cerrar y guardar cambios -->
+                                    <div class="modal-footer">
+                                        <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
@@ -452,119 +502,143 @@
 
 
 
-<!-- Table -->
+                        <!-- Table -->
                         <?php
                         include("Controlador.php");
                         include("tabla_estudiantes.php");
-                        
+
                         $controlador = new Controlador();
-                        
+
                         $buscar = $_GET['buscar'] ?? '';
-                        
+
                         $estudiantes = $controlador->buscarEstudiantes($buscar);
-                        
+
                         // Renderizar la tabla
                         renderizarTablaEstudiantes($estudiantes);
-                        
+
                         // Modal Modificar
                         foreach ($estudiantes as $estudiante) {
                             echo "
-                            <div class='modal fade' id='modalModificar{$estudiante['documento']}' tabindex='-1' aria-labelledby='modalModificarLabel{$estudiante['documento']}' aria-hidden='true'>
-                                <div class='modal-dialog modal-dialog-scrollable'>
-                                    <div class='modal-content'>
+                                <div class='modal fade' id='modalModificar{$estudiante['documento']}' tabindex='-1' aria-labelledby='modalModificarLabel{$estudiante['documento']}' aria-hidden='true'>
+                                    <div class='modal-dialog modal-dialog-scrollable'>
+                                        <div class='modal-content'>
 
-                                        <div class='modal-header'>
-                                            <h5 class='modal-title' id='modalModificarLabel{$estudiante['documento']}'>Modificar Estudiante</h5>
-                                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                            <div class='modal-header'>
+                                                <h5 class='modal-title' id='modalModificarLabel{$estudiante['documento']}'>Modificar Estudiante</h5>
+                                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                            </div>
+                                            
+                                            <div class='modal-body'>
+                                                <form action='modificar-estudiante.php' method='post'>
+
+                                                    <input type='hidden' name='documento' value='{$estudiante['documento']}'>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='primerNombre{$estudiante['documento']}' name='primerNombre' value='{$estudiante['primerNombre']}' required>
+                                                        <label for='primerNombre{$estudiante['documento']}'>Primer Nombre</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='segundoNombre{$estudiante['documento']}' name='segundoNombre' value='{$estudiante['segundoNombre']}'>
+                                                        <label for='segundoNombre{$estudiante['documento']}'>Segundo Nombre</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='primerApellido{$estudiante['documento']}' name='primerApellido' value='{$estudiante['primerApellido']}' required>
+                                                        <label for='primerApellido{$estudiante['documento']}'>Primer Apellido</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='segundoApellido{$estudiante['documento']}' name='segundoApellido' value='{$estudiante['segundoApellido']}'>
+                                                        <label for='segundoApellido{$estudiante['documento']}'>Segundo Apellido</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='calle{$estudiante['documento']}' name='calle' value='{$estudiante['calle']}' required>
+                                                        <label for='calle{$estudiante['documento']}'>Calle</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='numeroPuerta{$estudiante['documento']}' name='numeroPuerta' value='{$estudiante['numeroPuerta']}' required>
+                                                        <label for='numeroPuerta{$estudiante['documento']}'>Número de Puerta</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='barrio{$estudiante['documento']}' name='barrio' value='{$estudiante['barrio']}' required>
+                                                        <label for='barrio{$estudiante['documento']}'>Barrio</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='localidad{$estudiante['documento']}' name='localidad' value='{$estudiante['localidad']}' required>
+                                                        <label for='localidad{$estudiante['documento']}'>Localidad</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='tel{$estudiante['documento']}' name='tel' value='{$estudiante['tel']}' minlength='8' maxlength='9' required>
+                                                        <label for='tel{$estudiante['documento']}'>Teléfono</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <select class='form-select' id='teorico{$estudiante['documento']}' name='teorico' required>
+                                                            <option value='Pendiente' " . ($estudiante['teorico'] == 'Pendiente' ? 'selected' : '') . ">Pendiente</option>
+                                                            <option value='Aprobado' " . ($estudiante['teorico'] == 'Aprobado' ? 'selected' : '') . ">Aprobado</option>
+                                                        </select>
+                                                        <label for='teorico{$estudiante['documento']}'>Teórico</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='email' class='form-control' id='email{$estudiante['documento']}' name='email' value='{$estudiante['email']}' required>
+                                                        <label for='email{$estudiante['documento']}'>Email</label>
+                                                    </div>
+
+                                                    <div class='form-floating mb-3'>
+                                                        <input type='text' class='form-control' id='pass{$estudiante['documento']}' name='pass' value='{$estudiante['pass']}' required>
+                                                        <label for='pass{$estudiante['documento']}'>Pass</label>
+                                                    </div>
+
+                                            </div>
+
+                                            <div class='modal-footer'>
+                                                <button type='submit' class='btn btn-primary' id='liveAlertBtn'>Actualizar</button>
+                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+                                            </div>
+                                                
+                                                </form>
+                                            
                                         </div>
-                                        
-                                        <div class='modal-body'>
-                                            <form action='modificar-estudiante.php' method='post'>
-
-                                                <input type='hidden' name='documento' value='{$estudiante['documento']}'>
-
-                                                <div class='mb-3'>
-                                                    <label for='primerNombre{$estudiante['documento']}' class='form-label'>Primer Nombre</label>
-                                                    <input type='text' class='form-control' id='primerNombre{$estudiante['documento']}' name='primerNombre' value='{$estudiante['primerNombre']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='segundoNombre{$estudiante['documento']}' class='form-label'>Segundo Nombre</label>
-                                                    <input type='text' class='form-control' id='segundoNombre{$estudiante['documento']}' name='segundoNombre' value='{$estudiante['segundoNombre']}'>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='primerApellido{$estudiante['documento']}' class='form-label'>Primer Apellido</label>
-                                                    <input type='text' class='form-control' id='primerApellido{$estudiante['documento']}' name='primerApellido' value='{$estudiante['primerApellido']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='segundoApellido{$estudiante['documento']}' class='form-label'>Segundo Apellido</label>
-                                                    <input type='text' class='form-control' id='segundoApellido{$estudiante['documento']}' name='segundoApellido' value='{$estudiante['segundoApellido']}'>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='calle{$estudiante['documento']}' class='form-label'>Calle</label>
-                                                    <input type='text' class='form-control' id='calle{$estudiante['documento']}' name='calle' value='{$estudiante['calle']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='numeroPuerta{$estudiante['documento']}' class='form-label'>Número de Puerta</label>
-                                                    <input type='text' class='form-control' id='numeroPuerta{$estudiante['documento']}' name='numeroPuerta' value='{$estudiante['numeroPuerta']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='barrio{$estudiante['documento']}' class='form-label'>Barrio</label>
-                                                    <input type='text' class='form-control' id='barrio{$estudiante['documento']}' name='barrio' value='{$estudiante['barrio']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='localidad{$estudiante['documento']}' class='form-label'>Localidad</label>
-                                                    <input type='text' class='form-control' id='localidad{$estudiante['documento']}' name='localidad' value='{$estudiante['localidad']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='tel{$estudiante['documento']}' class='form-label'>Teléfono</label>
-                                                    <input type='text' class='form-control' id='tel{$estudiante['documento']}' name='tel' value='{$estudiante['tel']}' minlength='8' maxlength='9' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='email{$estudiante['documento']}' class='form-label'>Email</label>
-                                                    <input type='email' class='form-control' id='email{$estudiante['documento']}' name='email' value='{$estudiante['email']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='pass{$estudiante['documento']}' class='form-label'>Pass</label>
-                                                    <input type='text' class='form-control' id='pass{$estudiante['documento']}' name='pass' value='{$estudiante['pass']}' required>
-                                                </div>
-
-                                                <div class='mb-3'>
-                                                    <label for='teorico{$estudiante['documento']}' class='form-label'>Teórico</label>
-                                                    <select class='form-select' id='teorico{$estudiante['documento']}' name='teorico' required>
-                                                        <option value='Pendiente' " . ($estudiante['teorico'] == 'Pendiente' ? 'selected' : '') . ">Pendiente</option>
-                                                        <option value='Aprobado' " . ($estudiante['teorico'] == 'Aprobado' ? 'selected' : '') . ">Aprobado</option>
-                                                    </select>
-                                                </div>
-
-                                        </div>
-
-                                        <div class='modal-footer'>
-                                            <button type='submit' class='btn btn-primary' id='liveAlertBtn'>Actualizar</button>
-                                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
-                                        </div>
-                                               
-                                            </form>
-                                        
                                     </div>
-                                </div>
-                            </div>";
+                                </div>";
+
+                            // Modal de confirmación de baja
+                            echo "
+                                <div class='modal fade' id='modalBaja{$estudiante['documento']}' tabindex='-1' aria-labelledby='modalBajaLabel{$estudiante['documento']}' aria-hidden='true'>
+                                    <div class='modal-dialog'>
+                                        <div class='modal-content'>
+                                            <div class='modal-header'>
+                                                <h5 class='modal-title' id='modalBajaLabel{$estudiante['documento']}'>Confirmar Baja</h5>
+                                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                            </div>
+                                            <div class='modal-body'>
+                                                <p>¿Estás seguro de que deseas dar de baja a este estudiante? Esta acción es irreversible, pero quedará un registro en la base de datos.</p>
+                                            </div>
+                                            <div class='modal-footer'>
+                                                <form action='baja-estudiante.php' method='post'>
+                                                    <input type='hidden' name='documento' value='{$estudiante['documento']}' />
+                                                    <button type='submit' class='btn btn-danger'>Confirmar Baja</button>
+                                                </form>
+                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>";
                         }
 
 
-                        
+
+
                         $controlador->cerrarConexion();
                         ?>
-                        
+
                     </div>
                 </div>
             </main>
@@ -574,7 +648,54 @@
 
 
 
-
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" fill="white" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
 
 
 

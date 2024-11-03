@@ -1,8 +1,7 @@
 <?php include 'verificar_sesion.php'; ?>
 
 <!DOCTYPE html>
-
-<html>
+<html data-bs-theme="auto">
 
 <head>
     <meta charset="utf-8">
@@ -12,6 +11,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Símbolos para el toggler de los temas -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
 </head>
 
 <body class="dashboard-page">
@@ -20,7 +37,7 @@
 
     <div class="wrapper">
 
-<!-- Sidebar -->
+        <!-- Sidebar -->
         <aside id="sidebar">
             <div class="h-100 ">
 
@@ -49,13 +66,13 @@
                     <hr class="hr-color">
 
 
-<!-- Header General -->
+                    <!-- Header General -->
                     <li class="sidebar-header">
                         General
                     </li>
 
 
-<!-- Inicio -->
+                    <!-- Inicio -->
                     <li class="sidebar-item separar-items active-link">
 
                         <a href="inicio.php" class="sidebar-link">
@@ -68,7 +85,7 @@
 
                     </li>
 
-<!-- Configuracion -->
+                    <!-- Configuracion -->
                     <li class="sidebar-item">
 
                         <a href="configuracion.php" class="sidebar-link">
@@ -83,13 +100,13 @@
 
 
 
-<!-- Header Menu de Gestion -->
+                    <!-- Header Menu de Gestion -->
                     <li class="sidebar-header separar-headers">
                         Menú de Gestión
                     </li>
 
 
-<!-- Usuarios -->
+                    <!-- Usuarios -->
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link collapsed selected" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
@@ -113,7 +130,7 @@
                         </ul>
 
                     </li>
-<!-- Vehículos -->
+                    <!-- Vehículos -->
                     <li class="sidebar-item separar-items">
 
                         <a href="vehiculo.php" class="sidebar-link">
@@ -130,7 +147,7 @@
 
 
 
-<!-- Clases y Horarios -->
+                    <!-- Clases y Horarios -->
                     <li class="sidebar-item">
 
                         <a href="clases.php" class="sidebar-link">
@@ -147,10 +164,10 @@
                     <hr class="hr-color">
 
 
-<!-- Cerrar sesíón -->
+                    <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
-                        <a href="index.html" class="sidebar-link">
+                        <a href="index.html" class="sidebar-cerrar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -171,89 +188,133 @@
         </aside>
 
 
-<!-- Main Component -->
+        <!-- Main Component -->
         <div class="main">
 
 
 
-<!-- Nav Bar -->
-            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
 
-<!-- Boton para abir y cerrar sidebar -->
+                <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="ms-auto search-icon-container">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+                <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
+                    <div class="btn-group">
+                        <div class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" id="userDropdown" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <span class="ms-2" style="user-select: none;">
+                                <?php
+                                echo isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : (isset($_COOKIE['email']) ? htmlspecialchars($_COOKIE['email']) : 'Email no disponible');
+                                ?>
+                            </span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Configuracón</button></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a href="cerrar_sesion.php" class="dropdown-item" onclick="window.location.href='cerrar_sesion.php'; return false;">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </nav>
 
 
-<!-- Cuerpo -->
+            <!-- Cuerpo -->
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
 
-                        <h5 id="fecha-actual" class="text-center"></h5>
-                        
-                        <h3>Instructores</h3>
-                        <p>Administra a los distintos Instructores del sistema aquí.</p>
+                        <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
-                        <?php 
-                            if (isset($_SESSION['status'])) {
-                                if ($_SESSION['status'] == 'success') {
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-people me-2" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                            </svg>
+                            <h3 class="mb-0">Instructores</h3>
+                        </div>
+                        <p class="text-center text-lg-start">Administra a los distintos Instructores del sistema aquí.</p>
+
+                        <?php
+                        if (isset($_SESSION['status'])) {
+                            if ($_SESSION['status'] == 'success') {
+                                if ($_SESSION['operation'] == 'alta') {
+                                    $nombreInstructor = isset($_SESSION['nombre_instructor']) ? $_SESSION['nombre_instructor'] : 'el instructor';
                                     echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-                                            <strong>¡Excelente!</strong> Los cambios para el instructor se han realizado correctamente.
-                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                                        </div>";
-                                } else if ($_SESSION['status'] == 'error') {
-                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                                            <strong>¡Oh no!</strong> Ha ocurrido un error al intentar modificar la información del instructor. Por favor, inténtalo de nuevo más tarde.
-                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                                        </div>";
+                                                <strong>¡Excelente!</strong> El instructor $nombreInstructor ha sido registrado correctamente.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
+                                } else if ($_SESSION['operation'] == 'modificar') {
+                                    $nombreInstructor = isset($_SESSION['nombre_instructor']) ? $_SESSION['nombre_instructor'] : 'el instructor';
+                                    echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                                <strong>¡Excelente!</strong> Los cambios para el instructor $nombreInstructor se han realizado correctamente.
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
                                 }
-                                unset($_SESSION['status']);
+                            } else if ($_SESSION['status'] == 'error') {
+                                if ($_SESSION['operation'] == 'alta') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                <strong>¡Oh no!</strong> Ha ocurrido un error al intentar registrar al instructor. {$_SESSION['error_message']}
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
+                                } else if ($_SESSION['operation'] == 'modificar') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                                <strong>¡Oh no!</strong> Ha ocurrido un error al intentar modificar la información del instructor. {$_SESSION['error_message']}
+                                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                            </div>";
+                                }
                             }
+
+                            unset($_SESSION['status']);
+                            unset($_SESSION['operation']);
+                            unset($_SESSION['nombre_instructor']);
+                            unset($_SESSION['error_message']);
+                        }
                         ?>
 
 
-                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow color-gris">
-<!-- Boton refrescar -->
-                            <div class="me-auto p-2">
-                                <button type="submit" class="btn btn-outline-dark" onClick="refreshPage()">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
-                                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
-                                    </svg>
-                                </button>
+                        <div id="header-tabla" class="d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-center shadow bg-body-tertiary">
+                            <!-- Boton agregar instructor -->
+                            <div class="me-auto p-2 w-100 w-lg-auto">
+                                <button class="btn btn-primary w-100 w-lg-auto" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar instructor</button>
                             </div>
-<!-- Barra de busqueda -->
-                            <div class="p-2">
-                                <form action="" method="get">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Buscar por CI o Nombre" name="buscar" value="<?php echo isset($_GET['buscar']) ? htmlspecialchars($_GET['buscar']) : ''; ?>">
-                                        <button class="btn btn-outline-primary" type="submit">Buscar</button>
-                                    </div>
-                                </form>
+                            <!-- Barra de busqueda -->
+                            <div class="p-2 w-100 w-lg-auto">
+                                <input type="search" id="searchInput" class="form-control w-100 w-lg-auto" placeholder="Buscar instructores...">
                             </div>
-<!-- Boton agregar estudiante -->
-                            <div class="p-2">
-                                <button type="button" class="btn btn-azul shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                                    </svg>
-                                    Agregar Instructor 
-                                </button>
+                            <!-- Boton limitar -->
+                            <div class="p-2 d-flex w-100">
+                                <div class="p-2 d-flex align-items-center w-100 w-lg-auto">
+                                    <span class="me-2">Mostrar</span>
+                                    <select id="limitSelect" class="form-select me-2">
+                                        <!-- seleccione una opcion -->
+                                        <option value="5" selected>5</option>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <span>Filas</span>
+                                </div>
+                                <!-- Boton refrescar/recargar -->
+                                <div class="p-2 w-25 w-lg-auto mx-auto">
+                                    <button type="submit" class="btn w-100 w-lg-auto" onClick="refreshPage()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                                            <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -261,7 +322,7 @@
 
 
 
- <!-- Modal agregar instructor -->
+                        <!-- Modal agregar instructor -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -424,195 +485,59 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                            <!-- Cerrar y guardar cambios -->
-                                            <div class="modal-footer">
-                                                <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            </div>
-                                        </form>
-                                    
+                                    </div>
+                                    <!-- Cerrar y guardar cambios -->
+                                    <div class="modal-footer">
+                                        <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
+                                        <button type="button" class="btn btn-info" onclick="rellenarCampos()">Rellenar con datos aleatorios</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
 
 
 
-
-
-
-
-
-<!-- Table -->
-                        <?php
-                        include("Controlador.php");
-                        $controlador = new Controlador();
-                       
-
-                        // Verificar si se envió un término de búsqueda a través de $_GET arriba en el search bar, que funciona como URL
-                        if (isset($_GET['buscar'])) {
-                            $buscar = $_GET['buscar'];
-                        } else {
-                            $buscar = '';
-                        }
-
-                        // Metodo para mostrar todos los instructores en la tabla
-                        $instructores = $controlador->listarInstructores();
-
-                        // Metodo para buscar instructores en la tabla
-                        $instructores = $controlador->buscarInstructores($buscar);
-
-                        //si el array de instructores NO está vacio, osea que hay instructores en la bd, los muestra de la siguiente manera:
-                        if (empty($instructores) == false) {
-                            echo "<div id='tabla-instructores' class='table-responsive shadow'>";
-                            echo "<table class='table'>";
-                            echo "
-                                <thead class='table-light'>
+                        <div class="table-responsive shadow">
+                            <table id="tablaPersonas" class="table table-striped table-hover">
+                                <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Documento</th>
-                                        <th>Primer Nombre</th>
-                                        <th>Segundo Nombre</th>
-                                        <th>Primer Apellido</th>
-                                        <th>Segundo Apellido</th>
-                                        <th>Calle</th>
-                                        <th>Número Puerta</th>
-                                        <th>Barrio</th>
-                                        <th>Localidad</th>
-                                        <th>Teléfono</th>
-                                        <th>Email</th>
-                                        <th>Contraseña</th>
-                                        <th>Horas Dictadas</th>
-                                        <th>Eliminar</th>
-                                        <th>Modificar</th>
+                                        <th scope="col" class="border-0">ID Instructor</th>
+                                        <th scope="col" class="border-0">ID Usuario</th>
+                                        <th scope="col" class="border-0">Documento</th>
+                                        <th scope="col" class="border-0">Primer Nombre</th>
+                                        <th scope="col" class="border-0">Segundo Nombre</th>
+                                        <th scope="col" class="border-0">Primer Apellido</th>
+                                        <th scope="col" class="border-0">Segundo Apellido</th>
+                                        <th scope="col" class="border-0">Calle</th>
+                                        <th scope="col" class="border-0">Número Puerta</th>
+                                        <th scope="col" class="border-0">Barrio</th>
+                                        <th scope="col" class="border-0">Localidad</th>
+                                        <th scope="col" class="border-0">Teléfono</th>
+                                        <th scope="col" class="border-0">Horas Dictadas</th>
+                                        <th scope="col" class="border-0">Email</th>
+                                        <th scope="col" class="border-0">Contraseña</th>
+                                        <th scope="col" class="border-0">Modificar</th>
+                                        <th scope="col" class="border-0">Eliminar</th>
                                     </tr>
-                                </thead>";
-
-                            echo "<tbody>";
-                            foreach ($instructores as $instructor) {
-                                echo "<tr>";
-                                echo "<td>{$instructor['IDInstructor']}</td>";
-                                echo "<td>{$instructor['documento']}</td>";
-                                echo "<td>{$instructor['primerNombre']}</td>";
-                                echo "<td>{$instructor['segundoNombre']}</td>";
-                                echo "<td>{$instructor['primerApellido']}</td>";
-                                echo "<td>{$instructor['segundoApellido']}</td>";
-                                echo "<td>{$instructor['calle']}</td>";
-                                echo "<td>{$instructor['numeroPuerta']}</td>";
-                                echo "<td>{$instructor['barrio']}</td>";
-                                echo "<td>{$instructor['localidad']}</td>";
-                                echo "<td>{$instructor['tel']}</td>";
-                                echo "<td>{$instructor['email']}</td>";
-                                echo "<td>{$instructor['pass']}</td>";
-                                echo "<td>{$instructor['horasDictadas']}</td>";
-                                echo "<td class='text-center'>
-                                                <form action='baja-instructor.php' method='post'>
-                                                    <input type='hidden' name='documento' value='{$instructor['documento']}' /> 
-                                                    <button type='submit' class='btn btn-danger'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
-                                                        <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z'/>
-                                                        <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
-                                                        </svg>
-                                                    </button>
-                                                </form>
-                                        </td>";
-                                echo "<td class='text-center'>
-                                        <button type='button' data-bs-toggle='modal' data-bs-target='#modalModificar{$instructor['documento']}' class='btn btn-warning'>
-                                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 16 16'>
-                                                <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>
-                                                <path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z'/>
-                                            </svg>
-                                        </button>
-                                    </td>";
-                                echo "</tr>";
-                            }
-                            echo "</tbody>";
-                            echo "</table>";
-                            echo "</div>";
-                        } else {
-                            echo "<br> No existen instructores que coincidan con la búsqueda.";
-                        }
-
-
-// Modal para modificar estudiante
-                        foreach ($instructores as $instructor) {
-                            echo "
-                            <div class='modal fade' id='modalModificar{$instructor['documento']}' tabindex='-1' aria-labelledby='modalModificarLabel{$instructor['documento']}' aria-hidden='true'>
-                                <div class='modal-dialog modal-dialog-scrollable'>
-                                    <div class='modal-content'>
-
-                                        <div class='modal-header'>
-                                            <h5 class='modal-title' id='modalModificarLabel{$instructor['documento']}'>Modificar Instructor</h5>
-                                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                                        </div>
-
-                                        <div class='modal-body'>
-                                            <form action='modificar-instructor.php' method='post'>
-
-                                                <input type='hidden' name='documento' value='{$instructor['documento']}'>
-                                                <div class='mb-3'>
-                                                    <label for='primerNombre{$instructor['documento']}' class='form-label'>Primer Nombre</label>
-                                                    <input type='text' class='form-control' id='primerNombre{$instructor['documento']}' name='primerNombre' value='{$instructor['primerNombre']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='segundoNombre{$instructor['documento']}' class='form-label'>Segundo Nombre</label>
-                                                    <input type='text' class='form-control' id='segundoNombre{$instructor['documento']}' name='segundoNombre' value='{$instructor['segundoNombre']}'>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='primerApellido{$instructor['documento']}' class='form-label'>Primer Apellido</label>
-                                                    <input type='text' class='form-control' id='primerApellido{$instructor['documento']}' name='primerApellido' value='{$instructor['primerApellido']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='segundoApellido{$instructor['documento']}' class='form-label'>Segundo Apellido</label>
-                                                    <input type='text' class='form-control' id='segundoApellido{$instructor['documento']}' name='segundoApellido' value='{$instructor['segundoApellido']}'>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='calle{$instructor['documento']}' class='form-label'>Calle</label>
-                                                    <input type='text' class='form-control' id='calle{$instructor['documento']}' name='calle' value='{$instructor['calle']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='numeroPuerta{$instructor['documento']}' class='form-label'>Número de Puerta</label>
-                                                    <input type='text' class='form-control' id='numeroPuerta{$instructor['documento']}' name='numeroPuerta' value='{$instructor['numeroPuerta']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='barrio{$instructor['documento']}' class='form-label'>Barrio</label>
-                                                    <input type='text' class='form-control' id='barrio{$instructor['documento']}' name='barrio' value='{$instructor['barrio']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='localidad{$instructor['documento']}' class='form-label'>Localidad</label>
-                                                    <input type='text' class='form-control' id='localidad{$instructor['documento']}' name='localidad' value='{$instructor['localidad']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='tel{$instructor['documento']}' class='form-label'>Teléfono</label>
-                                                    <input type='text' class='form-control' id='tel{$instructor['documento']}' name='tel' value='{$instructor['tel']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='email{$instructor['documento']}' class='form-label'>Email</label>
-                                                    <input type='email' class='form-control' id='email{$instructor['documento']}' name='email' value='{$instructor['email']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='pass{$instructor['documento']}' class='form-label'>Pass</label>
-                                                    <input type='text' class='form-control' id='pass{$instructor['documento']}' name='pass' value='{$instructor['pass']}' required>
-                                                </div>
-                                                <div class='mb-3'>
-                                                    <label for='horasDictadas{$instructor['documento']}' class='form-label'>Horas Dictadas</label>
-                                                    <input type='number' class='form-control' id='horasDictadas{$instructor['documento']}' name='horasDictadas' value='{$instructor['horasDictadas']}' required>
-                                                </div>
-                                        </div>
-
-                                        <div class='modal-footer'>
-                                            <button type='submit' class='btn btn-primary'>Actualizar</button>
-                                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
-                                        </div>
-                                                
-                                            </form>
-                                        
-                                    </div>
-                                </div>
-                            </div>";
-                        }
-
-                        $controlador->cerrarConexion();
-                        ?>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="..." class="d-flex justify-content-lg-start justify-content-md-center justify-content-center">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" id="prevPage">Anterior</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" id="nextPage">Siguiente</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        
                     </div>
                 </div>
             </main>
@@ -620,12 +545,164 @@
     </div>
 
 
+    <div class="modal fade" id="modifModal" tabindex="-1" aria-labelledby="modalModificarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalModificarLabel">Modificar Instructor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="formModificarInstructor" method="post" onsubmit="guardarCambios(event)">
+
+                        <input type="hidden" id="txtDocumento" name="documento">
+
+                        <div class="form-floating mb-3">
+                            <input type="text" id="txtPrimerNombre" class="form-control" required>
+                            <label for="txtPrimerNombre">Primer Nombre</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtSegundoNombre" name="segundoNombre">
+                            <label for="txtSegundoNombre">Segundo Nombre</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtPrimerApellido" name="primerApellido" required>
+                            <label for="txtPrimerApellido">Primer Apellido</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtSegundoApellido" name="segundoApellido">
+                            <label for="txtSegundoApellido">Segundo Apellido</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtCalle" name="calle" required>
+                            <label for="txtCalle">Calle</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtNumeroPuerta" name="numeroPuerta" required>
+                            <label for="txtNumeroPuerta">Número de Puerta</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtBarrio" name="barrio" required>
+                            <label for="txtBarrio">Barrio</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtLocalidad" name="localidad" required>
+                            <label for="txtLocalidad">Localidad</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtTel" name="tel" required>
+                            <label for="txtTel">Teléfono</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="txtEmail" name="email" required>
+                            <label for="txtEmail">Email</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtPass" name="pass" required>
+                            <label for="txtPass">Pass</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="txtHorasDictadas" name="horasDictadas" required>
+                            <label for="txtHorasDictadas">Horas Dictadas</label>
+                        </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="btnGuardar">Actualizar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBaja" tabindex="-1" aria-labelledby="modalBajaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBajaLabel">Confirmar Baja</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas dar de baja a este instructor? Esta acción es irreversible, pero quedará un registro en la base de datos.</p>
+                </div>
+                <div class="modal-footer">
+                    <form id="formBajaInstructor" method="post" onsubmit="confirmarBaja(event)">
+                        <input type="hidden" id="bajaDocumento" name="documento">
+                        <button type="submit" class="btn btn-danger">Confirmar Baja</button>
+                    </form>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" fill="white" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
 
-
-
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/instructores.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>

@@ -1,15 +1,15 @@
-<?php include 'verificar_sesion.php';
-
-// if ($_SESSION['rol'] !== 'estudiante') {
-//     echo "<script>alert('No tiene permiso para acceder a esta página.'); window.location.href='inicio.php';</script>";
-//     exit();
-// }
-
+<?php
+include 'verificar_sesion.php';
 require_once 'Controlador.php';
 $controlador = new Controlador();
 $instructores = $controlador->obtenerInstructores();
 $estudiantes = $controlador->obtenerEstudiantes();
 $vehiculos = $controlador->obtenerVehiculos();
+
+if ($_SESSION['rol'] !== 'estudiante') {
+    echo "<script>alert('No tiene permiso para acceder a esta página.'); window.location.href='inicio.php';</script>";
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +73,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                     </li>
 
 
+
                     <hr class="hr-color">
 
 
@@ -85,7 +86,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                     <!-- Inicio -->
                     <li class="sidebar-item separar-items active-link">
 
-                        <a href="inicio.php" class="sidebar-link">
+                        <a href="inicio-estudiante.php" class="sidebar-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                                 <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
                             </svg>
@@ -112,53 +113,15 @@ $vehiculos = $controlador->obtenerVehiculos();
 
                     <!-- Header Menu de Gestion -->
                     <li class="sidebar-header separar-headers">
-                        Menú de Gestión
+                        Menú
                     </li>
 
-
-                    <!-- Usuarios -->
-                    <li class="sidebar-item separar-items">
-
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
-                            </svg>
-                            <i class="fa-regular fa-file-lines pe-2"></i>
-                            Usuarios
-                        </a>
-
-                        <ul id="usuarios" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-
-                            <li class="sidebar-item separar-hijos">
-                                <a href="estudiante.php" class="sidebar-link">Estudiantes</a>
-                            </li>
-
-                            <li class="sidebar-item separar-hijos">
-                                <a href="Instructor.php" class="sidebar-link">Instructores</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-                    <!-- Vehículos -->
-                    <li class="sidebar-item separar-items">
-
-                        <a href="vehiculo.php" class="sidebar-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16">
-                                <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
-                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
-                            </svg>
-                            <i class="fa-solid fa-sliders pe-2"></i>
-                            Vehículos
-                        </a>
-
-                    </li>
 
 
 
 
                     <!-- Clases y Horarios -->
-                    <li class="sidebar-item">
+                    <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link selected">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
@@ -169,6 +132,30 @@ $vehiculos = $controlador->obtenerVehiculos();
                             Clases y Horarios
                         </a>
 
+                    </li>
+
+                    <li class="sidebar-item separar-items">
+                        <a href="Examen.php" class="sidebar-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                            </svg>
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Examen
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="historial-clases.php" class="sidebar-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                                <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z" />
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
+                            </svg>
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Historial de clases
+                        </a>
                     </li>
 
                     <hr class="hr-color">
@@ -253,9 +240,9 @@ $vehiculos = $controlador->obtenerVehiculos();
                                 <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
                             </svg>
-                            <h3 class="mb-0">Clases</h3>
+                            <h3 class="mb-0">Mis clases</h3>
                         </div>
-                        <p class="text-center text-lg-start">Administra a las distintas clases del sistema aquí.</p>
+                        <p class="text-center text-lg-start">Calendario interactivo con tus clases.</p>
 
 
                     </div>
@@ -276,69 +263,62 @@ $vehiculos = $controlador->obtenerVehiculos();
                         </div>
 
                         <div class="modal-body">
-                            <form id="eventForm" action="modificar-evento.php" method="POST">
-                                <div class="modal-body">
+                            <div class="modal-body">
 
-                                    <!-- <label for="visualizar_id" class="form-label">ID</label> -->
-                                    <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
+                                <!-- <label for="visualizar_id" class="form-label">ID</label> -->
+                                <input type="hidden" class="form-control" id="visualizar_id" name="id" readonly>
 
-                                    <div class="mb-3">
-                                        <label for="visualizar_estudiante" class="form-label">Estudiante</label>
-                                        <input type="text" class="form-control" id="visualizar_estudiante" name="estudiante" readonly>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_instructor" class="form-label">Instructor</label>
-                                        <input type="text" class="form-control" id="visualizar_instructor" name="instructor" readonly>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_vehiculo" class="form-label">Vehículo</label>
-                                        <input type="text" class="form-control" id="visualizar_vehiculo" name="vehiculo" readonly>
-                                    </div>
-
-                                    <hr class="">
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_titulo" class="form-label">Título del evento</label>
-                                        <input type="text" class="form-control" id="visualizar_titulo" name="titulo" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_inicio" class="form-label">Día</label>
-                                        <input type="date" class="form-control" id="visualizar_inicio" name="inicio" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <!-- <label for="visualizar_fin" class="form-label">Fin</label> -->
-                                        <input type="hidden" class="form-control" id="visualizar_fin" name="fin" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_descripcion" class="form-label">Descripcion </label>
-                                        <textarea class="form-control" id="visualizar_descripcion" name="descripcion" rows="3"></textarea>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="visualizar_time" class="form-label">Hora</label>
-                                        <input type="time" class="form-control" id="visualizar_time" name="hora" required>
-                                    </div>
-
-
-
+                                <div class="mb-3">
+                                    <label for="visualizar_estudiante" class="form-label">Estudiante</label>
+                                    <input type="text" class="form-control" id="visualizar_estudiante" name="estudiante" readonly>
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="visualizar_instructor" class="form-label">Instructor</label>
+                                    <input type="text" class="form-control" id="visualizar_instructor" name="instructor" readonly>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="visualizar_vehiculo" class="form-label">Vehículo</label>
+                                    <input type="text" class="form-control" id="visualizar_vehiculo" name="vehiculo" readonly>
+                                </div>
+
+                                <hr class="">
+
+                                <div class="mb-3">
+                                    <label for="visualizar_titulo" class="form-label">Título del evento</label>
+                                    <input type="text" class="form-control" id="visualizar_titulo" name="titulo" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="visualizar_inicio" class="form-label">Día</label>
+                                    <input type="date" class="form-control" id="visualizar_inicio" name="inicio" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <!-- <label for="visualizar_fin" class="form-label">Fin</label> -->
+                                    <input type="hidden" class="form-control" id="visualizar_fin" name="fin" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="visualizar_descripcion" class="form-label">Descripcion </label>
+                                    <textarea class="form-control" id="visualizar_descripcion" name="descripcion" rows="3"></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="visualizar_time" class="form-label">Hora</label>
+                                    <input type="time" class="form-control" id="visualizar_time" name="hora" required>
+                                </div>
+
+
+
+                            </div>
                         </div>
 
 
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                            </form>
 
 
-                            <form id="deleteForm" action="baja-evento.php" method="POST">
-                                <input type="hidden" id="delete_id" name="id">
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
 
 
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -356,97 +336,11 @@ $vehiculos = $controlador->obtenerVehiculos();
 
 
 
-            <!-- Modal de Día -->
-            <div class="modal fade" id="dayModal" tabindex="-1" aria-labelledby="dayModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="dayModalLabel">Crear nuevo evento</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <form id="newEventForm" action="alta-evento.php" method="POST">
-                                <div class="modal-body">
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_titulo" class="form-label">Título del evento</label>
-                                        <input type="text" class="form-control" id="nuevo_titulo" name="titulo" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nueva_descripcion" class="form-label">Descripcion</label>
-                                        <textarea class="form-control" id="nueva_descripcion" name="descripcion" rows="3"></textarea>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_time" class="form-label">Hora</label>
-                                        <input type="time" class="form-control" id="nuevo_time" name="hora" required>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="asignar_tipo" class="form-label">Tipo de Clase</label>
-                                        <select class="form-select" id="asignar_tipo" name="tipo" required>
-                                            <option value="">Selecciona un Tipo</option>
-                                            <option value="Teórico" id='Teórico'>Teórico</option>
-                                            <option value="Práctico" id='Práctico'>Práctico</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_instructor" class="form-label">Instructor</label>
-                                        <select class="form-select" id="nuevo_instructor" name="instructor" required>
-                                            <option value="">Selecciona un instructor</option>
-                                            <?php foreach ($instructores as $instructor): ?>
-                                                <option value="<?php echo $instructor['IDInstructor']; ?>">
-                                                    <?php echo htmlspecialchars($instructor['primerNombre'] . ' ' . $instructor['primerApellido']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_estudiante" class="form-label">Estudiante</label>
-                                        <select class="form-select" id="nuevo_estudiante" name="estudiante" required>
-                                            <option value="">Selecciona un estudiante</option>
-                                            <?php foreach ($estudiantes as $estudiante): ?>
-                                                <option value="<?php echo $estudiante['IDEstudiante']; ?>">
-                                                    <?php echo htmlspecialchars($estudiante['primerNombre'] . ' ' . $estudiante['primerApellido']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="nuevo_vehiculo" class="form-label">Vehiculo</label>
-                                        <select class="form-select" id="nuevo_vehiculo" name="vehiculo" required>
-                                            <option value="">Selecciona un vehiculo</option>
-                                            <?php foreach ($vehiculos as $vehiculo): ?>
-                                                <option value="<?php echo $vehiculo['ID_Vehiculos']; ?>">
-                                                    <?php echo htmlspecialchars($vehiculo['Matricula'] . ' ' . $vehiculo['Modelo'] . ' ' . $vehiculo['Marca']); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <input type="hidden" id="nuevo_fecha" name="fecha">
-
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Guardar evento</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
 
 
         </div>
     </div>
+
 
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
@@ -503,6 +397,7 @@ $vehiculos = $controlador->obtenerVehiculos();
     </script>
     <script src="dist/index.global.min.js"></script>
     <script src="core/locales/es-us.global.min.js"></script>
+
 </body>
 
 </html>

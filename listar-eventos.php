@@ -1,8 +1,14 @@
 <?php
+session_start(); // Inicia la sesión si no está iniciada
+
 require_once 'Controlador.php';
 
 $controlador = new Controlador();
-$eventos = $controlador->listarEventos();
+
+$usuarioEmail = $_SESSION['usuario'];
+$rol = $_SESSION['rol'];
+
+$eventos = $controlador->listarEventos($usuarioEmail, $rol);
 
 $evs = [];
 foreach($eventos as $evento) {
@@ -18,7 +24,6 @@ foreach($eventos as $evento) {
             'estudiante' => $evento['estudiante'],
             'vehiculo' => $evento['vehiculo']
         ]
-        // 'end' => $evento['end']
     ];
 }
 

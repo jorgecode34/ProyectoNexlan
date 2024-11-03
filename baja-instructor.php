@@ -19,4 +19,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['documento'])) {
 } else {
     echo "Error al procesar la solicitud de eliminación.";
 }
-?>
+
+

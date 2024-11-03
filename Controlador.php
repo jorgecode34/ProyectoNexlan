@@ -61,10 +61,10 @@ class Controlador
         return $this->base->listarInstructores();
     }
 
-    public function buscarInstructores($termino)
-    {
-        return $this->base->buscarInstructor($termino);
-    }
+    // public function buscarInstructores($termino)
+    // {
+    //     return $this->base->buscarInstructor($termino);
+    // }
 
     /* Agarra los datos para crear estudiante, crea el OBJETO estudiante para posteriorme ingresarlo en la BD  */
     public function altaInstructor($documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass)
@@ -127,10 +127,10 @@ class Controlador
     /* FUNCIONES EVENTOS */
     /********************************************************************************************/
 
-    public function listarEventos()
-    {
-        return $this->base->listarEventos();
-    }
+    public function listarEventos($usuarioEmail, $rol)
+{
+    return $this->base->listarEventos($usuarioEmail, $rol);
+}
 
     public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
     {
@@ -199,8 +199,33 @@ class Controlador
     }
 
 
-    public function verificarLoginEstudiante($email, $password)
+    public function verificarLogin($email, $password)
     {
-        return $this->base->verificarCredencialesEstudiante($email, $password);
+        return $this->base->verificarCredenciales($email, $password);
     }
+
+    public function graficaRolesUsuarios()
+    {
+        return $this->base->graficaRolesUsuarios();
+    }
+
+    public function graficaTiposClases()
+    {
+        return $this->base->graficaTiposClases();  
+    }
+
+
+    public function obtenerPreguntasAleatorias($cantidad = 5) {
+        return $this->base->obtenerPreguntasAleatorias($cantidad);
+    }
+
+    public function verificarRespuestas($respuestas) {
+        return $this->base->verificarRespuestas($respuestas);
+    }
+
+    public function mostrarHistorial($usuarioEmail)
+    {
+        return $this->base->mostrarHistorial($usuarioEmail);
+    }
+
 }

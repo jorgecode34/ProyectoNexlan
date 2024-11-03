@@ -7,7 +7,7 @@ function renderizarTablaEstudiantes($estudiantes) {
     }
 
     echo "<div id='tabla-estudiantes' class='table-responsive shadow'>";
-    echo "<table class='table'>";
+    echo "<table class='table table-striped table-hover'>";
     echo renderizarEncabezadoTabla();
     echo renderizarCuerpoTabla($estudiantes);
     echo "</table></div>";
@@ -17,10 +17,10 @@ function renderizarTablaEstudiantes($estudiantes) {
 
 
 function renderizarEncabezadoTabla() {
-    $encabezados = ['ID', 'Documento', 'Primer Nombre', 'Segundo Nombre', 'Primer Apellido', 'Segundo Apellido', 
-                    'Calle', 'Número Puerta', 'Barrio', 'Localidad', 'Teléfono', 'Email', 'Contraseña', 'Teórico', 'Eliminar', 'Modificar'];
+    $encabezados = ['ID Estudiante', 'ID Usuario', 'Documento', 'Primer Nombre', 'Segundo Nombre', 'Primer Apellido', 'Segundo Apellido', 
+                    'Calle', 'Número Puerta', 'Barrio', 'Localidad', 'Teléfono', 'Teórico', 'Email', 'Contraseña', 'Eliminar', 'Modificar'];
    
-    $html = "<thead class='table-light'><tr>";
+    $html = "<thead><tr>";
     foreach ($encabezados as $encabezado) {
         $html .= "<th>$encabezado</th>";
     }
@@ -30,10 +30,9 @@ function renderizarEncabezadoTabla() {
 
 
 
-
 function renderizarCuerpoTabla($estudiantes) {
 
-    $html = "<tbody>";
+    $html = "<tbody class='table-group-divider'>";
 
     foreach ($estudiantes as $estudiante) {
         $html .= "<tr>";
@@ -58,16 +57,13 @@ function renderizarCuerpoTabla($estudiantes) {
 function renderizarBotones($documento) {
     
     $botonEliminar = "<td class='text-center'>
-        <form action='baja-estudiante.php' method='post'>
-            <input type='hidden' name='documento' value='$documento' /> 
-            <button type='submit' class='btn btn-danger'>
+            <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#modalBaja$documento'>
                 <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
                     <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z'/>
-                    <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
+                    <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
                 </svg>
             </button>
-        </form>
-    </td>";
+        </td>";
 
     $botonModificar = "<td class='text-center'>
         <button type='button' data-bs-toggle='modal' data-bs-target='#modalModificar$documento' class='btn btn-warning'>

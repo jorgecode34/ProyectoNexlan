@@ -12,6 +12,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Símbolos para el toggler de los temas -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
 </head>
 
 <body class="dashboard-page">
@@ -150,7 +168,7 @@
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
-                        <a href="cerrar_sesion.php" class="sidebar-link">
+                        <a href="cerrar_sesion.php" class="sidebar-cerrar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -177,22 +195,38 @@
 
 
             <!-- Nav Bar -->
-            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
 
                 <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="ms-auto search-icon-container">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
+                <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
+                    <div class="btn-group">
+                        <div class="dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" id="userDropdown" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <span class="ms-2" style="user-select: none;">
+                                <?php
+                                echo isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : (isset($_COOKIE['email']) ? htmlspecialchars($_COOKIE['email']) : 'Email no disponible');
+                                ?>
+                            </span>
+                        </div>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Configuracón</button></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a href="cerrar_sesion.php" class="dropdown-item" onclick="window.location.href='cerrar_sesion.php'; return false;">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </nav>
@@ -203,16 +237,59 @@
                 <div class="container-fluid">
                     <div class="mb-3">
 
-                        <h5 id="fecha-actual" class="text-center"></h5>
+                        <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
-                        <h3>Vehiculos</h3>
-                        <p>Administra los distintos Vehiculos del sistema aquí.</p>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-car-front me-2" viewBox="0 0 16 16">
+                                <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
+                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
+                            </svg>
+                            <h3 class="mb-0">Vehiculos</h3>
+                        </div>
+                        <p class="text-center text-lg-start">Administra los distintos Vehiculos del sistema aquí.</p>
+
+                        <?php
+                        if (isset($_SESSION['status'])) {
+                            if ($_SESSION['status'] == 'success') {
+                                if ($_SESSION['operation'] == 'alta') {
+                                    $matriculaVehiculo = isset($_SESSION['matricula_vehiculo']) ? $_SESSION['matricula_vehiculo'] : 'el vehículo';
+                                    echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                            <strong>¡Excelente!</strong> El vehículo con matrícula $matriculaVehiculo ha sido registrado correctamente.
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                        </div>";
+                                } else if ($_SESSION['operation'] == 'modificar') {
+                                    $matriculaVehiculo = isset($_SESSION['matricula_vehiculo']) ? $_SESSION['matricula_vehiculo'] : 'el vehículo';
+                                    echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                            <strong>¡Excelente!</strong> Los cambios para el vehículo con matrícula $matriculaVehiculo se han realizado correctamente.
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                        </div>";
+                                }
+                            } else if ($_SESSION['status'] == 'error') {
+                                if ($_SESSION['operation'] == 'alta') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                            <strong>¡Oh no!</strong> Ha ocurrido un error al intentar registrar el vehículo. {$_SESSION['error_message']}
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                        </div>";
+                                } else if ($_SESSION['operation'] == 'modificar') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                            <strong>¡Oh no!</strong> Ha ocurrido un error al intentar modificar la información del vehículo. {$_SESSION['error_message']}
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                        </div>";
+                                }
+                            }
+
+                            unset($_SESSION['status']);
+                            unset($_SESSION['operation']);
+                            unset($_SESSION['matricula_vehiculo']);
+                            unset($_SESSION['error_message']);
+                        }
+                        ?>
 
 
-                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow color-gris">
+                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow bg-body-tertiary">
                             <!-- Boton refrescar -->
                             <div class="me-auto p-2">
-                                <button type="submit" class="btn btn-outline-dark" onClick="refreshPage()">
+                                <button type="submit" class="btn" onClick="refreshPage()">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
                                         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
@@ -238,16 +315,6 @@
                                     Agregar Vehiculo
                                 </button>
                             </div>
-
-                            <!-- <div class="p-2">
-                                <button type="button" class="btn btn-azul shadow d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle me-1" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                                    </svg>
-                                    <span class="text-nowrap">Agregar Vehiculo</span>
-                                </button>
-                            </div> -->
                         </div>
 
 
@@ -300,14 +367,14 @@
                                                     </h2>
                                                     <div id="collapseName" class="accordion-collapse collapse show">
                                                         <div class="accordion-body">
-                                                        <input type="hidden" id="Estado" name="Estado" value="Disponible">
-                                                            <div class="mb-3">
-                                                                <label for="Modelo" class="form-label">Modelo</label>
-                                                                <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
-                                                            </div>
+                                                            <input type="hidden" id="Estado" name="Estado" value="Disponible">
                                                             <div class="mb-3">
                                                                 <label for="Marca" class="form-label">Marca</label>
                                                                 <input type="text" placeholder="Ingrese Marca" class="form-control" id="Marca" name="Marca">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="Modelo" class="form-label">Modelo</label>
+                                                                <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="AnioFabricacion" class="form-label">Año de fabricación</label>
@@ -324,7 +391,7 @@
                                                             <div class="mb-3">
                                                                 <label for="kilometraje" class="form-label">Kilometraje</label>
                                                                 <input type="number" placeholder="Ingrese Kilometraje" class="form-control" id="kilometraje" name="kilometraje" required>
-                                                            </div>    
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div> <!-- Fin del accordion-item -->
@@ -368,11 +435,11 @@
                         // Si el array de vehículos no está vacío, mostrar la tabla
                         if (!empty($vehiculos)) {
                             echo "<div id='tabla-vehiculos' class='table-responsive shadow'>";
-                            echo "<table class='table'>";
+                            echo "<table class='table table-striped table-hover'>";
 
                             // HEADER TABLA
                             echo " 
-                                    <thead class='table-light'>
+                                    <thead>
                                         <tr>
                                             <th>ID</th>
                                             <th>Matrícula</th>
@@ -390,7 +457,7 @@
                                     </thead>";
 
                             // CUERPO TABLA
-                            echo "<tbody>";
+                            echo "<tbody class='table-group-divider'>";
                             foreach ($vehiculos as $vehiculo) {
                                 echo "<tr>";
                                 echo "<td>{$vehiculo['ID_Vehiculos']}</td>";
@@ -402,20 +469,17 @@
                                 echo "<td>{$vehiculo['Color']}</td>";
                                 echo "<td>{$vehiculo['Precio']}</td>";
                                 echo "<td>{$vehiculo['Estado']}</td>";
-                                echo "<td>{$vehiculo['kilometraje']}</td>"; 
+                                echo "<td>{$vehiculo['kilometraje']}</td>";
 
                                 // BOTON DE BAJA
                                 echo "<td class='text-center'>
-                                            <form action='baja-vehiculo.php' method='post'>
-                                                <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}' /> 
-                                                <button type='submit' class='btn btn-danger'>
-                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
-                                                        <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z'/>
-                                                        <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
-                                                    </svg>
-                                                </button>
-                                            </form>
-                                        </td>";
+                                        <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#modalBaja{$vehiculo['Matricula']}'>
+                                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
+                                                <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z'/>
+                                                <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
+                                            </svg>
+                                        </button>
+                                    </td>";
 
                                 // BOTON QUE ME LLEVA AL MODAL DE MODIFICAR
                                 echo "<td class='text-center'>
@@ -438,77 +502,101 @@
                         // Modal para modificar vehículo
                         foreach ($vehiculos as $vehiculo) {
                             echo "
-                                <div class='modal fade' id='modalModificar{$vehiculo['Matricula']}' tabindex='-1' aria-labelledby='modalModificarLabel{$vehiculo['Matricula']}' aria-hidden='true'>
-                                    <div class='modal-dialog modal-dialog-scrollable'>
-                                        <div class='modal-content'>
+<div class='modal fade' id='modalModificar{$vehiculo['Matricula']}' tabindex='-1' aria-labelledby='modalModificarLabel{$vehiculo['Matricula']}' aria-hidden='true'>
+    <div class='modal-dialog modal-dialog-scrollable'>
+        <div class='modal-content'>
 
+            <div class='modal-header'>
+                <h5 class='modal-title' id='modalModificarLabel{$vehiculo['Matricula']}'>Modificar Vehículo</h5>
+                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+            </div>
+            
+            <div class='modal-body'>
+                <form action='modificar-vehiculo.php' method='post'>
+
+                    <input type='hidden' name='ID_Vehiculos' value='{$vehiculo['ID_Vehiculos']}'>
+                    <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}'>
+
+                    <div class='form-floating mb-3'>
+                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' required>
+                            <option value='Auto' " . ($vehiculo['tipoId'] == 'Auto' ? 'selected' : '') . ">Auto</option>
+                            <option value='Moto' " . ($vehiculo['tipoId'] == 'Moto' ? 'selected' : '') . ">Moto</option>
+                        </select>
+                        <label for='tipoId{$vehiculo['Matricula']}'>Tipo de Vehículo</label>
+                    </div>
+
+                    <div class='form-floating mb-3'>
+                        <input type='text' class='form-control' id='Modelo{$vehiculo['Matricula']}' name='Modelo' value='{$vehiculo['Modelo']}'>
+                        <label for='Modelo{$vehiculo['Matricula']}'>Modelo</label>
+                    </div>
+
+                    <div class='form-floating mb-3'>
+                        <input type='text' class='form-control' id='Marca{$vehiculo['Matricula']}' name='Marca' value='{$vehiculo['Marca']}' required>
+                        <label for='Marca{$vehiculo['Matricula']}'>Marca</label>
+                    </div>
+
+                    <div class='form-floating mb-3'>
+                        <input type='number' class='form-control' id='AnioFabricacion{$vehiculo['Matricula']}' name='AnioFabricacion' value='{$vehiculo['AnioFabricacion']}'>
+                        <label for='AnioFabricacion{$vehiculo['Matricula']}'>Año Fabricación</label>
+                    </div>
+
+                    <div class='form-floating mb-3'>
+                        <input type='text' class='form-control' id='Color{$vehiculo['Matricula']}' name='Color' value='{$vehiculo['Color']}' required>
+                        <label for='Color{$vehiculo['Matricula']}'>Color</label>
+                    </div>
+
+                    <div class='form-floating mb-3'>
+                        <input type='number' class='form-control' id='Precio{$vehiculo['Matricula']}' name='Precio' value='{$vehiculo['Precio']}' required>
+                        <label for='Precio{$vehiculo['Matricula']}'>Precio</label>
+                    </div>
+
+                    <div class='form-floating mb-3'>
+                        <select class='form-select' id='Estado{$vehiculo['Matricula']}' name='Estado' required>
+                            <option value='Disponible' " . ($vehiculo['Estado'] == 'Disponible' ? 'selected' : '') . ">Disponible</option>
+                            <option value='En clase' " . ($vehiculo['Estado'] == 'En clase' ? 'selected' : '') . ">En clase</option>
+                            <option value='En mantenimiento' " . ($vehiculo['Estado'] == 'En mantenimiento' ? 'selected' : '') . ">En mantenimiento</option>
+                        </select>
+                        <label for='Estado{$vehiculo['Matricula']}'>Estado</label>
+                    </div>  
+
+                    <div class='form-floating mb-3'>
+                        <input type='number' class='form-control' id='kilometraje{$vehiculo['Matricula']}' name='kilometraje' value='{$vehiculo['kilometraje']}' required>
+                        <label for='kilometraje{$vehiculo['Matricula']}'>Kilometraje</label>
+                    </div>    
+
+            </div>
+
+            <div class='modal-footer'>
+                <button type='submit' class='btn btn-primary'>Actualizar</button>
+                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+            </div>
+                
+                </form>
+            
+        </div>
+    </div>
+</div>";
+                        }
+
+                        foreach ($vehiculos as $vehiculo) {
+                            echo "
+                                <div class='modal fade' id='modalBaja{$vehiculo['Matricula']}' tabindex='-1' aria-labelledby='modalBajaLabel{$vehiculo['Matricula']}' aria-hidden='true'>
+                                    <div class='modal-dialog'>
+                                        <div class='modal-content'>
                                             <div class='modal-header'>
-                                                <h5 class='modal-title' id='modalModificarLabel{$vehiculo['Matricula']}'>Modificar Vehículo</h5>
+                                                <h5 class='modal-title' id='modalBajaLabel{$vehiculo['Matricula']}'>Confirmar Baja</h5>
                                                 <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                                             </div>
-                                            
                                             <div class='modal-body'>
-                                                <form action='modificar-vehiculo.php' method='post'>
-
-                                                `   <input type='hidden' name='ID_Vehiculos' value='{$vehiculo['ID_Vehiculos']}'>
-                                                    <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}'>
-
-                                                    <div class='mb-3'>
-                                                        <label for='tipoId{$vehiculo['Matricula']}' class='form-label'>Tipo de Vehículo</label>
-                                                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' required>
-                                                            <option value='Auto' " . ($vehiculo['tipoId'] == 'Auto' ? 'selected' : '') . ">Auto</option>
-                                                            <option value='Moto' " . ($vehiculo['tipoId'] == 'Moto' ? 'selected' : '') . ">Moto</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class='mb-3'>
-                                                        <label for='Modelo{$vehiculo['Matricula']}' class='form-label'>Modelo</label>
-                                                        <input type='text' class='form-control' id='Modelo{$vehiculo['Matricula']}' name='Modelo' value='{$vehiculo['Modelo']}'>
-                                                    </div>
-
-                                                    <div class='mb-3'>
-                                                        <label for='Marca{$vehiculo['Matricula']}' class='form-label'>Marca</label>
-                                                        <input type='text' class='form-control' id='Marca{$vehiculo['Matricula']}' name='Marca' value='{$vehiculo['Marca']}' required>
-                                                    </div>
-
-                                                    <div class='mb-3'>
-                                                        <label for='AnioFabricacion{$vehiculo['Matricula']}' class='form-label'>Año Fabricación</label>
-                                                        <input type='number' class='form-control' id='AnioFabricacion{$vehiculo['Matricula']}' name='AnioFabricacion' value='{$vehiculo['AnioFabricacion']}'>
-                                                    </div>
-
-                                                    <div class='mb-3'>
-                                                        <label for='Color{$vehiculo['Matricula']}' class='form-label'>Color</label>
-                                                        <input type='text' class='form-control' id='Color{$vehiculo['Matricula']}' name='Color' value='{$vehiculo['Color']}' required>
-                                                    </div>
-
-                                                    <div class='mb-3'>
-                                                        <label for='Precio{$vehiculo['Matricula']}' class='form-label'>Precio</label>
-                                                        <input type='number' class='form-control' id='Precio{$vehiculo['Matricula']}' name='Precio' value='{$vehiculo['Precio']}' required>
-                                                    </div>
-
-                                                    <div class='mb-3'>
-                                                        <label for='Estado{$vehiculo['Matricula']}' class='form-label'>Estado</label>
-                                                        <select class='form-select' id='Estado{$vehiculo['Matricula']}' name='Estado' value='{$vehiculo['Estado']}' required>
-                                                            <option value='Disponible' " . ($vehiculo['Estado'] == 'Disponible' ? 'selected' : '') . ">Disponible</option>
-                                                            <option value='En clase' " . ($vehiculo['Estado'] == 'En clase' ? 'selected' : '') . ">En clase</option>
-                                                            <option value='En mantenimiento' " . ($vehiculo['Estado'] == 'En mantenimiento' ? 'selected' : '') . ">En mantenimiento</option>
-                                                        </select>
-                                                    </div>  
-
-                                                    <div class='mb-3'>
-                                                        <label for='kilometraje{$vehiculo['Matricula']}' class='form-label'>Kilometraje</label>
-                                                        <input type='number' class='form-control' id='kilometraje{$vehiculo['Matricula']}' name='kilometraje' value='{$vehiculo['kilometraje']}' required>
-                                                    </div>    
-
+                                                <p>¿Estás seguro de que deseas dar de baja este vehículo? Esta acción es irreversible, pero quedará un registro en la base de datos.</p>
                                             </div>
-
                                             <div class='modal-footer'>
-                                                <button type='submit' class='btn btn-primary'>Actualizar</button>
-                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
-                                            </div>
-                                                
+                                                <form action='baja-vehiculo.php' method='post'>
+                                                    <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}' />
+                                                    <button type='submit' class='btn btn-danger'>Confirmar Baja</button>
                                                 </form>
-                                            
+                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>";
@@ -523,7 +611,54 @@
     </div>
 
 
-
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" fill="white" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
 
 
 

@@ -1,258 +1,18 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="auto">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login Page</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <!-- <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-        body {
-            font-family: "Outfit", sans-serif !important;
-            background-color: #e6e6e6;
-            height: 100vh;
-            margin: 0;
-            display: block;
-            padding-top: 0;
-        }
-
-        section {
-            font-family: "Outfit", sans-serif !important;
-            display: flex;
-            align-items: center;
-            height: 75vh;
-            justify-content: center;
-        }
-
-        .login-container {
-            max-width: 463px;
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-container img {
-            max-width: 116px;
-            margin-bottom: 90px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .login-container h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .login-container input[type="email"],
-        .login-container input[type="password"] {
-            width: 100%;
-            height: 30px;
-            padding: 10px;
-            margin: 5px 0 10px 0;
-            border: 3px solid #000;
-            border-radius: 5px;
-            text-align: left;
-        }
-
-        .login-container h2 {
-            font-size: 16px;
-            font-family: "Outfit", sans-serif !important;
-            text-align: left !important;
-            margin-left: 20px;
-            margin-bottom: 5px;
-            margin-top: 20px;
-        }
-
-        .login-container h1 {
-            font-size: 16px;
-            font-family: "Outfit", sans-serif;
-            text-align: left !important;
-            margin-left: 20px;
-            color: #283AA4;
-            position: relative;
-        }
-
-        .login-container h1::after {
-            content: "";
-            display: block;
-            width: 100px;
-            height: 2px;
-            background-color: #283AA4;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-        }
-
-        .divider {
-            width: 100%;
-            height: 1px;
-            background-color: #C3C3C3;
-            border: none;
-            margin: 10px 0;
-        }
-
-        .header-web {
-            background-color: #01082F;
-            color: #fff;
-            height: 45px;
-        }
-
-        .navbar-color {
-            background-color: #01082F;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-link {
-            color: #fff !important;
-        }
-
-        .navbar .bi {
-            fill: #fff !important;
-        }
-
-
-
-
-
-        
-        .form-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .remember-me {
-            display: flex;
-            margin-left: 20px;
-        }
-
-        .remember-me label {
-            margin-left: 5px;
-        }
-
-        .login-container button {
-            width: 100%;
-            max-width: 255px;
-            height: 32px;
-            background-color: #253FD4;
-            border: none;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 40px;
-            font-family: "Outfit", sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .login-container button:hover {
-            background-color: #01082F;
-        }
-
-        .forgot-password {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .forgot-password a {
-            font-size: 16px;
-            font-family: "Outfit", sans-serif;
-            font-weight: light;
-            text-decoration: none;
-            color: #253FD4;
-        }
-
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .login-container {
-                max-width: 90%;
-                height: auto;
-                padding: 15px;
-            }
-
-            .login-container h1 {
-                font-size: 14px;
-                margin-left: 10px;
-            }
-
-            .login-container h2 {
-                font-size: 14px;
-                margin-left: 10px;
-                margin-top: 10px;
-            }
-
-            .login-container input[type="email"],
-            .login-container input[type="password"] {
-                width: 100%;
-                height: 30px;
-                padding: 8px;
-                font-size: 14px;
-            }
-
-            .login-container button {
-                width: 100%;
-                max-width: 100%;
-                font-size: 14px;
-                height: 35px;
-            }
-
-            .remember-me {
-                margin-left: 10px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .login-container {
-                max-width: 90%;
-                height: auto;
-                padding: 10px;
-            }
-
-            .login-container h1 {
-                font-size: 12px;
-                margin-left: 5px;
-            }
-
-            .login-container h2 {
-                font-size: 12px;
-                margin-left: 5px;
-                margin-top: 5px;
-            }
-
-            .login-container input[type="email"],
-            .login-container input[type="password"] {
-                width: 100%;
-                height: 28px;
-                padding: 6px;
-                font-size: 12px;
-            }
-
-            .login-container button {
-                width: 100%;
-                max-width: 100%;
-                font-size: 12px;
-                height: 30px;
-            }
-
-            .remember-me {
-                margin-left: 5px;
-            }
-        }
-    </style> -->
 </head>
 
 <body>
@@ -303,7 +63,7 @@
                     <div class="row justify-content-md-center">
                         <div class="col-12 col-md-11 col-lg-8 col-xl-6 col-xxl-6">
 
-                            <div class="bg-white p-4 p-md-3 rounded shadow">
+                            <div class="bg-body-tertiary p-4 p-md-3 rounded shadow">
 
                                 <div class="row">
                                     <div class="col-12">
@@ -318,22 +78,43 @@
                                     </div>
                                 </div>
 
+                                <?php
+if (isset($_SESSION['status']) && $_SESSION['status'] == 'error') {
+    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>¡Oh no!</strong> {$_SESSION['error_message']}
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+          </div>";
+    unset($_SESSION['status']);
+    unset($_SESSION['error_message']);
+}
+?>
+
                                 <form action="login.php" class="row g-3 needs-validation" method="post" novalidate>
-                                    
+
                                     <div class="col-12">
-                                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+
+                                        <label for="email" class="form-label">Email <span class="text-danger">*</span>
+                                        </label>
+
                                         <div class="input-group has-validation">
+
                                             <span class="input-group-text" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Introduce el correo electrónico que usaste al registrarte.">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                                 </svg>
                                             </span>
+
                                             <input type="email" class="form-control" name="email" id="email"
                                                 value="<?php echo isset($_COOKIE['email']) ? htmlspecialchars($_COOKIE['email']) : ''; ?>" required>
+
+
+
                                             <div class="invalid-feedback">
                                                 Por favor, introduce un correo electrónico válido.
                                             </div>
+
                                         </div>
+
                                     </div>
 
                                     <div class="col-12">
@@ -345,8 +126,17 @@
                                                     <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                                 </svg>
                                             </span>
-                                            <input type="password" class="form-control" name="password" id="password"
+
+                                            <input type="password" class="form-control" id="inputPassword" name="password" id="password"
                                                 value="<?php echo isset($_COOKIE['password']) ? htmlspecialchars($_COOKIE['password']) : ''; ?>" required>
+                                            <span class="input-group-text" id="togglePassword" style="cursor: pointer; user-select: none;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                                                    <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z" />
+                                                    <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829" />
+                                                    <path d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z" />
+                                                </svg>
+                                            </span>
+
                                             <div class="invalid-feedback">
                                                 Por favor, introduce tu contraseña.
                                             </div>
@@ -385,9 +175,12 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzOgPHnKtiVyPrO9GfX3zP0I1VLjF6txg2Q0XHjAK/lE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    
+
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
