@@ -354,9 +354,6 @@ a.sidebar-link, a.sidebar-cerrar {
 
 /*****************************************************************************/
 
-
-
-
 /***************************** Arrows sidebar ****************************************/
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
@@ -505,6 +502,11 @@ a.sidebar-link, a.sidebar-cerrar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
+.dropdown-toggle::after {
+  color: #ffffff;
+}
+
+
 
 /*********************************************************************/
 /* Estilos para el checkbox de iniciar sesión (recordarme) */
@@ -530,7 +532,9 @@ input:focus {
   box-shadow: none !important; 
 }
 /*********************************************************************/
-
+/* .highlight {
+  background-color: yellow !important;
+} */
 
 
 
