@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<?php include 'verificar_sesion.php'; ?>
+=======
 <?php
 include 'verificar_sesion.php';
 include("Controlador.php");
@@ -10,6 +13,7 @@ $countsClases = $controlador->graficaTiposClases();
 //     exit();
 // }
 ?>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 <!DOCTYPE html>
 
@@ -23,6 +27,8 @@ $countsClases = $controlador->graficaTiposClases();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<<<<<<< HEAD
+=======
 
     <!-- Símbolos para el toggler de los temas -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -41,6 +47,7 @@ $countsClases = $controlador->graficaTiposClases();
         </symbol>
     </svg>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </head>
 
 <body class="dashboard-page">
@@ -177,7 +184,11 @@ $countsClases = $controlador->graficaTiposClases();
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
+<<<<<<< HEAD
+                        <a href="cerrar_sesion.php" class="sidebar-link">
+=======
                         <a href="cerrar_sesion.php" class="sidebar-cerrar">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -204,13 +215,28 @@ $countsClases = $controlador->graficaTiposClases();
 
 
             <!-- Nav Bar -->
+<<<<<<< HEAD
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+=======
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                 <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+<<<<<<< HEAD
+                <div class="ms-auto search-icon-container">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+=======
                 <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <div class="btn-group">
@@ -236,6 +262,7 @@ $countsClases = $controlador->graficaTiposClases();
                         </ul>
                     </div>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 </div>
 
             </nav>
@@ -248,6 +275,12 @@ $countsClases = $controlador->graficaTiposClases();
                     <div class="mb-3">
 
 
+<<<<<<< HEAD
+                        <h5 id="fecha-actual" class="text-center"></h5>
+
+                        <h3>Inicio</h3>
+                        <p>Vista general rápida de la academia.</p>
+=======
                         <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
                         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -257,11 +290,19 @@ $countsClases = $controlador->graficaTiposClases();
                             <h3 class="mb-0">Inicio</h3>
                         </div>
                         <p class="text-center text-lg-start">Vista general rápida de la academia.</p>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
                     </div>
                 </div>
 
+<<<<<<< HEAD
+                <?php
+                include("Controlador.php");
+                $controlador = new Controlador();
+                ?>
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                 <div class="row">
 
@@ -271,11 +312,19 @@ $countsClases = $controlador->graficaTiposClases();
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
+<<<<<<< HEAD
+                        <div class="card border-start-primary shadow h-100 custom-title">
+                            <div class="card-body">
+                                <div class="row g-0 align-items-center">
+                                    <div class="col me-2">
+                                        <div class="text-xs fw-bold text-primary text-uppercase mb-1">Estudiantes del sistema</div>
+=======
                         <div class="card border-start-primary shadow h-100 custom-title custom-border-radius">
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
                                         <div class="text-xs fw-bold text-primary text-uppercase mb-1">Estudiantes activos en el sistema</div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                         <div class="h5 mb-0 fw-bold text-gray-800 number-display">
 
 
@@ -300,18 +349,30 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+                            <a href="estudiante.php" class="btn btn-primary mt-auto py-1 rounded-0">Ver más</a>
+=======
                             <a href="estudiante.php" class="btn btn-primary mt-auto py-1 rounded-bottom">Ver más</a>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
                     </div>
 
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
+<<<<<<< HEAD
+                        <div class="card border-start-primary shadow h-100">
+                            <div class="card-body">
+                                <div class="row g-0 align-items-center">
+                                    <div class="col me-2">
+                                        <div class="text-xs fw-bold text-warning text-uppercase mb-1 custom-title">Instructores del sistema</div>
+=======
                         <div class="card border-start-primary shadow h-100 custom-border-radius">
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
                                         <div class="text-xs fw-bold text-warning text-uppercase mb-1 custom-title">Instructores activos en el sistema</div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                         <div class="h5 mb-0 fw-bold text-gray-800 number-display">
 
                                             <?php
@@ -334,14 +395,22 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+                            <a href="instructor.php" class="btn btn-warning mt-auto py-1 rounded-0 text-white">Ver más</a>
+=======
                             <a href="instructor.php" class="btn btn-warning mt-auto py-1 rounded-bottom text-white">Ver más</a>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
                     </div>
 
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
+<<<<<<< HEAD
+                        <div class="card border-start-primary shadow h-100">
+=======
                         <div class="card border-start-primary shadow h-100 custom-border-radius">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
@@ -370,7 +439,11 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+                            <a href="estudiante.php" class="btn btn-success mt-auto py-1 rounded-0 text-white">Ver más</a>
+=======
                             <a href="estudiante.php" class="btn btn-success mt-auto py-1 rounded-bottom text-white">Ver más</a>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
                     </div>
 
@@ -379,7 +452,11 @@ $countsClases = $controlador->graficaTiposClases();
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
+<<<<<<< HEAD
+                        <div class="card border-start-primary shadow h-100">
+=======
                         <div class="card border-start-primary shadow h-100 custom-border-radius">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
@@ -407,6 +484,35 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+                            <a href="vehiculo.php" class="btn btn-info mt-auto py-1 rounded-0 text-white">Ver más</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-start-primary shadow h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="me-2">
+                                    <div class="text-xs fw-bold text-danger text-uppercase mb-1 custom-title">Monto Total</div>
+                                    <div class="h5 mb-0 fw-bold text-gray-800 number-display">
+                                        <?php
+                                            $montoTotal = $controlador->obtenerMontoTotal();
+                                            if ($montoTotal) {
+                                                echo '<span class="text-uppercase fs-4 fw-bold">$' . 
+                                                    number_format($montoTotal['total_monto'], 0) . 
+                                                    '</span>';
+                                            } else {
+                                                echo '<span class="text-uppercase fs-4 fw-bold">$0</span>';
+                                            }
+                                        ?>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="iconoMonto" width="50" height="50" fill="red" class="bi bi-car-front" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                                    </svg>
+=======
                             <a href="vehiculo.php" class="btn btn-info mt-auto py-1 rounded-bottom text-white">Ver más</a>
                         </div>
                     </div>
@@ -420,10 +526,19 @@ $countsClases = $controlador->graficaTiposClases();
 
                                     </div>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                 </div>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+                </div>
+
+                    
+               
+
+                </div>
+=======
 
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-start-primary shadow h-100 custom-border-radius">
@@ -441,6 +556,7 @@ $countsClases = $controlador->graficaTiposClases();
 
 
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 
@@ -458,6 +574,13 @@ $countsClases = $controlador->graficaTiposClases();
 
     </div>
 
+<<<<<<< HEAD
+
+
+    <script src="js/script.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+=======
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
@@ -514,6 +637,7 @@ $countsClases = $controlador->graficaTiposClases();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </body>
 
 </html>

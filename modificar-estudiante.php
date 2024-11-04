@@ -6,6 +6,19 @@
 
 /*************************************************************************************************************************************/
 session_start();
+<<<<<<< HEAD
+    require_once 'Controlador.php';
+    $controlador = new Controlador();
+    $resultado = $controlador->modificarEstudiante($_POST['IDEstudiante'], $_POST['documento'], $_POST['primerNombre'], $_POST['segundoNombre'], $_POST['primerApellido'], $_POST['segundoApellido'], $_POST['calle'], $_POST['numeroPuerta'], $_POST['barrio'], $_POST['localidad'], $_POST['tel'], $_POST['email'], $_POST['pass'], $_POST['teorico']);
+
+    if ($resultado) {
+        $_SESSION['status'] = 'success';
+    } else {
+        $_SESSION['status'] = 'error';
+    }
+    header('Location: estudiante.php');
+    exit();
+=======
 require_once 'Controlador.php';
 
 try {
@@ -29,3 +42,4 @@ try {
 }
 header('Location: estudiante.php');
 exit();
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258

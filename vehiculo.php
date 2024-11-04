@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<<<<<<< HEAD
+=======
 
     <!-- Símbolos para el toggler de los temas -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -30,6 +32,7 @@
         </symbol>
     </svg>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </head>
 
 <body class="dashboard-page">
@@ -168,7 +171,11 @@
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
+<<<<<<< HEAD
+                        <a href="cerrar_sesion.php" class="sidebar-link">
+=======
                         <a href="cerrar_sesion.php" class="sidebar-cerrar">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -195,13 +202,28 @@
 
 
             <!-- Nav Bar -->
+<<<<<<< HEAD
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+=======
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                 <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+<<<<<<< HEAD
+                <div class="ms-auto search-icon-container">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+=======
                 <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <div class="btn-group">
@@ -227,6 +249,7 @@
                         </ul>
                     </div>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 </div>
 
             </nav>
@@ -237,6 +260,18 @@
                 <div class="container-fluid">
                     <div class="mb-3">
 
+<<<<<<< HEAD
+                        <h5 id="fecha-actual" class="text-center"></h5>
+
+                        <h3>Vehiculos</h3>
+                        <p>Administra los distintos Vehiculos del sistema aquí.</p>
+
+
+                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow color-gris">
+                            <!-- Boton refrescar -->
+                            <div class="me-auto p-2">
+                                <button type="submit" class="btn btn-outline-dark" onClick="refreshPage()">
+=======
                         <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
                         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -290,6 +325,7 @@
                             <!-- Boton refrescar -->
                             <div class="me-auto p-2">
                                 <button type="submit" class="btn" onClick="refreshPage()">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
                                         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
@@ -315,6 +351,19 @@
                                     Agregar Vehiculo
                                 </button>
                             </div>
+<<<<<<< HEAD
+
+                            <!-- <div class="p-2">
+                                <button type="button" class="btn btn-azul shadow d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle me-1" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                    </svg>
+                                    <span class="text-nowrap">Agregar Vehiculo</span>
+                                </button>
+                            </div> -->
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
 
 
@@ -367,16 +416,27 @@
                                                     </h2>
                                                     <div id="collapseName" class="accordion-collapse collapse show">
                                                         <div class="accordion-body">
+<<<<<<< HEAD
+                                                        <input type="hidden" id="Estado" name="Estado" value="Disponible">
+                                                            <div class="mb-3">
+                                                                <label for="Modelo" class="form-label">Modelo</label>
+                                                                <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
+                                                            </div>
+=======
                                                             <input type="hidden" id="Estado" name="Estado" value="Disponible">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                                             <div class="mb-3">
                                                                 <label for="Marca" class="form-label">Marca</label>
                                                                 <input type="text" placeholder="Ingrese Marca" class="form-control" id="Marca" name="Marca">
                                                             </div>
                                                             <div class="mb-3">
+<<<<<<< HEAD
+=======
                                                                 <label for="Modelo" class="form-label">Modelo</label>
                                                                 <input type="text" placeholder="Ingrese Modelo" class="form-control" id="Modelo" name="Modelo" required>
                                                             </div>
                                                             <div class="mb-3">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                                                 <label for="AnioFabricacion" class="form-label">Año de fabricación</label>
                                                                 <input type="number" placeholder="Ingrese Año de Fabricacion" class="form-control" id="AnioFabricacion" name="AnioFabricacion">
                                                             </div>
@@ -391,7 +451,11 @@
                                                             <div class="mb-3">
                                                                 <label for="kilometraje" class="form-label">Kilometraje</label>
                                                                 <input type="number" placeholder="Ingrese Kilometraje" class="form-control" id="kilometraje" name="kilometraje" required>
+<<<<<<< HEAD
+                                                            </div>    
+=======
                                                             </div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                                         </div>
                                                     </div>
                                                 </div> <!-- Fin del accordion-item -->
@@ -435,11 +499,19 @@
                         // Si el array de vehículos no está vacío, mostrar la tabla
                         if (!empty($vehiculos)) {
                             echo "<div id='tabla-vehiculos' class='table-responsive shadow'>";
+<<<<<<< HEAD
+                            echo "<table class='table'>";
+
+                            // HEADER TABLA
+                            echo " 
+                                    <thead class='table-light'>
+=======
                             echo "<table class='table table-striped table-hover'>";
 
                             // HEADER TABLA
                             echo " 
                                     <thead>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                         <tr>
                                             <th>ID</th>
                                             <th>Matrícula</th>
@@ -457,7 +529,11 @@
                                     </thead>";
 
                             // CUERPO TABLA
+<<<<<<< HEAD
+                            echo "<tbody>";
+=======
                             echo "<tbody class='table-group-divider'>";
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             foreach ($vehiculos as $vehiculo) {
                                 echo "<tr>";
                                 echo "<td>{$vehiculo['ID_Vehiculos']}</td>";
@@ -469,6 +545,22 @@
                                 echo "<td>{$vehiculo['Color']}</td>";
                                 echo "<td>{$vehiculo['Precio']}</td>";
                                 echo "<td>{$vehiculo['Estado']}</td>";
+<<<<<<< HEAD
+                                echo "<td>{$vehiculo['kilometraje']}</td>"; 
+
+                                // BOTON DE BAJA
+                                echo "<td class='text-center'>
+                                            <form action='baja-vehiculo.php' method='post'>
+                                                <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}' /> 
+                                                <button type='submit' class='btn btn-danger'>
+                                                    <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
+                                                        <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z'/>
+                                                        <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </td>";
+=======
                                 echo "<td>{$vehiculo['kilometraje']}</td>";
 
                                 // BOTON DE BAJA
@@ -480,6 +572,7 @@
                                             </svg>
                                         </button>
                                     </td>";
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                                 // BOTON QUE ME LLEVA AL MODAL DE MODIFICAR
                                 echo "<td class='text-center'>
@@ -502,6 +595,79 @@
                         // Modal para modificar vehículo
                         foreach ($vehiculos as $vehiculo) {
                             echo "
+<<<<<<< HEAD
+                                <div class='modal fade' id='modalModificar{$vehiculo['Matricula']}' tabindex='-1' aria-labelledby='modalModificarLabel{$vehiculo['Matricula']}' aria-hidden='true'>
+                                    <div class='modal-dialog modal-dialog-scrollable'>
+                                        <div class='modal-content'>
+
+                                            <div class='modal-header'>
+                                                <h5 class='modal-title' id='modalModificarLabel{$vehiculo['Matricula']}'>Modificar Vehículo</h5>
+                                                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                            </div>
+                                            
+                                            <div class='modal-body'>
+                                                <form action='modificar-vehiculo.php' method='post'>
+
+                                                `   <input type='hidden' name='ID_Vehiculos' value='{$vehiculo['ID_Vehiculos']}'>
+                                                    <input type='hidden' name='Matricula' value='{$vehiculo['Matricula']}'>
+
+                                                    <div class='mb-3'>
+                                                        <label for='tipoId{$vehiculo['Matricula']}' class='form-label'>Tipo de Vehículo</label>
+                                                        <select class='form-select' id='tipoId{$vehiculo['Matricula']}' name='tipoId' required>
+                                                            <option value='Auto' " . ($vehiculo['tipoId'] == 'Auto' ? 'selected' : '') . ">Auto</option>
+                                                            <option value='Moto' " . ($vehiculo['tipoId'] == 'Moto' ? 'selected' : '') . ">Moto</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='Modelo{$vehiculo['Matricula']}' class='form-label'>Modelo</label>
+                                                        <input type='text' class='form-control' id='Modelo{$vehiculo['Matricula']}' name='Modelo' value='{$vehiculo['Modelo']}'>
+                                                    </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='Marca{$vehiculo['Matricula']}' class='form-label'>Marca</label>
+                                                        <input type='text' class='form-control' id='Marca{$vehiculo['Matricula']}' name='Marca' value='{$vehiculo['Marca']}' required>
+                                                    </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='AnioFabricacion{$vehiculo['Matricula']}' class='form-label'>Año Fabricación</label>
+                                                        <input type='number' class='form-control' id='AnioFabricacion{$vehiculo['Matricula']}' name='AnioFabricacion' value='{$vehiculo['AnioFabricacion']}'>
+                                                    </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='Color{$vehiculo['Matricula']}' class='form-label'>Color</label>
+                                                        <input type='text' class='form-control' id='Color{$vehiculo['Matricula']}' name='Color' value='{$vehiculo['Color']}' required>
+                                                    </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='Precio{$vehiculo['Matricula']}' class='form-label'>Precio</label>
+                                                        <input type='number' class='form-control' id='Precio{$vehiculo['Matricula']}' name='Precio' value='{$vehiculo['Precio']}' required>
+                                                    </div>
+
+                                                    <div class='mb-3'>
+                                                        <label for='Estado{$vehiculo['Matricula']}' class='form-label'>Estado</label>
+                                                        <select class='form-select' id='Estado{$vehiculo['Matricula']}' name='Estado' value='{$vehiculo['Estado']}' required>
+                                                            <option value='Disponible' " . ($vehiculo['Estado'] == 'Disponible' ? 'selected' : '') . ">Disponible</option>
+                                                            <option value='En clase' " . ($vehiculo['Estado'] == 'En clase' ? 'selected' : '') . ">En clase</option>
+                                                            <option value='En mantenimiento' " . ($vehiculo['Estado'] == 'En mantenimiento' ? 'selected' : '') . ">En mantenimiento</option>
+                                                        </select>
+                                                    </div>  
+
+                                                    <div class='mb-3'>
+                                                        <label for='kilometraje{$vehiculo['Matricula']}' class='form-label'>Kilometraje</label>
+                                                        <input type='number' class='form-control' id='kilometraje{$vehiculo['Matricula']}' name='kilometraje' value='{$vehiculo['kilometraje']}' required>
+                                                    </div>    
+
+                                            </div>
+
+                                            <div class='modal-footer'>
+                                                <button type='submit' class='btn btn-primary'>Actualizar</button>
+                                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+                                            </div>
+                                                
+                                                </form>
+                                            
+=======
 <div class='modal fade' id='modalModificar{$vehiculo['Matricula']}' tabindex='-1' aria-labelledby='modalModificarLabel{$vehiculo['Matricula']}' aria-hidden='true'>
     <div class='modal-dialog modal-dialog-scrollable'>
         <div class='modal-content'>
@@ -597,6 +763,7 @@
                                                 </form>
                                                 <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
                                             </div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                         </div>
                                     </div>
                                 </div>";
@@ -611,6 +778,9 @@
     </div>
 
 
+<<<<<<< HEAD
+
+=======
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
@@ -659,6 +829,7 @@
             </li>
         </ul>
     </div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 

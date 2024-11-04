@@ -1,10 +1,13 @@
 <?php include 'verificar_sesion.php';
+<<<<<<< HEAD
+=======
 
 // if ($_SESSION['rol'] !== 'estudiante') {
 //     echo "<script>alert('No tiene permiso para acceder a esta página.'); window.location.href='inicio.php';</script>";
 //     exit();
 // }
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 require_once 'Controlador.php';
 $controlador = new Controlador();
 $instructores = $controlador->obtenerInstructores();
@@ -13,7 +16,11 @@ $vehiculos = $controlador->obtenerVehiculos();
 ?>
 
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html>
+=======
 <html data-bs-theme="auto">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 <head>
     <meta charset="utf-8">
@@ -26,6 +33,11 @@ $vehiculos = $controlador->obtenerVehiculos();
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
+<<<<<<< HEAD
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+=======
     <!-- Símbolos para el toggler de los temas -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -42,6 +54,7 @@ $vehiculos = $controlador->obtenerVehiculos();
             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
         </symbol>
     </svg>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </head>
 
 <body class="dashboard-page">
@@ -177,7 +190,11 @@ $vehiculos = $controlador->obtenerVehiculos();
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
+<<<<<<< HEAD
+                        <a href="cerrar_sesion.php" class="sidebar-link">
+=======
                         <a href="cerrar_sesion.php" class="sidebar-cerrar">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -204,13 +221,28 @@ $vehiculos = $controlador->obtenerVehiculos();
 
 
             <!-- Nav Bar -->
+<<<<<<< HEAD
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+=======
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                 <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+<<<<<<< HEAD
+                <div class="ms-auto search-icon-container">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+=======
                 <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <div class="btn-group">
@@ -236,6 +268,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                         </ul>
                     </div>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 </div>
 
             </nav>
@@ -246,6 +279,10 @@ $vehiculos = $controlador->obtenerVehiculos();
                 <div class="container-fluid">
 
                     <div class="mb-3">
+<<<<<<< HEAD
+                        <h3>Clases</h3>
+                        <p>Administra a las distintas clases del sistema aquí.</p>
+=======
                         <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
                         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -256,6 +293,7 @@ $vehiculos = $controlador->obtenerVehiculos();
                             <h3 class="mb-0">Clases</h3>
                         </div>
                         <p class="text-center text-lg-start">Administra a las distintas clases del sistema aquí.</p>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
                     </div>
@@ -291,7 +329,11 @@ $vehiculos = $controlador->obtenerVehiculos();
                                         <label for="visualizar_instructor" class="form-label">Instructor</label>
                                         <input type="text" class="form-control" id="visualizar_instructor" name="instructor" readonly>
                                     </div>
+<<<<<<< HEAD
+                                    
+=======
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                     <div class="mb-3">
                                         <label for="visualizar_vehiculo" class="form-label">Vehículo</label>
                                         <input type="text" class="form-control" id="visualizar_vehiculo" name="vehiculo" readonly>
@@ -324,7 +366,11 @@ $vehiculos = $controlador->obtenerVehiculos();
                                         <input type="time" class="form-control" id="visualizar_time" name="hora" required>
                                     </div>
 
+<<<<<<< HEAD
+                                    
+=======
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                                 </div>
                         </div>
@@ -395,6 +441,31 @@ $vehiculos = $controlador->obtenerVehiculos();
                                     </div>
 
                                     <div class="mb-3">
+<<<<<<< HEAD
+                                        <label for="asignar_categoria" class="form-label">Categoría de Licencia</label>
+                                        <select class="form-select" id="asignar_categoria" name="categoria" required>
+                                            <option value="">Seleccione una categoría</option>
+                                            <optgroup label="Motos">
+                                                <option value="G1">G1</option>
+                                                <option value="G2">G2</option>
+                                                <option value="G3">G3</option>
+                                            </optgroup>
+                                            <optgroup label="Autos">
+                                                <option value="A1">A1</option>
+                                                <option value="A2">A2</option>
+                                                <option value="A3">A3</option>
+                                                <option value="A4">A4</option>
+                                                <option value="A5">A5</option>
+                                            </optgroup>
+                                            <optgroup label="Especial">
+                                                <option value="F">F</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                         <label for="nuevo_instructor" class="form-label">Instructor</label>
                                         <select class="form-select" id="nuevo_instructor" name="instructor" required>
                                             <option value="">Selecciona un instructor</option>
@@ -430,6 +501,14 @@ $vehiculos = $controlador->obtenerVehiculos();
                                         </select>
                                     </div>
 
+<<<<<<< HEAD
+                                    <!-- <div class="mb-3">
+                                    <label for="nuevo_color" class="form-label">Color</label>
+                                    <input type="color" class="form-control form-control-color" id="nueco_color" name="color" value="#563d7c" title="Choose your color">
+                                </div> -->
+
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                     <input type="hidden" id="nuevo_fecha" name="fecha">
 
                                 </div>
@@ -448,6 +527,16 @@ $vehiculos = $controlador->obtenerVehiculos();
         </div>
     </div>
 
+<<<<<<< HEAD
+
+    </script>
+    <script src="dist/index.global.min.js"></script>
+    <script src="core/locales/es-us.global.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+=======
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
@@ -503,6 +592,7 @@ $vehiculos = $controlador->obtenerVehiculos();
     </script>
     <script src="dist/index.global.min.js"></script>
     <script src="core/locales/es-us.global.min.js"></script>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </body>
 
 </html>

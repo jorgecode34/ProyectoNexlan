@@ -1,7 +1,12 @@
 <?php include 'verificar_sesion.php'; ?>
 
 <!DOCTYPE html>
+<<<<<<< HEAD
+
+<html>
+=======
 <html data-bs-theme="auto">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 <head>
     <meta charset="utf-8">
@@ -11,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<<<<<<< HEAD
+=======
 
     <!-- Símbolos para el toggler de los temas -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -29,6 +36,7 @@
         </symbol>
     </svg>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </head>
 
 <body class="dashboard-page">
@@ -37,7 +45,11 @@
 
     <div class="wrapper">
 
+<<<<<<< HEAD
+<!-- Sidebar -->
+=======
         <!-- Sidebar -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
         <aside id="sidebar">
             <div class="h-100 ">
 
@@ -66,13 +78,21 @@
                     <hr class="hr-color">
 
 
+<<<<<<< HEAD
+<!-- Header General -->
+=======
                     <!-- Header General -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-header">
                         General
                     </li>
 
 
+<<<<<<< HEAD
+<!-- Inicio -->
+=======
                     <!-- Inicio -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item separar-items active-link">
 
                         <a href="inicio.php" class="sidebar-link">
@@ -85,7 +105,11 @@
 
                     </li>
 
+<<<<<<< HEAD
+<!-- Configuracion -->
+=======
                     <!-- Configuracion -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item">
 
                         <a href="configuracion.php" class="sidebar-link">
@@ -100,13 +124,21 @@
 
 
 
+<<<<<<< HEAD
+<!-- Header Menu de Gestion -->
+=======
                     <!-- Header Menu de Gestion -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-header separar-headers">
                         Menú de Gestión
                     </li>
 
 
+<<<<<<< HEAD
+<!-- Usuarios -->
+=======
                     <!-- Usuarios -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link collapsed selected" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
@@ -130,7 +162,11 @@
                         </ul>
 
                     </li>
+<<<<<<< HEAD
+<!-- Vehículos -->
+=======
                     <!-- Vehículos -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item separar-items">
 
                         <a href="vehiculo.php" class="sidebar-link">
@@ -147,7 +183,11 @@
 
 
 
+<<<<<<< HEAD
+<!-- Clases y Horarios -->
+=======
                     <!-- Clases y Horarios -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item">
 
                         <a href="clases.php" class="sidebar-link">
@@ -164,10 +204,17 @@
                     <hr class="hr-color">
 
 
+<<<<<<< HEAD
+<!-- Cerrar sesíón -->
+                    <li class="sidebar-item active-link">
+
+                        <a href="index.html" class="sidebar-link">
+=======
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
                         <a href="index.html" class="sidebar-cerrar">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -188,19 +235,41 @@
         </aside>
 
 
+<<<<<<< HEAD
+<!-- Main Component -->
+=======
         <!-- Main Component -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
         <div class="main">
 
 
 
+<<<<<<< HEAD
+<!-- Nav Bar -->
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+
+<!-- Boton para abir y cerrar sidebar -->
+=======
             <!-- Nav Bar -->
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
 
                 <!-- Boton para abir y cerrar sidebar -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+<<<<<<< HEAD
+                <div class="ms-auto search-icon-container">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+=======
                 <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <div class="btn-group">
@@ -226,16 +295,74 @@
                         </ul>
                     </div>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 </div>
 
             </nav>
 
 
+<<<<<<< HEAD
+<!-- Cuerpo -->
+=======
             <!-- Cuerpo -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
 
+<<<<<<< HEAD
+                        <h5 id="fecha-actual" class="text-center"></h5>
+                        
+                        <h3>Instructores</h3>
+                        <p>Administra a los distintos Instructores del sistema aquí.</p>
+
+                        <?php 
+                            if (isset($_SESSION['status'])) {
+                                if ($_SESSION['status'] == 'success') {
+                                    echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                            <strong>¡Excelente!</strong> Los cambios para el instructor se han realizado correctamente.
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                        </div>";
+                                } else if ($_SESSION['status'] == 'error') {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                            <strong>¡Oh no!</strong> Ha ocurrido un error al intentar modificar la información del instructor. Por favor, inténtalo de nuevo más tarde.
+                                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                                        </div>";
+                                }
+                                unset($_SESSION['status']);
+                            }
+                        ?>
+
+
+                        <div id="header-tabla" class="d-flex justify-content-between align-items-center shadow color-gris">
+<!-- Boton refrescar -->
+                            <div class="me-auto p-2">
+                                <button type="submit" class="btn btn-outline-dark" onClick="refreshPage()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+                                    </svg>
+                                </button>
+                            </div>
+<!-- Barra de busqueda -->
+                            <div class="p-2">
+                                <form action="" method="get">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Buscar por CI o Nombre" name="buscar" value="<?php echo isset($_GET['buscar']) ? htmlspecialchars($_GET['buscar']) : ''; ?>">
+                                        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                                    </div>
+                                </form>
+                            </div>
+<!-- Boton agregar estudiante -->
+                            <div class="p-2">
+                                <button type="button" class="btn btn-azul shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                                    </svg>
+                                    Agregar Instructor 
+                                </button>
+=======
                         <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
                         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -315,6 +442,7 @@
                                         </svg>
                                     </button>
                                 </div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             </div>
                         </div>
 
@@ -322,7 +450,11 @@
 
 
 
+<<<<<<< HEAD
+ <!-- Modal agregar instructor -->
+=======
                         <!-- Modal agregar instructor -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-xl modal-dialog-scrollable">
                                 <div class="modal-content">
@@ -485,6 +617,16 @@
                                                     </div>
                                                 </div>
                                             </div>
+<<<<<<< HEAD
+                                        </div>
+                                            <!-- Cerrar y guardar cambios -->
+                                            <div class="modal-footer">
+                                                <button type="submit" value="Registrar" class="btn btn-primary">Guardar Cambios</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </form>
+                                    
+=======
                                     </div>
                                     <!-- Cerrar y guardar cambios -->
                                     <div class="modal-footer">
@@ -494,12 +636,190 @@
                                     </div>
                                     </form>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                 </div>
                             </div>
                         </div>
 
 
 
+<<<<<<< HEAD
+
+
+
+
+
+<!-- Table -->
+                        <?php
+                        include("Controlador.php");
+                        $controlador = new Controlador();
+                       
+
+                        // Verificar si se envió un término de búsqueda a través de $_GET arriba en el search bar, que funciona como URL
+                        if (isset($_GET['buscar'])) {
+                            $buscar = $_GET['buscar'];
+                        } else {
+                            $buscar = '';
+                        }
+
+                        // Metodo para mostrar todos los instructores en la tabla
+                        $instructores = $controlador->listarInstructores();
+
+                        // Metodo para buscar instructores en la tabla
+                        $instructores = $controlador->buscarInstructores($buscar);
+
+                        //si el array de instructores NO está vacio, osea que hay instructores en la bd, los muestra de la siguiente manera:
+                        if (empty($instructores) == false) {
+                            echo "<div id='tabla-instructores' class='table-responsive shadow'>";
+                            echo "<table class='table'>";
+                            echo "
+                                <thead class='table-light'>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Documento</th>
+                                        <th>Primer Nombre</th>
+                                        <th>Segundo Nombre</th>
+                                        <th>Primer Apellido</th>
+                                        <th>Segundo Apellido</th>
+                                        <th>Calle</th>
+                                        <th>Número Puerta</th>
+                                        <th>Barrio</th>
+                                        <th>Localidad</th>
+                                        <th>Teléfono</th>
+                                        <th>Email</th>
+                                        <th>Contraseña</th>
+                                        <th>Horas Dictadas</th>
+                                        <th>Eliminar</th>
+                                        <th>Modificar</th>
+                                    </tr>
+                                </thead>";
+
+                            echo "<tbody>";
+                            foreach ($instructores as $instructor) {
+                                echo "<tr>";
+                                echo "<td>{$instructor['IDInstructor']}</td>";
+                                echo "<td>{$instructor['documento']}</td>";
+                                echo "<td>{$instructor['primerNombre']}</td>";
+                                echo "<td>{$instructor['segundoNombre']}</td>";
+                                echo "<td>{$instructor['primerApellido']}</td>";
+                                echo "<td>{$instructor['segundoApellido']}</td>";
+                                echo "<td>{$instructor['calle']}</td>";
+                                echo "<td>{$instructor['numeroPuerta']}</td>";
+                                echo "<td>{$instructor['barrio']}</td>";
+                                echo "<td>{$instructor['localidad']}</td>";
+                                echo "<td>{$instructor['tel']}</td>";
+                                echo "<td>{$instructor['email']}</td>";
+                                echo "<td>{$instructor['pass']}</td>";
+                                echo "<td>{$instructor['horasDictadas']}</td>";
+                                echo "<td class='text-center'>
+                                                <form action='baja-instructor.php' method='post'>
+                                                    <input type='hidden' name='documento' value='{$instructor['documento']}' /> 
+                                                    <button type='submit' class='btn btn-danger'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
+                                                        <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z'/>
+                                                        <path d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z'/>
+                                                        </svg>
+                                                    </button>
+                                                </form>
+                                        </td>";
+                                echo "<td class='text-center'>
+                                        <button type='button' data-bs-toggle='modal' data-bs-target='#modalModificar{$instructor['documento']}' class='btn btn-warning'>
+                                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-pencil-square' viewBox='0 0 16 16'>
+                                                <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>
+                                                <path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z'/>
+                                            </svg>
+                                        </button>
+                                    </td>";
+                                echo "</tr>";
+                            }
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
+                        } else {
+                            echo "<br> No existen instructores que coincidan con la búsqueda.";
+                        }
+
+
+// Modal para modificar estudiante
+                        foreach ($instructores as $instructor) {
+                            echo "
+                            <div class='modal fade' id='modalModificar{$instructor['documento']}' tabindex='-1' aria-labelledby='modalModificarLabel{$instructor['documento']}' aria-hidden='true'>
+                                <div class='modal-dialog modal-dialog-scrollable'>
+                                    <div class='modal-content'>
+
+                                        <div class='modal-header'>
+                                            <h5 class='modal-title' id='modalModificarLabel{$instructor['documento']}'>Modificar Instructor</h5>
+                                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                        </div>
+
+                                        <div class='modal-body'>
+                                            <form action='modificar-instructor.php' method='post'>
+
+                                                <input type='hidden' name='documento' value='{$instructor['documento']}'>
+                                                <div class='mb-3'>
+                                                    <label for='primerNombre{$instructor['documento']}' class='form-label'>Primer Nombre</label>
+                                                    <input type='text' class='form-control' id='primerNombre{$instructor['documento']}' name='primerNombre' value='{$instructor['primerNombre']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='segundoNombre{$instructor['documento']}' class='form-label'>Segundo Nombre</label>
+                                                    <input type='text' class='form-control' id='segundoNombre{$instructor['documento']}' name='segundoNombre' value='{$instructor['segundoNombre']}'>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='primerApellido{$instructor['documento']}' class='form-label'>Primer Apellido</label>
+                                                    <input type='text' class='form-control' id='primerApellido{$instructor['documento']}' name='primerApellido' value='{$instructor['primerApellido']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='segundoApellido{$instructor['documento']}' class='form-label'>Segundo Apellido</label>
+                                                    <input type='text' class='form-control' id='segundoApellido{$instructor['documento']}' name='segundoApellido' value='{$instructor['segundoApellido']}'>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='calle{$instructor['documento']}' class='form-label'>Calle</label>
+                                                    <input type='text' class='form-control' id='calle{$instructor['documento']}' name='calle' value='{$instructor['calle']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='numeroPuerta{$instructor['documento']}' class='form-label'>Número de Puerta</label>
+                                                    <input type='text' class='form-control' id='numeroPuerta{$instructor['documento']}' name='numeroPuerta' value='{$instructor['numeroPuerta']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='barrio{$instructor['documento']}' class='form-label'>Barrio</label>
+                                                    <input type='text' class='form-control' id='barrio{$instructor['documento']}' name='barrio' value='{$instructor['barrio']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='localidad{$instructor['documento']}' class='form-label'>Localidad</label>
+                                                    <input type='text' class='form-control' id='localidad{$instructor['documento']}' name='localidad' value='{$instructor['localidad']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='tel{$instructor['documento']}' class='form-label'>Teléfono</label>
+                                                    <input type='text' class='form-control' id='tel{$instructor['documento']}' name='tel' value='{$instructor['tel']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='email{$instructor['documento']}' class='form-label'>Email</label>
+                                                    <input type='email' class='form-control' id='email{$instructor['documento']}' name='email' value='{$instructor['email']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='pass{$instructor['documento']}' class='form-label'>Pass</label>
+                                                    <input type='text' class='form-control' id='pass{$instructor['documento']}' name='pass' value='{$instructor['pass']}' required>
+                                                </div>
+                                                <div class='mb-3'>
+                                                    <label for='horasDictadas{$instructor['documento']}' class='form-label'>Horas Dictadas</label>
+                                                    <input type='number' class='form-control' id='horasDictadas{$instructor['documento']}' name='horasDictadas' value='{$instructor['horasDictadas']}' required>
+                                                </div>
+                                        </div>
+
+                                        <div class='modal-footer'>
+                                            <button type='submit' class='btn btn-primary'>Actualizar</button>
+                                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+                                        </div>
+                                                
+                                            </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>";
+                        }
+
+                        $controlador->cerrarConexion();
+                        ?>
+=======
                         <div class="table-responsive shadow">
                             <table id="tablaPersonas" class="table table-striped table-hover">
                                 <thead>
@@ -538,6 +858,7 @@
                             </ul>
                         </nav>
                         
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     </div>
                 </div>
             </main>
@@ -545,6 +866,14 @@
     </div>
 
 
+<<<<<<< HEAD
+
+
+
+
+
+
+=======
     <div class="modal fade" id="modifModal" tabindex="-1" aria-labelledby="modalModificarLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
@@ -703,6 +1032,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/instructores.js"></script>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>

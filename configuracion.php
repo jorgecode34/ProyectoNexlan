@@ -12,6 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<<<<<<< HEAD
+</head>
+
+<body>
+=======
 
     <!-- Símbolos para el toggler de los temas -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -32,12 +37,17 @@
 </head>
 
 <body class="dashboard-page">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 
     <div class="wrapper">
 
+<<<<<<< HEAD
+<!-- Sidebar -->
+=======
         <!-- Sidebar -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
         <aside id="sidebar">
             <div class="h-100 ">
 
@@ -66,13 +76,21 @@
                     <hr class="hr-color">
 
 
+<<<<<<< HEAD
+<!-- Header General -->
+=======
                     <!-- Header General -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-header">
                         General
                     </li>
 
 
+<<<<<<< HEAD
+<!-- Inicio -->
+=======
                     <!-- Inicio -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item separar-items active-link">
 
                         <a href="inicio.php" class="sidebar-link">
@@ -85,7 +103,11 @@
 
                     </li>
 
+<<<<<<< HEAD
+<!-- Configuracion -->
+=======
                     <!-- Configuracion -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item">
 
                         <a href="configuracion.php" class="sidebar-link selected">
@@ -100,13 +122,21 @@
 
 
 
+<<<<<<< HEAD
+<!-- Header Menu de Gestion -->
+=======
                     <!-- Header Menu de Gestion -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-header separar-headers">
                         Menú de Gestión
                     </li>
 
 
+<<<<<<< HEAD
+<!-- Usuarios -->
+=======
                     <!-- Usuarios -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item separar-items">
 
                         <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
@@ -130,7 +160,11 @@
                         </ul>
 
                     </li>
+<<<<<<< HEAD
+<!-- Vehículos -->
+=======
                     <!-- Vehículos -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item separar-items">
 
                         <a href="vehiculo.php" class="sidebar-link">
@@ -147,7 +181,11 @@
 
 
 
+<<<<<<< HEAD
+<!-- Clases y Horarios -->
+=======
                     <!-- Clases y Horarios -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                     <li class="sidebar-item">
 
                         <a href="clases.php" class="sidebar-link">
@@ -164,10 +202,17 @@
                     <hr class="hr-color">
 
 
+<<<<<<< HEAD
+<!-- Cerrar sesíón -->
+                    <li class="sidebar-item active-link">
+
+                        <a href="cerrar_sesion.php" class="sidebar-link">
+=======
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
                         <a href="cerrar_sesion.php" class="sidebar-cerrar">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -188,19 +233,41 @@
         </aside>
 
 
+<<<<<<< HEAD
+<!-- Main Component -->
+=======
         <!-- Main Component -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
         <div class="main">
 
 
 
+<<<<<<< HEAD
+<!-- Nav Bar -->
+            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
+
+<!-- Boton para abir y cerrar sidebar -->
+=======
             <!-- Nav Bar -->
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
 
                 <!-- Boton para abir y cerrar sidebar -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+<<<<<<< HEAD
+                <div class="ms-auto search-icon-container">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+=======
                 <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <div class="btn-group">
@@ -226,16 +293,57 @@
                         </ul>
                     </div>
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 </div>
 
             </nav>
 
 
+<<<<<<< HEAD
+<!-- Cuerpo -->
+=======
             <!-- Cuerpo -->
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
             <main class="content px-3 py-2">
                 <div class="container-fluid">
                     <div class="mb-3">
 
+<<<<<<< HEAD
+                        <h5 id="fecha-actual" class="text-center"></h5>
+                        
+                        <h3>Configuracion</h3>
+                        <p>Configura tus parametros.</p>
+
+                        <div class="accordion accordion-flush shadow" id="accordionFlushExample">
+                            
+                        <div class="accordion-item">
+                            
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                    Editar Perfil
+                                </button>
+                            </h2>
+
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4" value="<?php echo isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : (isset($_COOKIE['email']) ? htmlspecialchars($_COOKIE['email']) : ''); ?>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4" value="<?php echo isset($_SESSION['password']) ? htmlspecialchars($_SESSION['password']) : (isset($_COOKIE['password']) ? htmlspecialchars($_COOKIE['password']) : ''); ?>">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+=======
                         <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
                         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -250,10 +358,16 @@
 
                         <!-- 
                         <div class="accordion accordion-flush shadow" id="accordionFlushExample">
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                             <div class="accordion-item">
 
                                 <h2 class="accordion-header">
+<<<<<<< HEAD
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Accordion Item #2
+                                </button>
+=======
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
                                         Editar Perfil
                                     </button>
@@ -293,6 +407,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                         Accordion Item #2
                                     </button>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                 </h2>
 
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -303,15 +418,24 @@
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
+<<<<<<< HEAD
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+=======
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                         Accordion Item #3
                                     </button>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
                                 </div>
                             </div>
                         </div>
+<<<<<<< HEAD
+                    
+=======
                         -->
 
                         <!-- 
@@ -350,6 +474,7 @@
 
 
 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                     </div>
                 </div>
@@ -359,6 +484,9 @@
 
 
 
+<<<<<<< HEAD
+
+=======
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
@@ -407,6 +535,7 @@
             </li>
         </ul>
     </div>
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 
