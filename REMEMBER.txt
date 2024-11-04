@@ -1,0 +1,5 @@
+-Atributo costo en base de datos
+-Arreglar bug de la sidebar con el dropdwon que en celu se buggea
+-hacer estudiante y vehiculo con javascript, hacer el cambio.
+
+?Hacer el typeahead autocompletar de los inputs de busqueda, ej de instructor.

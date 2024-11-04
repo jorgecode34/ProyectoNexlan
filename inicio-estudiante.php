@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<?php include 'verificar_sesion.php'; ?>
-=======
 <?php
 include 'verificar_sesion.php';
 include("Controlador.php");
@@ -8,12 +5,11 @@ $controlador = new Controlador();
 $countsRoles = $controlador->graficaRolesUsuarios();
 $countsClases = $controlador->graficaTiposClases();
 
-// if ($_SESSION['rol'] !== 'instructor') {
-//     echo "<script>alert('No tiene permiso para acceder a esta página.'); window.location.href='inicio.php';</script>";
-//     exit();
-// }
+if ($_SESSION['rol'] !== 'estudiante') {
+    echo "<script>alert('No tiene permiso para acceder a esta página.'); window.location.href='inicio.php';</script>";
+    exit();
+}
 ?>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 <!DOCTYPE html>
 
@@ -27,8 +23,6 @@ $countsClases = $controlador->graficaTiposClases();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<<<<<<< HEAD
-=======
 
     <!-- Símbolos para el toggler de los temas -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -46,8 +40,6 @@ $countsClases = $controlador->graficaTiposClases();
             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
         </symbol>
     </svg>
-
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </head>
 
 <body class="dashboard-page">
@@ -92,7 +84,7 @@ $countsClases = $controlador->graficaTiposClases();
                     <!-- Inicio -->
                     <li class="sidebar-item separar-items active-link">
 
-                        <a href="inicio.php" class="sidebar-link selected">
+                        <a href="inicio-estudiante.php" class="sidebar-link selected">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
                                 <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
                             </svg>
@@ -117,57 +109,19 @@ $countsClases = $controlador->graficaTiposClases();
 
 
 
-                    <!-- Header Menu de Gestion -->
+                    <!-- Header Menu -->
                     <li class="sidebar-header separar-headers">
-                        Menú de Gestión
+                        Menú
                     </li>
 
 
-                    <!-- Usuarios -->
-                    <li class="sidebar-item separar-items">
-
-                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#usuarios" aria-expanded="false" aria-controls="usuarios">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
-                            </svg>
-                            <i class="fa-regular fa-file-lines pe-2"></i>
-                            Usuarios
-                        </a>
-
-                        <ul id="usuarios" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-
-                            <li class="sidebar-item separar-hijos">
-                                <a href="estudiante.php" class="sidebar-link">Estudiantes</a>
-                            </li>
-
-                            <li class="sidebar-item separar-hijos">
-                                <a href="Instructor.php" class="sidebar-link">Instructores</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-                    <!-- Vehículos -->
-                    <li class="sidebar-item separar-items">
-
-                        <a href="vehiculo.php" class="sidebar-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16">
-                                <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276" />
-                                <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z" />
-                            </svg>
-                            <i class="fa-solid fa-sliders pe-2"></i>
-                            Vehículos
-                        </a>
-
-                    </li>
 
 
 
 
                     <!-- Clases y Horarios -->
-                    <li class="sidebar-item">
-
-                        <a href="clases.php" class="sidebar-link">
+                    <li class="sidebar-item separar-items">
+                        <a href="clases-estudiante.php" class="sidebar-link separar-items">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
                                 <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
@@ -178,17 +132,41 @@ $countsClases = $controlador->graficaTiposClases();
 
                     </li>
 
+                    <li class="sidebar-item separar-items">
+                        <a href="Examen.php" class="sidebar-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                                <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                            </svg>
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Examen
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="historial-clases.php" class="sidebar-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+                                <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z" />
+                                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
+                                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
+                            </svg>
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Historial de clases
+                        </a>
+                    </li>
+
+
+
+
+
                     <hr class="hr-color">
 
 
                     <!-- Cerrar sesíón -->
                     <li class="sidebar-item active-link">
 
-<<<<<<< HEAD
-                        <a href="cerrar_sesion.php" class="sidebar-link">
-=======
                         <a href="cerrar_sesion.php" class="sidebar-cerrar">
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
@@ -215,28 +193,13 @@ $countsClases = $controlador->graficaTiposClases();
 
 
             <!-- Nav Bar -->
-<<<<<<< HEAD
-            <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav">
-=======
             <nav class="navbar navbar-expand shadow-sm px-3 border-bottom fixed-nav bg-body-tertiary">
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                 <!-- Boton para abir y cerrar sidebar -->
                 <button class="btn" type="button" data-bs-theme="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-<<<<<<< HEAD
-                <div class="ms-auto search-icon-container">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
-=======
                 <div class="ms-auto search-icon-container" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <div class="btn-group">
@@ -262,7 +225,6 @@ $countsClases = $controlador->graficaTiposClases();
                         </ul>
                     </div>
 
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                 </div>
 
             </nav>
@@ -275,12 +237,6 @@ $countsClases = $controlador->graficaTiposClases();
                     <div class="mb-3">
 
 
-<<<<<<< HEAD
-                        <h5 id="fecha-actual" class="text-center"></h5>
-
-                        <h3>Inicio</h3>
-                        <p>Vista general rápida de la academia.</p>
-=======
                         <h5 id="fecha-actual" class="text-center mb-5"></h5>
 
                         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -289,20 +245,13 @@ $countsClases = $controlador->graficaTiposClases();
                             </svg>
                             <h3 class="mb-0">Inicio</h3>
                         </div>
-                        <p class="text-center text-lg-start">Vista general rápida de la academia.</p>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
+                        <p class="text-center text-lg-start">Vista general rápida de tu panel de control.</p>
+
 
 
                     </div>
                 </div>
 
-<<<<<<< HEAD
-                <?php
-                include("Controlador.php");
-                $controlador = new Controlador();
-                ?>
-=======
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
                 <div class="row">
 
@@ -312,19 +261,12 @@ $countsClases = $controlador->graficaTiposClases();
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
-<<<<<<< HEAD
                         <div class="card border-start-primary shadow h-100 custom-title">
+
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
-                                        <div class="text-xs fw-bold text-primary text-uppercase mb-1">Estudiantes del sistema</div>
-=======
-                        <div class="card border-start-primary shadow h-100 custom-title custom-border-radius">
-                            <div class="card-body">
-                                <div class="row g-0 align-items-center">
-                                    <div class="col me-2">
-                                        <div class="text-xs fw-bold text-primary text-uppercase mb-1">Estudiantes activos en el sistema</div>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
+                                        <div class="text-xs fw-bold text-primary text-uppercase mb-1">Estudiantes activos del sistema</div>
                                         <div class="h5 mb-0 fw-bold text-gray-800 number-display">
 
 
@@ -349,30 +291,18 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <a href="estudiante.php" class="btn btn-primary mt-auto py-1 rounded-0">Ver más</a>
-=======
-                            <a href="estudiante.php" class="btn btn-primary mt-auto py-1 rounded-bottom">Ver más</a>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
                     </div>
 
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
-<<<<<<< HEAD
                         <div class="card border-start-primary shadow h-100">
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
-                                        <div class="text-xs fw-bold text-warning text-uppercase mb-1 custom-title">Instructores del sistema</div>
-=======
-                        <div class="card border-start-primary shadow h-100 custom-border-radius">
-                            <div class="card-body">
-                                <div class="row g-0 align-items-center">
-                                    <div class="col me-2">
-                                        <div class="text-xs fw-bold text-warning text-uppercase mb-1 custom-title">Instructores activos en el sistema</div>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
+                                        <div class="text-xs fw-bold text-warning text-uppercase mb-1 custom-title">Instructores activos del sistema</div>
                                         <div class="h5 mb-0 fw-bold text-gray-800 number-display">
 
                                             <?php
@@ -395,22 +325,14 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <a href="instructor.php" class="btn btn-warning mt-auto py-1 rounded-0 text-white">Ver más</a>
-=======
-                            <a href="instructor.php" class="btn btn-warning mt-auto py-1 rounded-bottom text-white">Ver más</a>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
                     </div>
 
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
-<<<<<<< HEAD
                         <div class="card border-start-primary shadow h-100">
-=======
-                        <div class="card border-start-primary shadow h-100 custom-border-radius">
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
@@ -439,11 +361,7 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <a href="estudiante.php" class="btn btn-success mt-auto py-1 rounded-0 text-white">Ver más</a>
-=======
-                            <a href="estudiante.php" class="btn btn-success mt-auto py-1 rounded-bottom text-white">Ver más</a>
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                         </div>
                     </div>
 
@@ -452,11 +370,7 @@ $countsClases = $controlador->graficaTiposClases();
 
 
                     <div class="col-xl-3 col-md-6 mb-4">
-<<<<<<< HEAD
                         <div class="card border-start-primary shadow h-100">
-=======
-                        <div class="card border-start-primary shadow h-100 custom-border-radius">
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
@@ -484,41 +398,12 @@ $countsClases = $controlador->graficaTiposClases();
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <a href="vehiculo.php" class="btn btn-info mt-auto py-1 rounded-0 text-white">Ver más</a>
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-md-6 mb-4">
-                    <div class="card border-start-primary shadow h-100">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="me-2">
-                                    <div class="text-xs fw-bold text-danger text-uppercase mb-1 custom-title">Monto Total</div>
-                                    <div class="h5 mb-0 fw-bold text-gray-800 number-display">
-                                        <?php
-                                            $montoTotal = $controlador->obtenerMontoTotal();
-                                            if ($montoTotal) {
-                                                echo '<span class="text-uppercase fs-4 fw-bold">$' . 
-                                                    number_format($montoTotal['total_monto'], 0) . 
-                                                    '</span>';
-                                            } else {
-                                                echo '<span class="text-uppercase fs-4 fw-bold">$0</span>';
-                                            }
-                                        ?>
-                                    </div>
-                                </div>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="iconoMonto" width="50" height="50" fill="red" class="bi bi-car-front" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
-                                    </svg>
-=======
-                            <a href="vehiculo.php" class="btn btn-info mt-auto py-1 rounded-bottom text-white">Ver más</a>
-                        </div>
-                    </div>
-
                     <div class="col-xl-5 col-md-6 mb-4">
-                        <div class="card border-start-primary shadow h-100 custom-border-radius">
+                        <div class="card border-start-primary shadow h-100">
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
@@ -526,22 +411,13 @@ $countsClases = $controlador->graficaTiposClases();
 
                                     </div>
 
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
                                 </div>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-
-                    
-               
-
-                </div>
-=======
 
                     <div class="col-xl-3 col-md-6 mb-4">
-                        <div class="card border-start-primary shadow h-100 custom-border-radius">
+                        <div class="card border-start-primary shadow h-100">
                             <div class="card-body">
                                 <div class="row g-0 align-items-center">
                                     <div class="col me-2">
@@ -556,7 +432,6 @@ $countsClases = $controlador->graficaTiposClases();
 
 
 
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 
@@ -574,13 +449,6 @@ $countsClases = $controlador->graficaTiposClases();
 
     </div>
 
-<<<<<<< HEAD
-
-
-    <script src="js/script.js" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-=======
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
             id="bd-theme"
@@ -630,14 +498,11 @@ $countsClases = $controlador->graficaTiposClases();
         </ul>
     </div>
 
-
-
     <script src="js/script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
->>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 </body>
 
 </html>

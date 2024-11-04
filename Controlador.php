@@ -61,10 +61,17 @@ class Controlador
         return $this->base->listarInstructores();
     }
 
+<<<<<<< HEAD
     public function buscarInstructores($termino)
     {
         return $this->base->buscarInstructor($termino);
     }
+=======
+    // public function buscarInstructores($termino)
+    // {
+    //     return $this->base->buscarInstructor($termino);
+    // }
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
     /* Agarra los datos para crear estudiante, crea el OBJETO estudiante para posteriorme ingresarlo en la BD  */
     public function altaInstructor($documento, $primerNombre, $segundoNombre, $primerApellido, $segundoApellido, $calle, $numeroPuerta, $barrio, $localidad, $tel, $email, $pass)
@@ -127,6 +134,7 @@ class Controlador
     /* FUNCIONES EVENTOS */
     /********************************************************************************************/
 
+<<<<<<< HEAD
     public function listarEventos()
     {
         return $this->base->listarEventos();
@@ -135,6 +143,16 @@ class Controlador
     public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante, $categoria)
     {
         return $this->base->altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante, $categoria);
+=======
+    public function listarEventos($usuarioEmail, $rol)
+{
+    return $this->base->listarEventos($usuarioEmail, $rol);
+}
+
+    public function altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante)
+    {
+        return $this->base->altaEvento($titulo, $fecha, $descripcion, $hora, $color, $tipo, $IDInstructor, $ID_Vehiculos, $IDEstudiante);
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
     }
 
 
@@ -148,8 +166,11 @@ class Controlador
         return $this->base->bajaEvento($id);
     }
 
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
     /********************************************************************************************/
 
     public function listarTotalEstudiantes()
@@ -201,11 +222,30 @@ class Controlador
     }
 
 
+<<<<<<< HEAD
     public function verificarLoginEstudiante($email, $password)
     {
         return $this->base->verificarCredencialesEstudiante($email, $password);
     }
 
+=======
+    public function verificarLogin($email, $password)
+    {
+        return $this->base->verificarCredenciales($email, $password);
+    }
+
+    public function graficaRolesUsuarios()
+    {
+        return $this->base->graficaRolesUsuarios();
+    }
+
+    public function graficaTiposClases()
+    {
+        return $this->base->graficaTiposClases();  
+    }
+
+
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
     public function obtenerPreguntasAleatorias($cantidad = 5) {
         return $this->base->obtenerPreguntasAleatorias($cantidad);
     }
@@ -214,9 +254,17 @@ class Controlador
         return $this->base->verificarRespuestas($respuestas);
     }
 
+<<<<<<< HEAD
     public function obtenerMontoTotal() {
         return $this->base->obtenerMontoTotal();
     }
 
 
+=======
+    public function mostrarHistorial($usuarioEmail)
+    {
+        return $this->base->mostrarHistorial($usuarioEmail);
+    }
+
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 }

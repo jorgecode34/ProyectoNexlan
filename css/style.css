@@ -34,6 +34,7 @@ a{
 .header-web {
   background-color: #01082F;
   color: white;
+<<<<<<< HEAD
   height: 45px;
 }
 
@@ -41,6 +42,17 @@ a{
 /******************************************************************/
 
 
+=======
+}
+
+/******************************************************************/
+
+/* Estilos específicos para los enlaces dentro del calendario */
+#calendar a {
+  color: inherit !important; /* Usa el color heredado del tema */
+  text-decoration: none !important; /* Elimina el subrayado si no lo deseas */
+}
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 /******************************** Navbar **********************************/
 
@@ -173,6 +185,7 @@ a{
 
 #sidebar {
   background-color: #01082F;
+<<<<<<< HEAD
   max-width: 240px;
   min-width: 240px;
   transition: all 0.35s ease-in-out;
@@ -183,6 +196,30 @@ a{
 /* Sidebar collapse */
 #sidebar.collapsed {
   margin-left: -240px;
+=======
+  width: 240px;
+  min-width: 240px;
+  transition: all 0.35s ease-in-out;
+  z-index: 1040;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y:scroll;
+}
+
+#sidebar::-webkit-scrollbar {
+  width: auto;
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background: #01082F; 
+}
+
+#sidebar {
+  scrollbar-width: auto;
+  scrollbar-color: rgba(255, 255, 255, 0.2) #01082F;
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 }
 
 .main {
@@ -190,8 +227,58 @@ a{
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+<<<<<<< HEAD
   overflow-y: auto !important;
   transition: all 0.35s ease-in-out;
+=======
+  overflow-y: auto;
+  transition: all 0.35s ease-in-out;
+  margin-left: 240px; /* Igual al ancho del sidebar */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -240px; /* Oculto por defecto en móvil */
+    position: fixed;
+  }
+  
+  #sidebar.show {
+    margin-left: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .main {
+    margin-left: 0 !important; /* Siempre pegado a la izquierda en móvil */
+  }
+  
+  /* Overlay para el sidebar en móvil */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1039;
+  }
+  
+  .sidebar-overlay.show {
+    display: block;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  #sidebar.collapsed {
+    margin-left: -240px;
+  }
+  
+  .main.expanded {
+    margin-left: 0;
+  }
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 }
 
 
@@ -217,7 +304,11 @@ a{
 
 /*************************************************************/
 
+<<<<<<< HEAD
 a.sidebar-link {
+=======
+a.sidebar-link, a.sidebar-cerrar {
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
   text-decoration: none;
   padding: .625rem 1.625rem;
   color: #ffffff;
@@ -227,6 +318,7 @@ a.sidebar-link {
   font-size: 0.8rem;
 }
 
+<<<<<<< HEAD
 /* .navbar {
   position: sticky !important;
   top: 0 !important;
@@ -237,22 +329,46 @@ a.sidebar-link {
 } */
 
 .sidebar-link::before {
+=======
+.sidebar-link::before, .sidebar-cerrar::before {
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+<<<<<<< HEAD
   background-color: rgba(234, 234, 234, 0.1);
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
   border-radius: 8px;
   transform: scaleX(0);
   z-index: -1; 
 }
 
+<<<<<<< HEAD
 .sidebar-link:hover::before {
   transform: scaleX(0.9); 
 }
 
+=======
+.sidebar-link::before {
+  background-color: rgba(234, 234, 234, 0.1);
+}
+
+.sidebar-cerrar::before {
+  background-color: #ff0000;
+}
+
+.sidebar-link:hover::before, .sidebar-cerrar:hover::before {
+  transform: scaleX(0.9); 
+}
+
+
+
+
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 .sidebar-link.selected::before {
   background-color: #ffffff;
   transform: scaleX(0.9); 
@@ -269,6 +385,12 @@ a.sidebar-link {
 
 
 
+<<<<<<< HEAD
+=======
+.bd-mode-toggle {
+  z-index: 1050 !important;
+}
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 .separar-items {
   padding-bottom: 10px;
@@ -341,6 +463,7 @@ a.sidebar-link {
   margin-right: 10px; 
 }
 
+<<<<<<< HEAD
 
 .table-light{
   --bs-table-bg: #ffffff !important;
@@ -356,6 +479,29 @@ a.sidebar-link {
 }
 
 
+=======
+/* 
+.table-light{
+  --bs-table-bg: #ffffff !important;
+} */
+
+/* .color-gris{
+  background-color: #F4F4F4 !important;
+} */
+
+#header-tabla {
+    position: relative;
+}
+
+.btn-bd-primary {
+  background-color: #01082F !important; 
+  border: none !important; 
+}
+
+.btn-bd-primary:hover {
+  background-color: #01082F !important;
+}
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 
@@ -376,9 +522,20 @@ a.sidebar-link {
   fill: var(--bs-info) !important; 
 }
 
+<<<<<<< HEAD
 #iconoMonto{
   fill: var(--bs-info) !important;
   
+=======
+.btn.rounded-bottom {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+.custom-border-radius {
+  border-radius: 20px !important;
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 }
 
 .custom-title {
@@ -390,8 +547,35 @@ a.sidebar-link {
 }
 
 
+<<<<<<< HEAD
 .fc-header-toolbar{
   margin: 24px 10px 24px 10px;
+=======
+
+/*CALENDARIO ESTILOS*/
+.fc-header-toolbar {
+  margin: 24px 10px 24px 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fc-toolbar-chunk {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .fc-toolbar-chunk {
+    flex: 1;
+  }
+}
+
+.fc-col-header-cell {
+  background-color: #212529; 
+  color: white; 
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 }
 
 .center-content {
@@ -406,7 +590,10 @@ a.sidebar-link {
   top: 0 !important;
   width: 100% !important;
   z-index: 1000 !important;
+<<<<<<< HEAD
   background-color: #ffffff !important; 
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
@@ -414,11 +601,20 @@ a.sidebar-link {
 /*********************************************************************/
 /* Estilos para el checkbox de iniciar sesión (recordarme) */
 
+<<<<<<< HEAD
 .form-control:focus {
   border-color: var(--bs-border-color) !important;
   box-shadow: none !important; 
 }
 
+=======
+input{
+  border-radius: 0.1 !important;
+}
+input:focus {
+  outline: 0 !important;
+}
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 .form-check-input:checked {
   background-color: #0d6efd !important;
   border-color: #0d6efd !important;
@@ -573,7 +769,11 @@ a.sidebar-link {
 
 
 
+<<<<<<< HEAD
 /*Imagen WSP inicio */
+=======
+
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 .whatsapp-imagen{
   position:fixed;
 width:60px;
@@ -604,6 +804,7 @@ transition: all 300ms ease;
 
 
 
+<<<<<<< HEAD
 /*Examen.php*/
 /* Estilos para el contenedor del examen */
 .examen-container {
@@ -711,6 +912,8 @@ transition: all 300ms ease;
 
 
 
+=======
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
 
 
 
@@ -808,4 +1011,101 @@ transition: all 300ms ease;
 }
 
 
+<<<<<<< HEAD
 
+=======
+/* Estilos para el contenedor del examen */
+.examen-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Título principal del examen */
+.examen-titulo {
+  text-align: center;
+  color: #333;
+}
+
+/* Contenedor de cada pregunta */
+.pregunta-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+
+/* Estilos para las opciones de respuesta */
+.opcion-label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* Botón de enviar respuestas */
+.boton-enviar {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2F44B9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-enviar:hover {
+  background-color: #2F44B9;
+}
+
+/* Resultados del examen */
+.resultado-titulo {
+  text-align: center;
+  color: #333;
+}
+
+.resultado-pregunta {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+
+/* Respuestas correctas e incorrectas */
+.respuesta-correcta {
+  color: green;
+  font-weight: bold;
+}
+
+.respuesta-incorrecta {
+  color: red;
+}
+
+/* Mensaje final de resultado */
+.resultado-final {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Botón para realizar un nuevo intento */
+.boton-nuevo-intento {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.boton-nuevo-intento:hover {
+  background-color: #0056b3;
+}
+>>>>>>> bd544add25e6f75591fc182d9a5a54c18050f258
