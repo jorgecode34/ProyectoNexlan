@@ -131,7 +131,7 @@ $$
 DELIMITER ;
 
 CREATE TABLE admin (
-    nombre VARCHAR(8) UNIQUE NOT NULL,
+    nombre VARCHAR(255) UNIQUE NOT NULL,
     pass VARCHAR (50),
     PRIMARY KEY (nombre) 
 );
