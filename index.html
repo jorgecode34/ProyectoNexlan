@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+
+
+
+<!-- Navbar -->
+
+  <nav id="navbar-index" class="navbar fixed-top navbar-expand-lg navbar-color">
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="img/union.png" alt="" width="60" height="60">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarText">
+
+        <ul class="navbar-nav mx-auto text-center align-items-center">
+
+          <li class="nav-item nav-underlining">
+            <a class="nav-link active color-azul-oscuro " aria-current="page" href="#">Inicio</a>
+          </li>
+
+          <li class="nav-item nav-underlining">
+            <a class="nav-link color-azul-oscuro" href="#nuestros-servicios-seccion">Servicios</a>
+          </li>
+
+          <li class="nav-item nav-underlining">
+            <a class="nav-link color-azul-oscuro" href="#Packs">Paquetes</a>
+          </li>
+
+          <li class="nav-item nav-underlining">
+            <a class="nav-link color-azul-oscuro" href="#Flo">Flota</a>
+          </li>
+
+          <!--<li class="nav-item nav-underlining">
+            <a class="nav-link color-azul-oscuro" aria-current="page" href="#">Acerca de</a>
+          </li>-->
+
+          <li class="nav-item nav-underlining">
+            <a class="nav-link color-azul-oscuro" href="login.html.php">Iniciar Sesión</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn btn-primary d-flex align-items-center justify-content-center" href="carrito.html" role="button" style="border-radius: 20px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart me-2" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
+              Carrito
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      
+    </div>
+  </nav>
+
+
+
+
+<!-- Carousel -->
+<div id="In">
+<div id="carouselExampleCaptions" class="carousel slide">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item carousel-image bg-img-1 active">
+      <!-- <img src="img/carnew.jpg" class="d-block w-100" alt="..."> -->
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-4"> Aprende a conducir con seguridad y confianza </h1>
+        <a href="login.html.php" class="btn btn-outline-light btn-ingresar col-lg-4 col-8" role="button">Ingresar</a>
+      </div>
+    </div>
+
+    <div class="carousel-item carousel-image-2 bg-img-2">
+      <!-- <img src="img/carnew.jpg" class="d-block w-100" alt="..."> -->
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-4"> Aprende a conducir con seguridad y confianza </h1>
+        <a href="login.html.php" class="btn btn-outline-light btn-ingresar col-lg-4 col-8" role="button">Ingresar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+</div>
+
+
+
+
+
+
+<!-- Quiénes somos -->
+
+<!-- <div class="seccion-quienes-somos">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="seccion-quienes-somos">
+        <h1 class="text-white text-center">¿Quiénes somos?</h1>
+        <p class="text-white text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique lacus eget lectus sagittis gravida. Nunc hendrerit at tortor a mattis. Morbi consequat pulvinar ante eget condimentum. Donec placerat, nulla ut tempus commodo, orci magna aliquet nisl, eget sodales lorem dui non justo. Proin quis magna quam. In ac lectus congue.
+        </p>
+      </div>
+    </div>
+</div> -->
+
+<!-- Sección de Servicios ofrecidos por la escuela -->
+<div id="nuestros-servicios-seccion">
+  <section class="services-section">
+      <div class="container" id="servicios-container">
+          <!-- Título de la sección -->
+          <h1 class="display-4 text-center mb-5" id="servicios-titulo-principal">Nuestros Servicios</h1>
+          <div class="row justify-content-center" id="servicios-row">
+
+
+              <!-- Primer servicio -->
+              <div class="col-md-5 col-sm-12 mb-4" id="servicio-columna-1">
+                  <div class="servicio-item shadow h-100" 
+                       id="servicio-item-1" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#staticBackdrop">
+                      <div class="servicio-contenido" id="servicio-contenido-1">
+                          <div class="row g-0 align-items-center">
+                              <div class="col me-2">
+                                  <div class="text-xs fw-bold text-black text-uppercase mb-1">
+                                      <h5 id="servicio-titulo-1">Clases de Manejo Personalizadas</h5>
+                                  </div>
+                                  <div class="px-0">
+                                      <img src="img/thumbnail.png" 
+                                           class="servicio-imagen mb-3" 
+                                           alt="Servicio 1" 
+                                           id="servicio-imagen-1">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Segundo servicio -->
+              <div class="col-md-5 col-sm-12 mb-4" id="servicio-columna-2">
+                  <div class="servicio-item shadow h-100" 
+                       id="servicio-item-2" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#serviceModal2">
+                      <div class="servicio-contenido" id="servicio-contenido-2">
+                          <div class="row g-0 align-items-center">
+                              <div class="col me-2">
+                                  <div class="text-xs fw-bold text-black text-uppercase mb-3">
+                                      <h5 id="servicio-titulo-2">Asesoría para la obtención de licencias</h5>
+                                  </div>
+                                  <div class="px-0">
+                                      <img src="img/thumbnail2.png" 
+                                           class="servicio-imagen mb-3" 
+                                           alt="Servicio 2" 
+                                           id="servicio-imagen-2">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>
+
+
+<!-- Modal para la primera tarjeta -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Clases de Manejo Personalizadas</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <img src="img/thumbnail.png" class="img-fluid mb-3" alt="Servicio 1">
+            <p><li>Instructores calificados</li></p>
+            <p><li>Prácticas en diferentes tipos de vehículos</li></p>
+            <p><li>Horarios flexibles</li></p>
+            <p><li>Clases teóricas y prácticas</li></p>
+            <p><li>Simuladores de conducción</li></p>
+            <p><li>Preparación para exámenes de manejo</li></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Modal para la segunda tarjeta -->
+  <div class="modal fade" id="serviceModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Asesoría para la obtención de licencias</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/thumbnail2.png" class="img-fluid mb-3" alt="Servicio 2">
+          <p><li>Asistencia con la documentación</li></p>
+          <p><li>Simuladores de exámenes de conocimiento</li></p>
+          <p><li>Orientación sobre normativas de tránsito</li></p>
+          <p><li>Gestión de citas para pruebas</li></p>
+          <p><li>Soporte continuo hasta la obtención de la licencia</li></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal para la segunda tarjeta -->
+<div class="modal fade" id="serviceModal2a" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel2">Asesoría para la obtención de licencias</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/thumbnail2.png" class="img-fluid mb-3" alt="Servicio 2">
+        <p><li>Asistencia con la documentación</li></p>
+        <p><li>Simuladores de exámenes de conocimiento</li></p>
+        <p><li>Orientación sobre normativas de tránsito</li></p>
+        <p><li>Gestión de citas para pruebas</li></p>
+        <p><li>Soporte continuo hasta la obtención de la licencia</li></p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary">Descubre más</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Sección Paquetes -->
+<div id="Packs">
+  <section class="paquetes">
+    <h1 class="display-4"> Paquetes de Conducir </h1>
+    <div class="paquete-cuadro">
+      <div class="paquete-item">
+        <h3 class="display-4">Paquete Básico</h3>
+        <p>4 lecciones prácticas + 2 clases teóricas</p>
+        <p>$120</p>
+        <button type="button" class="btn btn-outline-secondary" id="liveToastBtn-basico" onclick="agregarAlCarrito('Paquete Básico', 120)">Comprar</button>
+      </div>
+
+      <div class="paquete-item Avanzado">
+        <h3 class="display-4">Paquete Avanzado</h3>
+        <p>8 lecciones prácticas + 4 clases teóricas</p>
+        <p>$220</p>
+        <button type="button" class="btn btn-outline-warning" id="liveToastBtn-avanzado" onclick="agregarAlCarrito('Paquete Avanzado', 220)">Comprar</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="Flo">
+<!-- Sección de Flota de Vehículos -->
+<section class="fleet-section text-center">
+    <div class="container">
+      <!-- Título de la sección -->
+      <h2 class="display-4">Nuestra Flota</h2>
+      <!-- Carrusel de vehículos -->
+      <div id="fleetCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-inner">
+          <!-- Primer set de vehículos en el carrusel -->
+          <div class="carousel-item active">
+            <div class="fleet-container">
+              <div class="fleet-card">
+                <img src="img/hyundai_hb20 1.png" class="d-block w-100" alt="Carro 1">
+              </div>
+              <div class="fleet-card">
+                <img src="img/Suzuki_swift_1.png" class="d-block w-100" alt="Carro 2">
+              </div>
+              <div class="fleet-card">
+                <img src="img/volkswagen_gol_1.png" class="d-block w-100" alt="Carro 3">
+              </div>
+            </div>
+          </div>
+          <!-- Segundo set de vehículos en el carrusel -->
+          <div class="carousel-item">
+            <div class="fleet-container">
+              <div class="fleet-card">
+                <img src="img/hyundai_hb20 1.png" class="d-block w-100" alt="Carro 4">
+              </div>
+              <div class="fleet-card">
+                <img src="img/Suzuki_swift_1.png" class="d-block w-100" alt="Carro 5">
+              </div>
+              <div class="fleet-card">
+                <img src="img/volkswagen_gol_1.png" class="d-block w-100" alt="Carro 6">
+              </div>
+            </div>
+          </div>
+          <!-- Tercer set de vehículos en el carrusel -->
+          <div class="carousel-item">
+            <div class="fleet-container">
+              <div class="fleet-card">
+                <img src="img/hyundai_hb20 1.png" class="d-block w-100" alt="Carro 7">
+              </div>
+              <div class="fleet-card">
+                <img src="img/Suzuki_swift_1.png" class="d-block w-100" alt="Carro 8">
+              </div>
+              <div class="fleet-card">
+                <img src="img/volkswagen_gol_1.png" class="d-block w-100" alt="Carro 9">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#fleetCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#fleetCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+<!-- Pie de página -->
+<footer class="footer text-center">
+  <div class="container">
+      <div class="row">
+          <!-- Sección de contacto en el pie de página -->
+          <div class="col-md-4">
+              <h5>Contacto</h5>
+              <p>Dirección, Ciudad, País<br>Teléfono: +1 234 567 890</p>
+          </div>
+          <!-- Sección de horarios en el pie de página -->
+          <div class="col-md-4">
+              <h5>Horarios</h5>
+              <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábado: 8:00 AM - 2:00 PM</p>
+          </div>
+          <!-- Sección de redes sociales en el pie de página -->
+          <div class="col-md-4">
+              <h5>Síguenos</h5>
+              <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      
+      <!-- Texto de derechos reservados en el pie de página -->
+      <div class="mt-3">
+          <p>&copy; 2024 Escuela de Conducción. Todos los derechos reservados.</p>
+      </div>
+  </div>
+</footer>
+
+  
+<a href="https://wa.me/59891602159" target="_blank" class="whatsapp-button">
+  <img class="whatsapp-imagen" src="img/whatsapp-imgn.png" alt="Contactar por WhatsApp">
+</a>
+
+
+
+<div class="toast-container position-fixed bottom-0 start-0 p-3">
+  <div id="liveToast-avanzado" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Academia de choferes Union</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Paquete avanzado agregado al carrito correctamente.
+      <div class="mt-2 pt-2 border-top">
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='carrito.html'">Carrito</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 start-0 p-3">
+  <div id="liveToast-basico" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Academia de choferes Union</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Paquete básico agregado al carrito correctamente.
+      <div class="mt-2 pt-2 border-top">
+        <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='carrito.html'">Carrito</button>
+        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var toastTrigger = document.getElementById('liveToastBtn-avanzado');
+    var toastLiveExample = document.getElementById('liveToast-avanzado');
+
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', function () {
+        var toast = new bootstrap.Toast(toastLiveExample);
+        toast.show();
+      });
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var toastTrigger = document.getElementById('liveToastBtn-basico');
+    var toastLiveExample = document.getElementById('liveToast-basico');
+
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', function () {
+        var toast = new bootstrap.Toast(toastLiveExample);
+        toast.show();
+      });
+    }
+  });
+  
+
+  
+</script>
+  <script src="js/carrito.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
